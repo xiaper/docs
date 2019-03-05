@@ -1,0 +1,15 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "A Vue.js project",
+  "author": "jackning <270580156@qq.com>",
+  "private": true,
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.42",
+    "vuepress": "^1.0.0-alpha.42"
+  }
+}

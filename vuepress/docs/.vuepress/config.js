@@ -48,7 +48,7 @@ module.exports = {
           '/guide/web',
           '/guide/mp',
           '/guide/mini',
-          '/guide/other',
+          '/guide/other/',
           '/faq/'
         ],
         serviceWorker: {

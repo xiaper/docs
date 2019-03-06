@@ -17,3 +17,17 @@ RabbitMQ/ActiveMQ二选其一，无特殊版本要求，建议最新稳定版
 :::
 
 ## 部署
+
+支持多种部署方式，可任选其一
+
+### Jar
+
+
+
+### Maven
+
+TODO
+
+### Docker
+
+TODO

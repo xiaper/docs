@@ -6,8 +6,8 @@
 
 ## 发展历史
 
-* 2019年，发布开源版
-* 2018年，基于SpringCloud微服务改造上线
+* 2019年，发布开源版[虾婆](http://www.xiaper.io)
+* 2018年，基于SpringCloud微服务改造上线, 发布智能客服[萝卜丝](https://www.bytedesk.com)
 * 2017年，探索优化通讯协议：XMPP->Socket.io->Stomp/WebSocket/MQTT/私有协议
 * 2014年，[微客服](http://www.weikefu.net)集群版发布，基于ejabberd(XMPP)协议
 * 2013年，[微客服](http://www.weikefu.net)单机版发布，基于ejabberd(XMPP)协议
@@ -20,7 +20,7 @@
 
 ### 支持分布式部署，支持微服务架构
 
-后台开发语言Java，基于SpringBoot2开发，支持Spring Cloud微服务。支持分布式集群部署
+后台开发语言Java，基于SpringBoot2开发，支持Spring Cloud微服务架构。支持分布式集群部署
 
 ### 支持亿级长连接，百万级并发
 
@@ -30,9 +30,27 @@
 
 所有代码全部开源，您可以任意修改和发布。Web/Windows/Mac/小程序端基于Stomp/WebSocket通讯协议，安卓和IOS基于MQTT二进制通讯协议
 
+### 插件架构
+
+TODO: 虾婆将会支持插件机制
+
 ### 商业技术支持
 
-如果您需要技术支持或者定制服务，我们和乐意为您提供商业技术支持
+如果您需要技术支持或者定制服务，我们很乐意为您提供商业技术支持
+
+## 应用场景
+
+### 社交IM
+
+基于虾婆可以打造各种各样的社交IM
+
+### 办公IM
+
+可以开发部署私有办公IM，整合OA等
+
+### 在线客服
+
+虾婆默认支持在线客服功能
 
 ## 部分成功案例
 

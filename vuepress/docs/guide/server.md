@@ -22,11 +22,17 @@ RabbitMQ/ActiveMQ二选其一，无特殊版本要求，建议最新稳定版
 
 支持多种架构，可任选其一
 
-### 单机架构
+### 单体架构
+
+![单体架构](/architechture-sole.png)
 
 ### 集群架构
 
+![单体架构](/architechture-cluster.png)
+
 ### 微服务架构
+
+![单体架构](/architechture-service.png)
 
 ## 部署
 

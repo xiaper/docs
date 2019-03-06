@@ -1,11 +1,27 @@
 module.exports = {
   title: 'Hello Xiaper',
-  description: 'Just playing around',
+  description: 'Enterprise IM Solution',
   plugins: ['@vuepress/back-to-top'] ,
   markdown: {
     lineNumbers: true
   },
   themeConfig: {
+    // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
+    repo: 'xiaper/docs',
+    // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
+    // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
+    repoLabel: '查看源码',
+    // 以下为可选的编辑链接选项
+    // 假如你的文档仓库和项目本身不在一个仓库：
+    docsRepo: 'xiaper/docs',
+    // 假如文档不是放在仓库的根目录下：
+    docsDir: 'vuepress/docs',
+    // 假如文档放在一个特定的分支下：
+    docsBranch: 'master',
+    // 默认是 false, 设置为 true 来启用
+    editLinks: true,
+    // 默认为 "Edit this page"
+    editLinkText: '帮助我们改善此页面！',
     locales: {
       '/': {
         label: '简体中文',
@@ -31,7 +47,15 @@ module.exports = {
           '/guide/android',
           '/guide/web',
           '/faq/'
-        ]
+        ],
+        serviceWorker: {
+          updatePopup: true // Boolean | Object, 默认值是 undefined.
+          // 如果设置为 true, 默认的文本配置将是: 
+          // updatePopup: { 
+          //    message: "New content is available.", 
+          //    buttonText: "Refresh" 
+          // }
+        }
       },
       '/en/': {
         label: 'English',
@@ -51,7 +75,15 @@ module.exports = {
           '/en/guide/android',
           '/en/guide/web',
           '/en/faq/'
-        ]
+        ],
+        serviceWorker: {
+          updatePopup: true // Boolean | Object, 默认值是 undefined.
+          // 如果设置为 true, 默认的文本配置将是: 
+          // updatePopup: { 
+          //    message: "New content is available.", 
+          //    buttonText: "Refresh" 
+          // }
+        }
       }
     }
     

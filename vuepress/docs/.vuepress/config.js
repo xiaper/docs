@@ -46,6 +46,8 @@ module.exports = {
           '/guide/ios',
           '/guide/android',
           '/guide/web',
+          '/guide/mp',
+          '/guide/mini',
           '/faq/'
         ],
         serviceWorker: {

@@ -11,6 +11,6 @@ features:
 - title: 分布式/微服务
   details: 支持分布式部署。基于Spring Boot/Cloud架构
 - title: 高性能
-  details: 亿级连接，百万级并发
+  details: 支持亿级连接，百万级并发
 footer: MIT Licensed | Copyright © 2019 Jack Ning
 ---

@@ -3,10 +3,12 @@
 ## 准备
 
 * Linux
-* Nginx
-* MySQL/Oracle
+* [Nginx](./other.md#nginx)
+* MySQL
+* Oracle
 * Redis
-* RabbitMQ/ActiveMQ
+* [RabbitMQ](./other.md#rabbitmq)
+* [ActiveMQ](./other.md#activemq)
 * Zookeeper
 
 ::: tip
@@ -30,7 +32,7 @@ RabbitMQ/ActiveMQ二选其一，无特殊版本要求，建议最新稳定版
 
 支持多种部署方式，可任选其一
 
-### Jar
+### Jar/War
 
 TODO
 

@@ -2,7 +2,7 @@
 
 ## 配置
 
-``` md
+``` bash
 - 查看最新版本：https://github.com/rabbitmq/rabbitmq-server/releases
 - 注意：下载 rabbitmq-server-generic-unix-***.tar.xz 版本
 - 下载：wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.7.8/rabbitmq-server-generic-unix-3.7.8.tar.xz
@@ -57,7 +57,7 @@
 
 ## 阿里云后台添加安全组访问端口号
 
-``` md
+``` bash
 - 5672  rabbitmq-service
 - 61613 rabbitmq-stomp
 - 1883  rabbitmq-mqtt
@@ -69,7 +69,7 @@
 
 ## Spring Boot 配置文件
 
-``` md
+``` bash
 为演示方便，在此我们仅配置单台
 spring.rabbitmq.host=127.0.0.1
 spring.rabbitmq.port=5672

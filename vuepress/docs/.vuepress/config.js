@@ -2,6 +2,7 @@ module.exports = {
   title: 'Hello Xiaper',
   description: 'Enterprise IM Solution',
   plugins: ['@vuepress/back-to-top'] ,
+  base: '/xiaper.io/',
   markdown: {
     lineNumbers: true
   },

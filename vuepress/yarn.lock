@@ -854,6 +854,11 @@
   dependencies:
     lodash.debounce "^4.0.8"
 
+"@vuepress/plugin-blog@^1.0.0-alpha.42":
+  version "1.0.0-alpha.42"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.0.0-alpha.42.tgz#bf91dcaa4724966b8240761c7aa71b8f147bc39b"
+  integrity sha512-di/77Lnb/EOwSKintfzuxezSnkSq/JxYN2L7urRmB7FadKTX3C+FMkvLY4lqAY8L5daodEbvjdR797UWWTkKyA==
+
 "@vuepress/plugin-container@^1.0.0-alpha.42":
   version "1.0.0-alpha.42"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-container/-/plugin-container-1.0.0-alpha.42.tgz#c61ec31ba088b62f0f78431399f3686d99179308"
@@ -861,12 +866,24 @@
   dependencies:
     markdown-it-container "^2.0.0"
 
+"@vuepress/plugin-google-analytics@^1.0.0-alpha.42":
+  version "1.0.0-alpha.42"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-google-analytics/-/plugin-google-analytics-1.0.0-alpha.42.tgz#8ceef7fd88ff02aa505d8577888f836e325a5cb5"
+  integrity sha512-2w59V6x4l2SClnbq9te0DQ8kWwKUs9xx2tDMpbFj/4s3hquNQu38wI9MUTmuUXPCFCTUO2A3NB+SJT5L4w/2Mw==
+
 "@vuepress/plugin-last-updated@^1.0.0-alpha.42":
   version "1.0.0-alpha.42"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-last-updated/-/plugin-last-updated-1.0.0-alpha.42.tgz#51b888da72ad6bb8d7912275f9604232c756743b"
   integrity sha512-jHXo7gU174eRcXngBlTnX4jRXk6Z3Id8CZEOJXTKlqdM6XN+DvfWRkqCDSHpqTnjuWzG0r3kp7k4Hq0m4uOW0A==
   dependencies:
     cross-spawn "^6.0.5"
+
+"@vuepress/plugin-medium-zoom@^1.0.0-alpha.42":
+  version "1.0.0-alpha.42"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-medium-zoom/-/plugin-medium-zoom-1.0.0-alpha.42.tgz#e34e27f8d28627758c0ac772706c29b3d60227a6"
+  integrity sha512-b2RQM8KkAEjrsqHZ5348h+bGZ4v9taGfRxqm5i660DWbVKiJl6Qvw80sxH4KCQhrQfU9qs72Ke0jAnYITmhN0Q==
+  dependencies:
+    medium-zoom "^0.4.0"
 
 "@vuepress/plugin-nprogress@^1.0.0-alpha.42":
   version "1.0.0-alpha.42"
@@ -4267,6 +4284,11 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
+
+medium-zoom@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/medium-zoom/-/medium-zoom-0.4.0.tgz#8e13c9b754903c0c903220611af0d3cd373a4222"
+  integrity sha512-0z7yMfd6I1BTCAa8QaR4cp5AqDkQD571GzhHIbbfefKEssGLSvs+4Xai/itOAncm4FBlF5gUoMQ22yW9/f8Sig==
 
 mem@^4.0.0:
   version "4.1.0"

@@ -1,7 +1,18 @@
 module.exports = {
   title: 'Hello Xiaper',
   description: 'Enterprise IM Solution',
-  plugins: ['@vuepress/back-to-top'] ,
+  plugins: [
+    '@vuepress/back-to-top',
+    [ 
+      '@vuepress/google-analytics',
+      {
+        'ga': '' // UA-00000000-0
+      }
+    ],
+    '@vuepress/blog',
+    '@vuepress/medium-zoom',
+    '@vuepress/active-header-links'
+  ] ,
   base: '/xiaper.io/',
   markdown: {
     lineNumbers: true
@@ -29,6 +40,7 @@ module.exports = {
         selectText: '选择语言',
         editLinkText: '在 GitHub 上编辑此页',
         lastUpdated: '上次更新',
+        sidebarDepth: 3,
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
@@ -41,7 +53,7 @@ module.exports = {
           }
         ],
         sidebar: [
-          '/',
+          // '/',
           '/guide/',
           '/guide/server',
           '/guide/ios',
@@ -66,6 +78,7 @@ module.exports = {
         selectText: 'Languages',
         editLinkText: 'Edit this page on GitHub',
         lastUpdated: 'Last Updated',
+        sidebarDepth: 3,
         nav: [
           { text: 'Home', link: '/' },
           { text: 'Guide', link: '/guide/' },

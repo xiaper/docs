@@ -14,6 +14,7 @@
 * [MySQL](./other/mysql.md)
 * [Oracle](./other/oracle.md)
 * [Redis](./other/redis.md)
+* [Mongo](./other/mongo.md)
 * [RabbitMQ](./other/rabbitmq.md)
 * [ActiveMQ](./other/activemq.md)
 * [Zookeeper](./other/zookeeper.md)
@@ -30,6 +31,7 @@
 ## 架构
 
 支持多种架构，可任选其一
+<!-- TODO: 高并发、高可用、易伸缩、可扩展、安全 -->
 
 ### 单体架构
 
@@ -55,6 +57,10 @@
 
 单体架构不推荐，分布式架构和微服务架构整体类似，我们下文主要以讲解分布式架构为主。支持多种部署方式，可任选其一
 
+### 源码
+
+TODO
+
 ### Jar/War
 
 TODO
@@ -67,3 +73,9 @@ TODO
 
 TODO
 <!-- TODO:开发vuepress插件：支持客服和聊天 -->
+
+## 其他
+
+### 关于图片、文件、语音、视频消息
+
+### 关于业务系统账号体系与IM账号体系整合

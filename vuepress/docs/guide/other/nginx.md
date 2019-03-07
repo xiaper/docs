@@ -1,8 +1,8 @@
-# nginx
+# Nginx
 
 ## 重定向
 
-``` java
+``` text
 server {
  listen 80 default_server;
  listen [::]:80 default_server;
@@ -15,7 +15,7 @@ server {
 
 ## 反向代理
 
-``` java
+``` text
 server {
  server_name _;
 
@@ -78,7 +78,7 @@ server {
 
 ## 负载均衡
 
-``` java
+``` text
 upstream bytedesk {
   # 这样来自同一个IP的访客固定访问一个后端服务器
   ip_hash;
@@ -94,14 +94,14 @@ upstream bytedesk {
 
 ## 缓存
 
-``` java
+``` text
 # 注意：要放在/var/www/html目录下，否则会permission denied
 proxy_cache_path /var/www/html/nginx/cache/webserver levels=1:2 keys_zone=webserver:20m max_size=1g;
 ```
 
 ## https证书
 
-``` java
+``` text
 server {
  # SSL configuration
  #

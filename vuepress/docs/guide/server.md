@@ -4,7 +4,7 @@
 
 * 编程语言：Java
 * 版本：JDK 8
-* 框架：Spring Boot 2.1.3.RELEASE
+* 框架：Spring Boot 2.1.3.RELEASE, Spring Cloud Greenwich.RELEASE
 :::
 
 ## 准备
@@ -39,9 +39,13 @@
 
 ![分布式架构](/architechture-cluster.png)
 
+![分布式架构2](/architechture-cluster2.png)
+
 ### 微服务架构
 
 ![微服务架构](/architechture-service.png)
+
+![微服务架构2](/architechture-service2.png)
 
 ## 部署
 
@@ -58,3 +62,4 @@ TODO
 ### Docker
 
 TODO
+<!-- TODO:开发vuepress插件：支持客服和聊天 -->

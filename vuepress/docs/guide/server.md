@@ -37,14 +37,18 @@
 
 ### 分布式架构
 
+* 中小企业
 ![分布式架构](/architechture-cluster.png)
 
+* 大型企业
 ![分布式架构2](/architechture-cluster2.png)
 
 ### 微服务架构
 
+* 中小企业
 ![微服务架构](/architechture-service.png)
 
+* 大型企业
 ![微服务架构2](/architechture-service2.png)
 
 ## 部署

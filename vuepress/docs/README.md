@@ -12,5 +12,5 @@ features:
   details: 支持分布式部署。基于Spring Boot/Cloud架构
 - title: 高性能
   details: 支持亿级连接，百万级并发
-footer: Apache Licensed 2.0 | Copyright © 2013~2019 Jack Ning
+footer: MIT-Licensed | Copyright ©2013~2019 Jack Ning | 270580156@qq.com
 ---

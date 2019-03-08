@@ -35,33 +35,32 @@
 
 ### 单体架构
 
-![单体架构](/architechture-sole.png)
+![单体架构](/xiaper.io/architechture-sole.png)
 
 ### 分布式架构
 
 * 中小企业
-![分布式架构](/architechture-cluster.png)
+![分布式架构](/xiaper.io/architechture-cluster.png)
 
 * 大型企业
-![分布式架构2](/architechture-cluster2.png)
+![分布式架构2](/xiaper.io/architechture-cluster2.png)
 
 ### 微服务架构
 
 * 中小企业
-![微服务架构](/architechture-service.png)
+![微服务架构](/xiaper.io/architechture-service.png)
 
 * 大型企业
-![微服务架构2](/architechture-service2.png)
+![微服务架构2](/xiaper.io/architechture-service2.png)
 
 ## 部署
 
 单体架构不推荐，分布式架构和微服务架构整体类似，我们下文主要以讲解分布式架构为主。支持多种部署方式，可任选其一
 
-### 源码
+<!-- TODO: ### 源码 -->
+<!-- TODO: War -->
 
-TODO
-
-### Jar/War
+### Jar
 
 TODO
 
@@ -69,9 +68,7 @@ TODO
 
 TODO
 
-### Docker
-
-TODO
+<!-- TODO: ### Docker -->
 <!-- TODO:开发vuepress插件：支持客服和聊天 -->
 
 ## 其他

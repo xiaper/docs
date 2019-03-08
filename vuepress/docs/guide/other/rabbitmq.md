@@ -33,26 +33,22 @@
 - 登录管理后台: http://localhost:15672, guest/guest
 - 其他：https://www.rabbitmq.com/man/rabbitmqctl.8.html#set_user_tags
 
-- 添加管理员用户:  ./sbin/rabbitmqctl add_user chainsnow C8aJEVCCvSA1VFi976
-- 增加权限:  ./sbin/rabbitmqctl set_user_tags chainsnow administrator
-    查看：  ./sbin/rabbitmqctl list_users
-- ./sbin/rabbitmqctl set_permissions -p "/" chainsnow ".*" ".*" ".*"
+- 添加管理员账号：
+- ./sbin/rabbitmqctl add_user 用户名 密码
+- ./sbin/rabbitmqctl set_user_tags 用户名 administrator
+- ./sbin/rabbitmqctl set_permissions -p "/" 用户名 ".*" ".*" ".*"
 
-- 添加另外一个管理员：
-- ./sbin/rabbitmqctl add_user bytedesk C8aJEVCCvSA1VFi976
-- ./sbin/rabbitmqctl set_user_tags bytedesk administrator
-- ./sbin/rabbitmqctl set_permissions -p "/" bytedesk ".*" ".*" ".*"
-
-- 查看：./sbin/rabbitmqctl list_permissions -p /
 - 添加访客： ./sbin/rabbitmqctl add_user visitor visitor
 - 添加访问控制： ./sbin/rabbitmqctl set_permissions -p "/" visitor ".*" ".*" ".*"
-
 - 添加ios端授权用户：./sbin/rabbitmqctl add_user mqtt_ios mqtt_ios
 - 添加访问控制： ./sbin/rabbitmqctl set_permissions -p "/" mqtt_ios ".*" ".*" ".*"
 - 添加android端授权用户：./sbin/rabbitmqctl add_user mqtt_android mqtt_android
 - 添加访问控制： ./sbin/rabbitmqctl set_permissions -p "/" mqtt_android ".*" ".*" ".*"
 - 添加web端授权用户：./sbin/rabbitmqctl add_user stomp_web stomp_web
 - 添加访问控制： ./sbin/rabbitmqctl set_permissions -p "/" stomp_web ".*" ".*" ".*"
+
+- 查看：./sbin/rabbitmqctl list_permissions -p /
+
 ```
 
 ## 阿里云后台添加安全组访问端口号

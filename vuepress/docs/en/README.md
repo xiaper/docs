@@ -12,5 +12,5 @@ features:
   details: Based On Spring Boot/Cloud Architechture
 - title: High Performance
   details: Support Billons Connections, Millions of ConCurrency
-footer: Apache Licensed 2.0 | Copyright © 2013~2019 Jack Ning
+footer: MIT Licensed | Copyright © 2013~2019 Jack Ning | 270580156@qq.com
 ---

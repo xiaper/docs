@@ -176,8 +176,12 @@ wechat.open.componentToken=
 wechat.open.componentAesKey=
 ```
 
+### 运行
+
+<!-- 
 ## 其他
 
 ### 关于图片、文件、语音、视频消息
 
-### 关于业务系统账号体系与IM账号体系整合
+### 关于业务系统账号体系与IM账号体系整合 
+-->

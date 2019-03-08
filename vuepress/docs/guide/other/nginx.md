@@ -4,6 +4,9 @@
 
 ``` bash
 http {
+  # 开发者其他配置
+  ....
+
   ## http://blog.51cto.com/freeloda/1288553
   ## 设置缓存
   ## 注意：要放在/var/www/html目录下，否则会permission denied
@@ -44,6 +47,9 @@ server {
 
   # 强制http 转 https, 开发者需要修改为自己的域名
   return 301 https://www.bytedesk.com$request_uri;
+
+  # 开发者其他配置
+  ....
 }
 
 server {
@@ -117,6 +123,8 @@ server {
     proxy_cache_valid  404      1m;
   }
 
+  # 开发者其他配置
+  ....
 }
 ```
 

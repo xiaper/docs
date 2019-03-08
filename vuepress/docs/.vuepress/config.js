@@ -59,6 +59,8 @@ module.exports = {
           '/guide/ios',
           '/guide/android',
           '/guide/web',
+          '/guide/windows',
+          '/guide/mac',
           '/guide/mp',
           '/guide/mini',
           '/guide/other/',

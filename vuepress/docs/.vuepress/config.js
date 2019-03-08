@@ -52,20 +52,25 @@ module.exports = {
             ]
           }
         ],
-        sidebar: [
-          // '/',
-          '/guide/',
-          '/guide/server',
-          '/guide/ios',
-          '/guide/android',
-          '/guide/web',
-          '/guide/windows',
-          '/guide/mac',
-          '/guide/mp',
-          '/guide/mini',
-          '/guide/other/',
-          '/faq/'
-        ],
+        sidebar: {
+          '/': [
+            '/guide/',
+            '/guide/server',
+            '/guide/ios',
+            '/guide/android',
+            '/guide/web',
+            '/guide/windows',
+            '/guide/mac',
+            '/guide/mp',
+            '/guide/mini',
+            '/guide/other/jmeter',
+            '/faq/'
+          ],
+          // '/guide/other/': [
+          //   '/guide/other/mysql',
+          //   '/guide/other/jmeter'
+          // ]
+        },
         serviceWorker: {
           updatePopup: true // Boolean | Object, 默认值是 undefined.
           // 如果设置为 true, 默认的文本配置将是: 

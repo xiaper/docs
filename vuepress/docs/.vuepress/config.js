@@ -44,6 +44,7 @@ module.exports = {
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
+          { text: '关于', link: '/guide/other/about' },
           {
             text: 'APIs',
             items: [
@@ -64,6 +65,7 @@ module.exports = {
             '/guide/mp',
             '/guide/mini',
             '/guide/other/jmeter',
+            '/guide/other/about',
             '/faq/'
           ],
           // '/guide/other/': [

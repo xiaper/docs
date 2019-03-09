@@ -95,10 +95,10 @@
 ``` bash
 # MySQL 8
 #spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-#spring.datasource.url=jdbc:mysql://127.0.0.1:3306/bytedesk?serverTimezone=GMT%2B8&useUnicode=true&autoReconnect=true&characterEncoding=utf8&useSSL=true
+#spring.datasource.url=jdbc:mysql://127.0.0.1:3306/xiaper?serverTimezone=GMT%2B8&useUnicode=true&autoReconnect=true&characterEncoding=utf8&useSSL=true
 # MySQL 5.7
 #spring.datasource.driver-class-name=com.mysql.jdbc.Driver
-spring.datasource.url=jdbc:mysql://127.0.0.1:3306/bytedesk?autoReconnect=true&characterEncoding=utf8&useSSL=true
+spring.datasource.url=jdbc:mysql://127.0.0.1:3306/xiaper?autoReconnect=true&characterEncoding=utf8&useSSL=true
 spring.datasource.username=root
 spring.datasource.password=
 ```
@@ -176,9 +176,30 @@ wechat.open.componentToken=
 wechat.open.componentAesKey=
 ```
 
-### 导入初始化数据
+### 数据库
+
+* 创建数据库，编码选择：utf8mb4_general_cli
+![create_database](/xiaper.io/create_database.png)
+* 导入初始化数据
 
 ### 运行
+
+直接点击IDEA运行
+
+### 导入数据
+
+因为项目配置文件中配置了
+
+``` bash
+spring.jpa.hibernate.ddl-auto = update
+```
+
+所以会自动生成数据库表，我们只需要导入初始化数据即可
+
+``` SQL
+
+```
+
 
 <!-- 
 ## 其他

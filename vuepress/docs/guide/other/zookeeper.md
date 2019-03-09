@@ -2,7 +2,7 @@
 
 ## Spring Boot 配置文件
 
-首先到[zookeeper](https://zookeeper.apache.org/)下载最新稳定版
+首先到[ZooKeeper](https://zookeeper.apache.org/)下载最新稳定版
 
 ``` bash
 - 端口：2181、36426、8083(管理后台端口，默认8080)
@@ -13,6 +13,6 @@
 ```
 
 ``` bash
-# spring 配置
+# spring 配置, 注意：修改为真实值
 zk.url=127.0.0.1:2181
 ```

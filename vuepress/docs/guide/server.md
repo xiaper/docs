@@ -90,7 +90,7 @@
 
 修改配置参数：
 
-[MySQL](./other/mysql.md)
+数据库：[MySQL](./other/mysql.md)
 
 ``` bash
 # MySQL 8
@@ -103,7 +103,7 @@ spring.datasource.username=root
 spring.datasource.password=
 ```
 
-[Redis](./other/redis.md)
+缓存：[Redis](./other/redis.md)
 
 ``` bash
 # Redis
@@ -129,7 +129,7 @@ spring.redis.password=
 #spring.redis.timeout=0
 ```
 
-[RabbitMQ](./other/rabbitmq.md)
+消息队列：[RabbitMQ](./other/rabbitmq.md)
 
 ``` bash
 # RabbitMQ
@@ -144,14 +144,14 @@ spring.rabbitmq.stomp.login=stomp_web
 spring.rabbitmq.stomp.passcode=stomp_web
 ```
 
-[Zookeeper](./other/zookeeper.md)
+分布式锁：[Zookeeper](./other/zookeeper.md)
 
 ``` bash
-# Zookeeper
+# 注意：修改为真实值
 zk.url=127.0.0.1:2181
 ```
 
-[AliyunOSS](./other/aliyunoss.md)
+上传图片、语音文件等到阿里云，[AliyunOSS](./other/aliyunoss.md)
 
 ``` bash
 # AliyunOSS(可选)
@@ -159,13 +159,33 @@ aliyun.access.key.id=您的osskeyid
 aliyun.access.key.secret=您的osskeysecret
 # 阿里云OSS服务相关配置
 # OSS的endpoint,这里是华南地区(也就是深圳)
-aliyun.oss.endpoint=https://oss-cn-shenzhen.aliyuncs.com
+aliyun.oss.endpoint=您的地址，如：https://oss-cn-shenzhen.aliyuncs.com
 # 需要保留尾部的"/"
-aliyun.oss.base.url=https://bytedesk.oss-cn-shenzhen.aliyuncs.com/
+aliyun.oss.base.url=您的地址：https://bytedesk.oss-cn-shenzhen.aliyuncs.com/
 # 这是创建的bucket
-aliyun.oss.bucket.name=bytedesk
+aliyun.oss.bucket.name=您的bucket,如：bytedesk
 # 这里已经把自己的域名映射到bucket地址了。需要设置域名绑定，设置域名CNAME（暂不使用）
-aliyun.oss.img.domain=oss.bytedesk.com
+aliyun.oss.img.domain=您的bucket域名：oss.bytedesk.com
+```
+
+发送邮件通知，[Email](./other/email.md)
+
+``` bash
+spring.mail.host=smtp.163.com
+#spring.mail.port=25
+spring.mail.username=邮箱地址，如：bytedesk@163.com
+# 授权码，网易邮箱需要用授权码登录
+spring.mail.password=授权码
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.starttls.required=true
+spring.mail.default-encoding=UTF-8
+#SSL证书Socket工厂
+spring.mail.properties.mail.smtp.socketFactory.class=javax.net.ssl.SSLSocketFactory
+#使用SMTPS协议465端口
+spring.mail.properties.mail.smtp.socketFactory.port=465
+#显示在收件人邮箱里面的发件人名称
+spring.mail.self.username=邮箱地址
 ```
 
 ``` bash
@@ -178,9 +198,8 @@ wechat.open.componentAesKey=
 
 ### 数据库
 
-* 创建数据库，编码选择：utf8mb4_general_cli
+创建数据库，编码选择：utf8mb4_general_cli
 ![create_database](/xiaper.io/create_database.png)
-* 导入初始化数据
 
 ### 运行
 
@@ -194,12 +213,11 @@ wechat.open.componentAesKey=
 spring.jpa.hibernate.ddl-auto = update
 ```
 
-所以会自动生成数据库表，我们只需要导入初始化数据即可
+所以会自动生成数据库表，开发者只需要导入初始化数据即可
 
 ``` SQL
 
 ```
-
 
 <!-- 
 ## 其他

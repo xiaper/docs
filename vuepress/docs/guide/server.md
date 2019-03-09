@@ -201,23 +201,15 @@ wechat.open.componentAesKey=
 创建数据库，编码选择：utf8mb4_general_cli
 ![create_database](/xiaper.io/create_database.png)
 
+### 导入数据
+
+* 导入数据库表文件：bytedesk_table.sql
+* 导入初始化数据：bytedesk_data.sql
+
 ### 运行
 
 直接点击IDEA运行
 
-### 导入数据
-
-因为项目配置文件中配置了
-
-``` bash
-spring.jpa.hibernate.ddl-auto = update
-```
-
-所以会自动生成数据库表，开发者只需要导入初始化数据即可
-
-``` SQL
-
-```
 
 <!-- 
 ## 其他

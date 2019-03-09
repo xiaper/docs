@@ -188,6 +188,8 @@ spring.mail.properties.mail.smtp.socketFactory.port=465
 spring.mail.self.username=邮箱地址
 ```
 
+微信开放平台
+
 ``` bash
 # 微信开放平台：第三方平台(可选)
 wechat.open.componentAppId=
@@ -198,13 +200,9 @@ wechat.open.componentAesKey=
 
 ### 数据库
 
-创建数据库，编码选择：utf8mb4_general_cli
+* 创建数据库，编码选择：utf8mb4_general_cli
 ![create_database](/xiaper.io/create_database.png)
-
-### 导入数据
-
-* 导入数据库表文件：bytedesk_table.sql
-* 导入初始化数据：bytedesk_data.sql
+* 初始化数据库, 导入sql文件：[xiaper_mysql.sql](https://github.com/xiaper/server/blob/master/sql/xiaper_mysql.sql)
 
 ### 运行
 

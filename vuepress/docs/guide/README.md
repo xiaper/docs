@@ -80,7 +80,11 @@
 
 ### 全开源免费
 
-代码之前，了无密码。面对开源代码，您可以任意修改和发布。Web/Windows/Mac/小程序端基于Stomp/WebSocket通讯协议，安卓和IOS基于MQTT二进制通讯协议
+代码之前，了无密码。面对开源代码，您可以任意修改和发布。Web/Windows/Mac/小程序端基于Stomp/WebSocket通讯协议，安卓和IOS基于MQTT二进制通讯协议。遇到问题，可以随时求助于强大的开源社区。
+
+### 更安全
+
+基于国际著名的[Signal Protocol](https://signal.org/docs/)开源端到端加密协议。此协议已经被[WhatsApp](https://signal.org/blog/whatsapp-complete/)、[Facebook Messager](https://signal.org/blog/facebook-messenger/) 和 [Google Allo](https://signal.org/blog/allo/)采用。[可选组件]
 
 ### 插件架构
 

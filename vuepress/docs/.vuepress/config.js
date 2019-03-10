@@ -64,6 +64,7 @@ module.exports = {
             '/guide/mac',
             '/guide/mp',
             '/guide/mini',
+            '/guide/other/security',
             '/guide/other/jmeter',
             '/guide/other/about',
             '/faq/'

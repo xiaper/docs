@@ -66,21 +66,22 @@ module.exports = {
             '/guide/mac',
             '/guide/mp',
             '/guide/mini',
-            '/guide/other/security',
-            '/guide/other/jmeter',
+            '/other/security',
+            '/other/jmeter',
             '/faq/'
           ]
         },{
           title: '其他',
           children: [ 
-            '/guide/other/activemq',
-            '/guide/other/mysql',
-            '/guide/other/oracle',
-            '/guide/other/rabbitmq',
-            '/guide/other/redis',
-            '/guide/other/war',
-            '/guide/other/zookeeper',
-            '/guide/other/about'
+            '/other/activemq',
+            '/other/mysql',
+            '/other/nginx',
+            '/other/oracle',
+            '/other/rabbitmq',
+            '/other/redis',
+            '/other/war',
+            '/other/zookeeper',
+            '/other/about'
           ]
         }],
         serviceWorker: {

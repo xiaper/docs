@@ -40,7 +40,6 @@ module.exports = {
         selectText: '选择语言',
         editLinkText: '在 GitHub 上编辑此页',
         lastUpdated: '上次更新',
-        sidebarDepth: 3,
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
@@ -53,8 +52,11 @@ module.exports = {
             ]
           }
         ],
-        sidebar: {
-          '/': [
+        sidebarDepth: 3,
+        sidebar: [{
+          title: '',
+          collapsable: false,
+          children: [
             '/guide/',
             '/guide/server',
             '/guide/ios',
@@ -66,14 +68,21 @@ module.exports = {
             '/guide/mini',
             '/guide/other/security',
             '/guide/other/jmeter',
-            '/guide/other/about',
             '/faq/'
-          ],
-          // '/guide/other/': [
-          //   '/guide/other/mysql',
-          //   '/guide/other/jmeter'
-          // ]
-        },
+          ]
+        },{
+          title: '其他',
+          children: [ 
+            '/guide/other/activemq',
+            '/guide/other/mysql',
+            '/guide/other/oracle',
+            '/guide/other/rabbitmq',
+            '/guide/other/redis',
+            '/guide/other/war',
+            '/guide/other/zookeeper',
+            '/guide/other/about'
+          ]
+        }],
         serviceWorker: {
           updatePopup: true // Boolean | Object, 默认值是 undefined.
           // 如果设置为 true, 默认的文本配置将是: 
@@ -88,12 +97,12 @@ module.exports = {
         selectText: 'Languages',
         editLinkText: 'Edit this page on GitHub',
         lastUpdated: 'Last Updated',
-        sidebarDepth: 3,
         nav: [
           { text: 'Home', link: '/' },
           { text: 'Guide', link: '/guide/' },
           { text: 'External', link: 'https://google.com' },
         ],
+        sidebarDepth: 3,
         sidebar: [
           '/',
           '/en/guide/',

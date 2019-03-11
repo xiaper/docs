@@ -75,3 +75,5 @@ spring.rabbitmq.stomp.port=61613
 spring.rabbitmq.stomp.login=stomp_web
 spring.rabbitmq.stomp.passcode=stomp_web
 ```
+
+## 集群

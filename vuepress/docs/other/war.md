@@ -70,3 +70,4 @@ public class ClusterWebMvcApplication extends SpringBootServletInitializer imple
 - [Create a Deployable War File](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-traditional-deployment.html)
 - [Deploying a WAR to WebLogic](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-traditional-deployment.html#howto-weblogic)
 - [Spring Boot on Oracle WebLogic Server 12](http://www.virtual7.de/blog/2016/07/oracle-weblogic-server-spring-boot/)
+- [WebLogic 12.1.3 and Spring Boot 2.x](https://medium.com/@agrawal.tushar/weblogic-12-1-3-and-spring-boot-2-x-ea0461bab47c)

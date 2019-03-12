@@ -10,15 +10,15 @@
 ## 准备
 
 * Linux
-* [Nginx](/other/nginx.md)
-* [MySQL](/other/mysql.md)
-* [Oracle](/other/oracle.md)
-* [Redis](/other/redis.md)
-* [Mongo](/other/mongo.md)
-* [RabbitMQ](/other/rabbitmq.md)
-* [ActiveMQ](/other/activemq.md)
-* [Zookeeper](/other/zookeeper.md)
-* [AliyunOSS](/other/aliyunoss.md)
+* [Nginx](/component/nginx.md)
+* [MySQL](/component/mysql.md)
+* [Oracle](/component/oracle.md)
+* [Redis](/component/redis.md)
+* [Mongo](/component/mongo.md)
+* [RabbitMQ](/component/rabbitmq.md)
+* [ActiveMQ](/component/activemq.md)
+* [Zookeeper](/component/zookeeper.md)
+* [AliyunOSS](/component/aliyunoss.md)
 
 ::: tip 提示
 
@@ -90,7 +90,7 @@
 
 修改配置参数：
 
-数据库：[MySQL](./other/mysql.md)
+数据库：[MySQL](./component/mysql.md)
 
 ``` bash
 # MySQL 8
@@ -103,7 +103,7 @@ spring.datasource.username=root
 spring.datasource.password=
 ```
 
-缓存：[Redis](./other/redis.md)
+缓存：[Redis](./component/redis.md)
 
 ``` bash
 # Redis
@@ -129,7 +129,7 @@ spring.redis.password=
 #spring.redis.timeout=0
 ```
 
-消息队列：[RabbitMQ](./other/rabbitmq.md)
+消息队列：[RabbitMQ](./component/rabbitmq.md)
 
 ``` bash
 # RabbitMQ
@@ -144,14 +144,14 @@ spring.rabbitmq.stomp.login=stomp_web
 spring.rabbitmq.stomp.passcode=stomp_web
 ```
 
-分布式锁：[Zookeeper](./other/zookeeper.md)
+分布式锁：[Zookeeper](./component/zookeeper.md)
 
 ``` bash
 # 注意：修改为真实值
 zk.url=127.0.0.1:2181
 ```
 
-上传图片、语音文件等到阿里云，[AliyunOSS](./other/aliyunoss.md)
+上传图片、语音文件等到阿里云，[AliyunOSS](./component/aliyunoss.md)
 
 ``` bash
 # AliyunOSS(可选)
@@ -168,7 +168,7 @@ aliyun.oss.bucket.name=您的bucket,如：bytedesk
 aliyun.oss.img.domain=您的bucket域名：oss.bytedesk.com
 ```
 
-发送邮件通知，[Email](./other/email.md)
+发送邮件通知，[Email](./component/email.md)
 
 ``` bash
 spring.mail.host=smtp.163.com

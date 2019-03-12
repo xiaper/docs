@@ -79,7 +79,6 @@ module.exports = {
             '/component/oracle',
             '/component/rabbitmq',
             '/component/redis',
-            '/component/war',
             '/component/zookeeper'
           ]
         },{
@@ -95,6 +94,7 @@ module.exports = {
           title: '其他',
           children: [ 
             '/other/protobuf',
+            '/other/war',
             '/other/about',
             '/faq/'
           ]

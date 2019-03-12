@@ -1,6 +1,6 @@
 # Redis
 
-## 配置(可选)
+## 安装
 
 ``` bash
 # 安装redis：
@@ -10,6 +10,41 @@ vi /etc/redis/redis.conf
 # 取消注释：requirepass foobared，修改密码： requirepass 你的密码
 # 远程访问：添加注释 bind 127.0.0.1 ::1
 # 重启: service redis restart
+```
+
+## 配置
+
+``` bash
+# Spring Boot自带缓存
+#spring.cache.type=Simple
+# 禁用缓存
+#spring.cache.type=None
+# redis缓存
+spring.cache.type=Redis
+#
+spring.redis.database=2
+# Redis服务器地址
+spring.redis.host=127.0.0.1
+# Redis服务器连接端口
+spring.redis.port=6379
+# Redis服务器连接密码（默认为空）
+spring.redis.password=
+# 连接池最大连接数（使用负值表示没有限制）
+#spring.redis.pool.max-active=8
+# 连接池最大阻塞等待时间（使用负值表示没有限制）
+#spring.redis.pool.max-wait=-1
+# 连接池中的最大空闲连接
+#spring.redis.pool.max-idle=8
+# 连接池中的最小空闲连接
+#spring.redis.pool.min-idle=0
+# 连接超时时间（毫秒）
+#spring.redis.timeout=0
+```
+
+## 集群
+
+``` bash
+
 ```
 
 ## 客户端

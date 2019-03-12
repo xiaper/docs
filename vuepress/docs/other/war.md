@@ -2,9 +2,11 @@
 
 ## 打包
 
+需要修改三处，首先给ClusterWebMvcApplication添加继承SpringBootServletInitializer，并重写configure函数，如下：
+
 ``` java
 @SpringBootApplication
-public class Application extends SpringBootServletInitializer {
+public class ClusterWebMvcApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
@@ -17,9 +19,13 @@ public class Application extends SpringBootServletInitializer {
 }
 ```
 
+其次，修改pom.xml打包格式为war
+
 ``` java
 <packaging>war</packaging>
 ```
+
+最后，添加 spring-boot-starter-tomcat 依赖，特别注意 scope 为 provided
 
 ``` java
 <dependencies>
@@ -33,8 +39,9 @@ public class Application extends SpringBootServletInitializer {
 </dependencies>
 ```
 
-
 ## 部署到WebLogic
+
+在上一步的基础之上，ClusterWebMvcApplication 实现接口 WebApplicationInitializer
 
 ``` java
 public class ClusterWebMvcApplication extends SpringBootServletInitializer implements WebApplicationInitializer {
@@ -46,7 +53,7 @@ public class ClusterWebMvcApplication extends SpringBootServletInitializer imple
 
   @Override
   protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-    return application.sources(ClusterWebMvcApplication.class); 
+    return application.sources(ClusterWebMvcApplication.class);
   }
 
   public static void main(String[] args) {
@@ -54,6 +61,9 @@ public class ClusterWebMvcApplication extends SpringBootServletInitializer imple
   }
 }
 ```
+
+## 注意
+
 
 ## 参考
 

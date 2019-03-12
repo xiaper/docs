@@ -4,10 +4,6 @@
 
 ## 配置(可选)
 
-- [Docker](https://hub.docker.com/_/mysql)
-- [官方指南](https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/)
-- [下载](https://dev.mysql.com/downloads/repo/apt/)
-
 ``` bash
 - sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
 - sudo apt-get update
@@ -49,4 +45,7 @@ spring.datasource.jndi-name=java:jdbc/mysql
 
 ## 参考
 
+- [Docker](https://hub.docker.com/_/mysql)
+- [官方指南](https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/)
+- [下载](https://dev.mysql.com/downloads/repo/apt/)
 - [Connection to a JNDI DataSource](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html#boot-features-connecting-to-a-jndi-datasource)

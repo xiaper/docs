@@ -10,15 +10,15 @@
 ## 准备
 
 * Linux
-* [Nginx](./other/nginx.md)
-* [MySQL](./other/mysql.md)
-* [Oracle](./other/oracle.md)
-* [Redis](./other/redis.md)
-* [Mongo](./other/mongo.md)
-* [RabbitMQ](./other/rabbitmq.md)
-* [ActiveMQ](./other/activemq.md)
-* [Zookeeper](./other/zookeeper.md)
-* [AliyunOSS](./other/aliyunoss.md)
+* [Nginx](/other/nginx.md)
+* [MySQL](/other/mysql.md)
+* [Oracle](/other/oracle.md)
+* [Redis](/other/redis.md)
+* [Mongo](/other/mongo.md)
+* [RabbitMQ](/other/rabbitmq.md)
+* [ActiveMQ](/other/activemq.md)
+* [Zookeeper](/other/zookeeper.md)
+* [AliyunOSS](/other/aliyunoss.md)
 
 ::: tip 提示
 

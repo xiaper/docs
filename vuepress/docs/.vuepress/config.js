@@ -43,7 +43,7 @@ module.exports = {
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
-          { text: '关于', link: '/guide/other/about' },
+          { text: '关于', link: '/other/about' },
           {
             text: 'APIs',
             items: [
@@ -66,22 +66,37 @@ module.exports = {
             '/guide/mac',
             '/guide/mp',
             '/guide/mini',
-            '/other/security',
-            '/other/jmeter',
-            '/faq/'
+            '/guide/webrtc',
+            '/guide/security',
+            '/guide/jmeter'
+          ]
+        },{
+          title: '组件',
+          children: [ 
+            '/component/activemq',
+            '/component/mysql',
+            '/component/nginx',
+            '/component/oracle',
+            '/component/rabbitmq',
+            '/component/redis',
+            '/component/war',
+            '/component/zookeeper'
+          ]
+        },{
+          title: '通信协议',
+          children: [ 
+            '/protocol/mqtt',
+            '/protocol/socket.io',
+            '/protocol/stomp',
+            '/protocol/websocket',
+            '/protocol/xmpp'
           ]
         },{
           title: '其他',
           children: [ 
-            '/other/activemq',
-            '/other/mysql',
-            '/other/nginx',
-            '/other/oracle',
-            '/other/rabbitmq',
-            '/other/redis',
-            '/other/war',
-            '/other/zookeeper',
-            '/other/about'
+            '/other/protobuf',
+            '/other/about',
+            '/faq/'
           ]
         }],
         serviceWorker: {

@@ -1,5 +1,9 @@
 # RabbitMQ
 
+::: tip 提示
+ActiveMQ 和 RabbitMQ 二选其一
+:::
+
 ## 配置
 
 ``` bash

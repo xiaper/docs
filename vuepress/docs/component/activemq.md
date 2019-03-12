@@ -1,5 +1,9 @@
 # ActiveMQ
 
+::: tip 提示
+ActiveMQ 和 RabbitMQ 二选其一
+:::
+
 ## 配置
 
 连接单台服务器

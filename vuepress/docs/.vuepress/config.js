@@ -95,6 +95,7 @@ module.exports = {
           children: [ 
             '/other/protobuf',
             '/other/war',
+            '/other/elk',
             '/other/about',
             '/faq/'
           ]

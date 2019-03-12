@@ -1,5 +1,9 @@
 # Oracle
 
+::: tip 提示
+MySQL 和 Oracle 二选其一
+:::
+
 ## Spring Boot 配置
 
 pom.xml添加配置:

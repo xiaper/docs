@@ -19,6 +19,7 @@
 * [ActiveMQ](/component/activemq.md)
 * [Zookeeper](/component/zookeeper.md)
 * [AliyunOSS](/component/aliyunoss.md)
+* [ELK](/other/elk.md)
 
 ::: tip 提示
 

@@ -44,11 +44,23 @@ spring.redis.password=
 ## 集群
 
 ``` bash
-
+#最大等待时间
+spring.redis.jedis.pool.max-wait=1000ms
+#最小空闲数量
+spring.redis.jedis.pool.min-idle=1
+#最大空闲数量
+spring.redis.jedis.pool.max-idle=10
+#最大连接数量
+spring.redis.jedis.pool.max-active=1000
+#逗号分隔
+spring.redis.cluster.nodes=192.168.0.159:7001,192.168.0.159:7002
 ```
 
-## 客户端
+<!-- TODO:如何搭建redis集群 -->
+
+## 参考
 
 - [phpRedisAdmin](https://github.com/erikdubbelboer/phpRedisAdmin)
 - [RedisDesktopManager Windows](https://www.daxiblog.com/redis%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7redisdesktopmanager-0-9-9-%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD/)
 - [RedisDesktopManager Mac](https://github.com/onewe/RedisDesktopManager-Mac/releases/tag/0.9.9)
+- [Redis cluster tutorial](https://redis.io/topics/cluster-tutorial)

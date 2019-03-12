@@ -39,3 +39,14 @@ spring.datasource.username=root
 spring.datasource.password=你的密码
 ```
 
+## 支持JNDI数据源
+
+如果想使用Tomcat或者WebLogic的数据源，则不需要配置`spring.datasource.url`等参数，只需要配置`spring.datasource.jndi-name`为JNDI的name即可，如：
+
+``` bash
+spring.datasource.jndi-name=java:jdbc/mysql
+```
+
+## 参考
+
+- [Connection to a JNDI DataSource](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html#boot-features-connecting-to-a-jndi-datasource)

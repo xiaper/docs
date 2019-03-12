@@ -51,29 +51,26 @@
 
 ```
 
-## 阿里云后台添加安全组访问端口号
-
-``` bash
-- 5672  rabbitmq-service
-- 61613 rabbitmq-stomp
-- 1883  rabbitmq-mqtt
-- 15672 rabbitmq-web
-- 3306  mysql
-- 6379  redis
-- 2181  zookeeper
-```
-
 ## Spring Boot 配置文件
 
 ``` bash
-为演示方便，在此我们仅配置单台
+#
 spring.rabbitmq.host=127.0.0.1
 spring.rabbitmq.port=5672
 spring.rabbitmq.username=你的用户名
 spring.rabbitmq.password=你的密码
+#
 spring.rabbitmq.stomp.port=61613
 spring.rabbitmq.stomp.login=stomp_web
 spring.rabbitmq.stomp.passcode=stomp_web
 ```
 
 ## 集群
+
+``` bash
+spring.rabbitmq.addresses=127.0.0.1:5672,127.0.0.2:5672,127.0.0.3:5672
+```
+
+<!-- TODO:如何搭建rabitmq集群 -->
+
+## 参考

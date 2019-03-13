@@ -50,13 +50,14 @@ core characteristic of good encryption: even the people who design and deploy it
 
 ## 原理
 
-
+TODO
 
 ## 参考
 
 - [Signal Protocol](https://signal.org/docs/)
 - [Signal Protocal Wiki](https://en.wikipedia.org/wiki/Signal_Protocol)
 - [Signal Github](https://github.com/signalapp)
+- [Signal Protocol library for Java/Android](https://github.com/signalapp/libsignal-protocol-java)
 - [移动端安全通信的利器——端到端加密（E2EE）技术详解](http://www.52im.net/thread-764-1-1.html)
 - [Facebook Messenger deploys Signal Protocol for end-to-end encryption](https://signal.org/blog/facebook-messenger/)
 - [WhatsApp's Signal Protocol integration is now complete](https://signal.org/blog/whatsapp-complete/)

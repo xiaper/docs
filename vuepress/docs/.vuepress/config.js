@@ -67,7 +67,6 @@ module.exports = {
             '/guide/mp',
             '/guide/mini',
             '/guide/webrtc',
-            '/guide/security',
             '/guide/jmeter'
           ]
         },{
@@ -93,9 +92,11 @@ module.exports = {
         },{
           title: '其他',
           children: [ 
+            '/other/microservice',
+            '/other/elk',
             '/other/protobuf',
             '/other/war',
-            '/other/elk',
+            '/other/security',
             '/other/about',
             '/faq/'
           ]

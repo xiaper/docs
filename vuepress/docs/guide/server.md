@@ -62,10 +62,10 @@
 ::: tip 提示
 支持多种部署方式，可任选其一
 
-* Jar
-* War
-* Maven
-* Docker
+* Jar：支持直接运行jar
+* War：支持war包放到Tomcat/WebLogic等容器中
+* Maven：支持将虾婆通过maven或gradle方式集成到现有项目中
+* Docker：支持docker部署
 :::
 
 <!-- TODO: ### 源码 -->
@@ -201,7 +201,7 @@ wechat.open.componentAesKey=
 
 ### 数据库
 
-* 创建数据库，编码选择：utf8mb4_general_cli
+* 创建数据库，编码选择：utf8mb4_unicode_cli
 ![create_database](/xiaper.io/create_database.png)
 * 初始化数据库, 导入sql文件：[xiaper_mysql.sql](https://github.com/xiaper/server/blob/master/sql/xiaper_mysql.sql)
 

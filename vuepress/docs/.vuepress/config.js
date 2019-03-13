@@ -78,7 +78,8 @@ module.exports = {
             '/component/oracle',
             '/component/rabbitmq',
             '/component/redis',
-            '/component/zookeeper'
+            '/component/zookeeper',
+            '/component/quartz'
           ]
         },{
           title: '通信协议',

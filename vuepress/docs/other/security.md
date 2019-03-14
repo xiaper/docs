@@ -72,7 +72,7 @@ TODO
 - [Tox Clients](https://tox.chat/clients.html#qtox)
 - [安全的即时通讯——基于分布式系统的Tox](https://zhuanlan.zhihu.com/p/34477792)
 - [Telegram MTProto](https://core.telegram.org/mtproto)
-- [通俗易懂：一篇掌握即时通讯的消息传输安全原理](https://juejin.im/entry/598e73b9f265da3e3d125b88)
 - [Using The Signal Protocol Library](https://open-whisper-systems.readme.io/docs/textsecure-java-library)
 - [Signal: A Quick and Dirty demo](https://medium.com/@lvijay/signal-a-quick-and-dirty-demo-eca47d76d4f3)
 - [signal-protocol Javascript npm](https://www.npmjs.com/package/signal-protocol)
+- [Advanced cryptographic ratcheting](https://signal.org/blog/advanced-ratcheting/)

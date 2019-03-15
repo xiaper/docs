@@ -98,6 +98,7 @@ module.exports = {
             '/other/protobuf',
             '/other/war',
             '/other/security',
+            '/other/push',
             '/other/about',
             '/faq/'
           ]

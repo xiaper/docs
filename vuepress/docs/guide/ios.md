@@ -51,6 +51,33 @@ pod 'bytedesk-core'
 
 ### 注册
 
+* 普通用户注册
+
+``` bash
+[BDCoreApis registerUser:@"username" 
+            withNickname:@"nickname" 
+            withPassword:@"password" 
+  resultSuccess:^(NSDictionary *dict) {
+    //
+    NSString *message = dict[@"message"];
+    NSNumber *status_code = dict[@"status_code"];
+    if ([status_code isEqualToNumber:[NSNumber numberWithInt:200]]) {
+      // 注册成功
+    } else {
+      // 注册失败
+    }
+  } resultFailed:^(NSError *error) {
+    NSLog(@"%s, %@", __PRETTY_FUNCTION__, error);
+}];
+```
+
+* 多租户用户注册
+
+``` bash
+```
+
+* 自定义UID用户注册
+
 ``` bash
 ```
 
@@ -62,6 +89,18 @@ pod 'bytedesk-core'
 ```
 
 * 用户名登录
+
+``` bash
+```
+
+* 建立长连接
+
+后台切换前台
+
+``` bash
+```
+
+* 监听长连接状态
 
 ``` bash
 ```

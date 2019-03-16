@@ -54,13 +54,23 @@ pod 'bytedesk-core'
 * 普通用户注册
 
 ``` bash
+/**
+ 普通用户注册
+
+ @param username 用户名
+ @param nickname 昵称
+ @param password 密码
+ @param success 成功回调
+ @param failed 失败回调
+ */
 [BDCoreApis registerUser:@"username" 
             withNickname:@"nickname" 
             withPassword:@"password" 
   resultSuccess:^(NSDictionary *dict) {
-    //
+    // 提示内容
     NSString *message = dict[@"message"];
     NSNumber *status_code = dict[@"status_code"];
+    // 状态码 200 代表成功
     if ([status_code isEqualToNumber:[NSNumber numberWithInt:200]]) {
       // 注册成功
     } else {
@@ -114,7 +124,7 @@ pod 'bytedesk-core'
 
 单聊、群聊、客服会话
 
-* 加载列表
+* 加载
 
 ``` bash
 ```

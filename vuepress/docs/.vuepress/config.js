@@ -43,14 +43,14 @@ module.exports = {
         nav: [
           { text: '首页', link: '/' },
           { text: '指南', link: '/guide/' },
-          { text: '关于', link: '/other/about' },
-          {
-            text: 'APIs',
-            items: [
-              { text: 'web', link: 'http://www.xiaper.io/apis/web' },
-              { text: '安卓', link: 'http://www.xiaper.io/apis/android' }
-            ]
-          }
+          { text: '关于', link: '/other/about' }
+          // {
+          //   text: 'APIs',
+          //   items: [
+          //     { text: 'web', link: 'http://www.xiaper.io/apis/web' },
+          //     { text: '安卓', link: 'http://www.xiaper.io/apis/android' }
+          //   ]
+          // }
         ],
         sidebarDepth: 3,
         sidebar: [{

@@ -276,3 +276,4 @@
 ## 参考
 
 * [Alice & Bob](http://cryptocouple.com/)
+* [虾婆 安卓 Demo](https://github.com/xiaper/android)

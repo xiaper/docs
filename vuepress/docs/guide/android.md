@@ -1,4 +1,4 @@
-# 安卓
+# Android
 
 ::: tip 提示
 示例基于两个用户 [Alice And Bob](https://en.wikipedia.org/wiki/Alice_and_Bob)

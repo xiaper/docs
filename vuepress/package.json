@@ -1,7 +1,7 @@
 {
-  "name": "admin",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
+  "name": "jackning",
+  "version": "1.0.1",
+  "description": "Enterprise OpenSource IM Solution",
   "author": "jackning <270580156@qq.com>",
   "private": true,
   "scripts": {

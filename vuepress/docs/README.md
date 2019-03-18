@@ -11,6 +11,12 @@ features:
 - title: 分布式/微服务
   details: 支持分布式部署。基于Spring Boot/Cloud架构
 - title: 高性能
-  details: 支持亿级连接，百万级并发
+  details: 致力于打造高并发架构，支持分布式集群部署，避免单点故障
+- title: IM
+  details: 提供IM相关接口，如发送文本消息、图片消息、语音消息等，支持单聊和群聊
+- title: 在线客服
+  details: 提供客服工作组会话、指定坐席会话、统计数据查询导出等众多在线客服相关接口
+- title: 全开源免费
+  details: 代码之前，了无密码。面对开源代码，您可以任意修改和发布
 footer: MIT-Licensed | Copyright ©2013~2019 Jack Ning | 270580156@qq.com
 ---

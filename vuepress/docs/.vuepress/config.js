@@ -51,61 +51,68 @@ module.exports = {
               { text: 'Android', link: '/api/android' },
               { text: 'Web', link: '/api/web' },
               { text: 'Mac', link: '/api/mac' },
-              { text: 'Windows', link: '/api/windows' }
+              { text: 'Windows', link: '/api/windows' },
+              { text: 'MiniProgram', link: '/api/mini' }
             ]
           }
         ],
         sidebarDepth: 3,
-        sidebar: [{
-          title: '',
-          collapsable: false,
-          children: [
-            '/guide/',
-            '/guide/server',
-            '/guide/ios',
-            '/guide/android',
-            '/guide/web',
-            '/guide/windows',
-            '/guide/mac',
-            '/guide/mp',
-            '/guide/mini',
-            '/guide/webrtc',
-            '/guide/jmeter'
-          ]
-        },{
-          title: '组件',
-          children: [ 
-            '/component/activemq',
-            '/component/mysql',
-            '/component/nginx',
-            '/component/oracle',
-            '/component/rabbitmq',
-            '/component/redis',
-            '/component/zookeeper',
-            '/component/quartz'
-          ]
-        },{
-          title: '通信协议',
-          children: [ 
-            '/protocol/mqtt',
-            '/protocol/socket.io',
-            '/protocol/stomp',
-            '/protocol/websocket',
-            '/protocol/xmpp'
-          ]
-        },{
-          title: '其他',
-          children: [ 
-            '/other/microservice',
-            '/other/elk',
-            '/other/protobuf',
-            '/other/war',
-            '/other/security',
-            '/other/push',
-            '/other/about',
-            '/faq/'
-          ]
-        }],
+        sidebar: {
+          '/': [{
+            title: '',
+            collapsable: false,
+            children: [
+              '/guide/',
+              '/guide/server',
+              '/guide/ios',
+              '/guide/android',
+              '/guide/web',
+              '/guide/windows',
+              '/guide/mac',
+              '/guide/mp',
+              '/guide/mini',
+              '/guide/webrtc',
+              '/guide/jmeter'
+            ]
+          },{
+            title: '组件',
+            children: [ 
+              '/component/activemq',
+              '/component/mysql',
+              '/component/nginx',
+              '/component/oracle',
+              '/component/rabbitmq',
+              '/component/redis',
+              '/component/zookeeper',
+              '/component/quartz'
+            ]
+          },{
+            title: '通信协议',
+            children: [ 
+              '/protocol/mqtt',
+              '/protocol/socket.io',
+              '/protocol/stomp',
+              '/protocol/websocket',
+              '/protocol/xmpp'
+            ]
+          },{
+            title: '其他',
+            children: [ 
+              '/other/microservice',
+              '/other/elk',
+              '/other/protobuf',
+              '/other/war',
+              '/other/security',
+              '/other/push',
+              '/other/about',
+              '/faq/'
+            ]
+          }]
+          // '/api/': [
+          //   '/api/ios',
+          //   '/api/android'
+          // ]
+        },
         serviceWorker: {
           updatePopup: true // Boolean | Object, 默认值是 undefined.
           // 如果设置为 true, 默认的文本配置将是: 

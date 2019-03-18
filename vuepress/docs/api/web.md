@@ -1,3 +1,8 @@
+---
+sidebarDepth: 3
+sidebar: auto
+---
+
 # Web/H5
 
 ## 接口文档

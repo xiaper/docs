@@ -1,3 +1,8 @@
+---
+sidebarDepth: 3
+sidebar: auto
+---
+
 # iOS
 
 ## 接口文档

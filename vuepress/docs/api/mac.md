@@ -1,3 +1,8 @@
+---
+sidebarDepth: 3
+sidebar: auto
+---
+
 # Mac
 
 ## 接口文档

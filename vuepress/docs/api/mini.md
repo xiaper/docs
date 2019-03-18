@@ -3,7 +3,7 @@ sidebarDepth: 3
 sidebar: auto
 ---
 
-# Windows
+# Mini Program
 
 ## 接口文档
 

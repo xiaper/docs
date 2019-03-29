@@ -18,5 +18,5 @@ features:
   details: 提供客服工作组会话、指定坐席会话、统计数据查询导出等众多在线客服相关接口
 - title: 全开源免费
   details: 代码之前，了无密码。面对开源代码，您可以任意修改和发布
-footer: MIT-Licensed | Copyright ©2013~2019 Jack Ning | 270580156@qq.com
+footer: Copyright ©2013~2019 Jack Ning | 270580156@qq.com
 ---

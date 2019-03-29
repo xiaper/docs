@@ -91,7 +91,7 @@
 
 修改配置参数：
 
-数据库：[MySQL](./component/mysql.md)
+数据库：[MySQL](../component/mysql.md)
 
 ``` bash
 # MySQL 8
@@ -104,7 +104,7 @@ spring.datasource.username=root
 spring.datasource.password=
 ```
 
-缓存：[Redis](./component/redis.md)
+缓存：[Redis](../component/redis.md)
 
 ``` bash
 # Redis
@@ -130,7 +130,7 @@ spring.redis.password=
 #spring.redis.timeout=0
 ```
 
-消息队列：[RabbitMQ](./component/rabbitmq.md)
+消息队列：[RabbitMQ](../component/rabbitmq.md)
 
 ``` bash
 # RabbitMQ
@@ -145,14 +145,14 @@ spring.rabbitmq.stomp.login=stomp_web
 spring.rabbitmq.stomp.passcode=stomp_web
 ```
 
-分布式锁：[Zookeeper](./component/zookeeper.md)
+分布式锁：[Zookeeper](../component/zookeeper.md)
 
 ``` bash
 # 注意：修改为真实值
 zk.url=127.0.0.1:2181
 ```
 
-上传图片、语音文件等到阿里云，[AliyunOSS](./component/aliyunoss.md)
+上传图片、语音文件等到阿里云，[AliyunOSS](../component/aliyunoss.md)
 
 ``` bash
 # AliyunOSS(可选)
@@ -169,7 +169,7 @@ aliyun.oss.bucket.name=您的bucket,如：bytedesk
 aliyun.oss.img.domain=您的bucket域名：oss.bytedesk.com
 ```
 
-发送邮件通知，[Email](./component/email.md)
+发送邮件通知，[Email](../component/email.md)
 
 ``` bash
 spring.mail.host=smtp.163.com
@@ -201,7 +201,7 @@ wechat.open.componentAesKey=
 
 ### 数据库
 
-* 创建数据库，编码选择：utf8mb4_unicode_cli
+* 创建数据库，可自定义数据库名，编码选择：utf8mb4_unicode_cli，例如：
 ![create_database](/xiaper.io/create_database.png)
 * 初始化数据库, 导入sql文件：[xiaper_mysql.sql](https://github.com/xiaper/server/blob/master/sql/xiaper_mysql.sql)
 

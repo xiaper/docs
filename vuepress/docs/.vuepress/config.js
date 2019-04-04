@@ -106,6 +106,7 @@ module.exports = {
               '/other/war',
               '/other/security',
               '/other/push',
+              '/other/taboo',
               '/other/about',
               '/faq/'
             ]

@@ -55,7 +55,7 @@
 * 大型企业
 ![微服务架构2](/xiaper.io/architechture-service2.png)
 
-## 部署
+<!-- ## 部署 -->
 
 单体架构不推荐，分布式架构和微服务架构整体类似，我们下文主要以讲解分布式架构为主。
 
@@ -65,7 +65,7 @@
 * Jar：支持直接运行jar
 * War：支持war包放到Tomcat/WebLogic等容器中
 * Maven：支持将虾婆通过maven或gradle方式集成到现有项目中
-* Docker：支持docker部署
+* Docker：支持docker部署 TODO
 :::
 
 <!-- TODO: ### 源码 -->
@@ -73,141 +73,155 @@
 <!-- TODO: ### Docker -->
 <!-- TODO:开发vuepress插件：支持客服和聊天 -->
 
-### 配置
+### 单体部署
 
-::: tip 提示
+#### [下载](https://github.com/Bytedesk/bytedesk-server/releases)
 
-* 默认开发工具使用IntelliJ IDEA, 您也可以使用Spring Tool Suite或者Eclipse，根据您的喜好
-* 基于Maven作为项目管理工具
-:::
+#### 解压
 
-<!-- 
-首先到[starter](https://start.spring.io/)创建初始化Maven项目, 如图：
-![start-spring-project](/xiaper.io/start-spring-project.jpg) 
--->
-
-首先到[Github](https://github.com/xiaper/server)下载Server，然后用IDEA打开。找到application-dev.properties文件，如图：
-<img :src="$withBase('/application-dev.jpg')" style="width:350px;"/>
-
-修改配置参数：
-
-数据库：[MySQL](../component/mysql.md)
+目录结构
 
 ``` bash
-# MySQL 8
-#spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-#spring.datasource.url=jdbc:mysql://127.0.0.1:3306/xiaper?serverTimezone=GMT%2B8&useUnicode=true&autoReconnect=true&characterEncoding=utf8&useSSL=true
-# MySQL 5.7
+.
+├─ README.md
+├─ config
+│  └─ application.properties
+├─ start.sh
+└─ xiaper-spring-boot-sample-webmvc-2.1.5-SNAPSHOT.jar
+```
+
+#### 修改配置config/application.properties，将以下值均修改为自定义服务器配置
+
+* MySQL
+
+``` bash
+# mysql 5.7
 #spring.datasource.driver-class-name=com.mysql.jdbc.Driver
-spring.datasource.url=jdbc:mysql://127.0.0.1:3306/xiaper?autoReconnect=true&characterEncoding=utf8&useSSL=true
+spring.datasource.url=jdbc:mysql://localhost:3306/数据库名?autoReconnect=true&characterEncoding=utf8&useSSL=true&serverTimezone=GMT%2B8
 spring.datasource.username=root
 spring.datasource.password=
 ```
 
-缓存：[Redis](../component/redis.md)
+* Redis
 
 ``` bash
-# Redis
 # redis缓存
 spring.cache.type=Redis
-#
-spring.redis.database=1
+spring.redis.database=0
 # Redis服务器地址
-spring.redis.host=127.0.0.1
+spring.redis.host=
 # Redis服务器连接端口
 spring.redis.port=6379
 # Redis服务器连接密码（默认为空）
 spring.redis.password=
-# 连接池最大连接数（使用负值表示没有限制）
-#spring.redis.pool.max-active=8
-# 连接池最大阻塞等待时间（使用负值表示没有限制）
-#spring.redis.pool.max-wait=-1
-# 连接池中的最大空闲连接
-#spring.redis.pool.max-idle=8
-# 连接池中的最小空闲连接
-#spring.redis.pool.min-idle=0
-# 连接超时时间（毫秒）
-#spring.redis.timeout=0
 ```
 
-消息队列：[RabbitMQ](../component/rabbitmq.md)
+* 上传文件
+
+支持服务器本地存储、阿里云OSS、腾讯云对象存储三种存储方式，其中本地存储不支持集群，下面说明以腾讯云为例
 
 ``` bash
-# RabbitMQ
+# 腾讯云cos
+upload.type=tencent
+# 创建bucket并需要在此bucket下创建文件夹：apns/development(二级文件夹), apns/production(二级文件夹), avatars, images, voices, files
+# 存储桶所属地域
+tencent.bucket.location=
+# 存储桶名称
+tencent.bucket.name=
+# 访问域名
+tencent.bucket.domain=
+
+#API密钥管理获取
+tencent.appid=
+tencent.secretid=
+tencent.secretkey=
+```
+
+* RabbitMQ
+
+``` bash
 spring.rabbitmq.host=127.0.0.1
 spring.rabbitmq.port=5672
-# 自行创建管理员账号
-spring.rabbitmq.username=管理员用户名
-spring.rabbitmq.password=管理员密码
+spring.rabbitmq.username=用户名
+spring.rabbitmq.password=密码
 spring.rabbitmq.stomp.port=61613
-# 自行创建访客账号
 spring.rabbitmq.stomp.login=stomp_web
 spring.rabbitmq.stomp.passcode=stomp_web
 ```
 
-分布式锁：[Zookeeper](../component/zookeeper.md)
+* ZooKeeper
 
 ``` bash
-# 注意：修改为真实值
 zk.url=127.0.0.1:2181
 ```
 
-上传图片、语音文件等到阿里云，[AliyunOSS](../component/aliyunoss.md)
+* 上传到服务器
+* 修改start.sh权限为可执行权限，如：
 
 ``` bash
-# AliyunOSS(可选)
-aliyun.access.key.id=您的osskeyid
-aliyun.access.key.secret=您的osskeysecret
-# 阿里云OSS服务相关配置
-# OSS的endpoint,这里是华南地区(也就是深圳)
-aliyun.oss.endpoint=您的地址，如：https://oss-cn-shenzhen.aliyuncs.com
-# 需要保留尾部的"/"
-aliyun.oss.base.url=您的地址：https://bytedesk.oss-cn-shenzhen.aliyuncs.com/
-# 这是创建的bucket
-aliyun.oss.bucket.name=您的bucket,如：bytedesk
-# 这里已经把自己的域名映射到bucket地址了。需要设置域名绑定，设置域名CNAME（暂不使用）
-aliyun.oss.img.domain=您的bucket域名：oss.bytedesk.com
+chmod 777 start.sh
 ```
 
-发送邮件通知，[Email](../component/email.md)
+* 启动：
 
 ``` bash
-spring.mail.host=smtp.163.com
-#spring.mail.port=25
-spring.mail.username=邮箱地址，如：bytedesk@163.com
-# 授权码，网易邮箱需要用授权码登录
-spring.mail.password=授权码
-spring.mail.properties.mail.smtp.auth=true
-spring.mail.properties.mail.smtp.starttls.enable=true
-spring.mail.properties.mail.smtp.starttls.required=true
-spring.mail.default-encoding=UTF-8
-#SSL证书Socket工厂
-spring.mail.properties.mail.smtp.socketFactory.class=javax.net.ssl.SSLSocketFactory
-#使用SMTPS协议465端口
-spring.mail.properties.mail.smtp.socketFactory.port=465
-#显示在收件人邮箱里面的发件人名称
-spring.mail.self.username=邮箱地址
+./start.sh
 ```
 
-微信开放平台
+* 查看是否启动成功
 
 ``` bash
-# 微信开放平台：第三方平台(可选)
-wechat.open.componentAppId=
-wechat.open.componentSecret=
-wechat.open.componentToken=
-wechat.open.componentAesKey=
+方法1：
+  等待5分钟后，执行 netstat -ntlp, 查看8000端口号是否启动，如有，则启动成功
+
+方法2：
+  浏览器中输入 http://ip:8000/hello 查看是否有返回，如有，则启动成功
+
+其中：ip为此台服务器地址
 ```
 
-### 数据库
+#### 修改nginx负载均衡配置，指向此服务器地址
 
-* 创建数据库，可自定义数据库名，编码选择：utf8mb4_unicode_cli，例如：
-![create_database](/xiaper.io/create_database.png)
-* 初始化数据库, 导入sql文件：[xiaper_mysql.sql](https://github.com/xiaper/server/blob/master/sql/xiaper_mysql.sql)
+客户端均通过nginx访问rest接口，nginx需要支持https和websocket, 具体可参考[Nginx](/component/nginx.md)
 
-### 运行
+#### 如需配置集群，可在多台机器上重复上述步骤即可
 
-直接点击IDEA运行
+#### 集群扩容，可在新增机器上重复上述步骤即可
+
+#### 后续新版升级步骤
+
+注意：为了不影响集群整体可用性，建议一台一台升级，也即只有第一台升级成功之后，再按照下述步骤升级第二台
+
+``` bash
+查看进程：netstat -ntlp，找到8000对应进程号
+杀掉进程：kill -9 进程号
+上传新版：jar文件
+启动：./start.sh
+```
+
+### 安卓端
+
+* 参考demo中：自定义服务器
+* REST服务器为nginx地址
+* 其中消息服务器地址为RabbitMQ服务器地址
+
+### iOS端
+
+* 参考demo中：自定义服务器
+* REST服务器为nginx地址
+* 其中消息服务器地址为RabbitMQ服务器地址
+
+### web端
+
+* 修改js/data.js中默认HOST地址为nginx地址
+
+<!-- ### 快速集群部署 -->
+
+<!-- ::: tip 提示
+
+* 默认开发工具使用IntelliJ IDEA, 您也可以使用Spring Tool Suite或者Eclipse，根据您的喜好
+* 基于Maven作为项目管理工具
+::: -->
 
 <!-- 
 ## 其他

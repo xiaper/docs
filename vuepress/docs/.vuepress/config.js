@@ -92,10 +92,10 @@ module.exports = {
             title: '通信协议',
             children: [ 
               '/protocol/mqtt',
-              '/protocol/socket.io',
+              // '/protocol/socket.io',
               '/protocol/stomp',
-              '/protocol/websocket',
-              '/protocol/xmpp'
+              '/protocol/websocket'
+              // '/protocol/xmpp'
             ]
           },{
             title: '其他',

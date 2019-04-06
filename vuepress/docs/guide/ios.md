@@ -5,6 +5,10 @@
 <!-- 示例基于两个用户 [Alice And Bob](https://en.wikipedia.org/wiki/Alice_and_Bob) -->
 :::
 
+## 下载
+
+* [Github](https://github.com/Bytedesk/bytedesk-ios)
+
 ## IM实战
 
 ::: tip 提示

@@ -51,6 +51,9 @@ spring.datasource.password=你的密码
 spring.datasource.jndi-name=java:jdbc/mysql
 ```
 
+<!-- TODO: 读写分离 -->
+<!-- TODO: 分表、分库 -->
+
 ## 参考
 
 * [Docker](https://hub.docker.com/_/mysql)

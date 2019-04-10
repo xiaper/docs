@@ -75,6 +75,8 @@
 
 ### 单体部署
 
+#### 安装[jdk8](https://github.com/Bytedesk/bytedesk-server/wiki/java)
+
 #### [下载](https://github.com/Bytedesk/bytedesk-server/releases)
 
 #### 解压

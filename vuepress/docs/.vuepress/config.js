@@ -102,6 +102,7 @@ module.exports = {
             children: [ 
               '/other/microservice',
               '/other/elk',
+              '/other/docker',
               '/other/protobuf',
               '/other/war',
               '/other/security',

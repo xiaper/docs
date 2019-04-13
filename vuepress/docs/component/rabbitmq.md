@@ -20,20 +20,20 @@ ActiveMQ 和 RabbitMQ 二选其一
 - 启用管理后台:
     ./sbin/rabbitmq-plugins enable rabbitmq_management
     ./sbin/rabbitmq-plugins enable rabbitmq_shovel rabbitmq_shovel_management
-- 禁用：
-    ./sbin/rabbitmq-plugins disable rabbitmq_management
+# - 禁用：
+#     ./sbin/rabbitmq-plugins disable rabbitmq_management
 - 启用mqtt：  
     ./sbin/rabbitmq-plugins enable rabbitmq_mqtt
     ./sbin/rabbitmq-plugins enable rabbitmq_web_mqtt
-    ./sbin/rabbitmq-plugins enable rabbitmq_web_mqtt_examples
--禁用：
-    ./sbin/rabbitmq-plugins disable rabbitmq_mqtt
-    https://www.rabbitmq.com/mqtt.html
+    # ./sbin/rabbitmq-plugins enable rabbitmq_web_mqtt_examples
+# -禁用：
+#     ./sbin/rabbitmq-plugins disable rabbitmq_mqtt
+#     https://www.rabbitmq.com/mqtt.html
 - 启用stomp:
     ./sbin/rabbitmq-plugins enable rabbitmq_web_stomp
-    ./sbin/rabbitmq-plugins enable rabbitmq_web_stomp_examples
-    https://www.rabbitmq.com/web-stomp.html
-    测试实例： http://127.0.0.1:15670/
+    # ./sbin/rabbitmq-plugins enable rabbitmq_web_stomp_examples
+    # https://www.rabbitmq.com/web-stomp.html
+    # 测试实例： http://127.0.0.1:15670/
 
 - 登录管理后台: http://localhost:15672, guest/guest
 - 其他：https://www.rabbitmq.com/man/rabbitmqctl.8.html#set_user_tags
@@ -77,5 +77,9 @@ spring.rabbitmq.addresses=127.0.0.1:5672,127.0.0.2:5672,127.0.0.3:5672
 ```
 
 <!-- TODO:如何搭建rabitmq集群 -->
+
+<!-- ## KeepAlived -->
+
+## HAProxy
 
 ## 参考

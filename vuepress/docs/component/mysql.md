@@ -30,6 +30,11 @@ MySQL 和 Oracle 二选其一
 ![create_database](/xiaper.io/create_database.png)
 * 初始化数据库, 导入sql文件：[xiaper_mysql.sql](https://github.com/xiaper/server/blob/master/sql/xiaper_mysql.sql)
 
+<!--
+``` bash
+```
+-->
+
 ## Spring Boot 配置
 
 ``` bash
@@ -51,7 +56,54 @@ spring.datasource.password=你的密码
 spring.datasource.jndi-name=java:jdbc/mysql
 ```
 
-<!-- TODO: 读写分离 -->
+## 读写分离
+
+``` bash
+<dependency>
+  <groupId>com.alibaba</groupId>
+  <artifactId>druid-spring-boot-starter</artifactId>
+  <version>1.1.16</version>
+</dependency>
+```
+
+``` bash
+spring.datasource.druid.write.url=jdbc:mysql://localhost:3306/bytedesk?autoReconnect=true&characterEncoding=utf8&useSSL=true&serverTimezone=GMT%2B8
+spring.datasource.druid.write.username=root
+spring.datasource.druid.write.password=
+
+spring.datasource.druid.read.url=jdbc:mysql://localhost:3306/bytedesk?autoReconnect=true&characterEncoding=utf8&useSSL=true&serverTimezone=GMT%2B8
+spring.datasource.druid.read.username=root
+spring.datasource.druid.read.password=
+```
+
+``` java
+/**
+ * 配置读写分离数据源
+ * @author bytedesk.com on 2019/4/11
+ */
+@Configuration
+public class DruidDataSourceConfig {
+  /**
+   * 写数据库连接配置
+   */
+  @Primary
+  @Bean
+  @ConfigurationProperties("spring.datasource.druid.write")
+  public DataSource dataSourceWrite(){
+      return DruidDataSourceBuilder.create().build();
+  }
+
+  /**
+   * 读数据库连接配置
+   */
+  @Bean
+  @ConfigurationProperties("spring.datasource.druid.read")
+  public DataSource dataSourceRead(){
+      return DruidDataSourceBuilder.create().build();
+  }
+}
+```
+
 <!-- TODO: 分表、分库 -->
 
 ## 参考

@@ -2,7 +2,7 @@
 home: true
 heroImage: /xiaper.png
 heroText: 虾婆
-tagline: 企业级开源即时通讯解决方案
+tagline: 开源即时通讯解决方案
 actionText: 快速上手 →
 actionLink: /guide/
 features:

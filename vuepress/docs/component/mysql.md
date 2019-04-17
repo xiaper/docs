@@ -30,10 +30,16 @@ MySQL 和 Oracle 二选其一
 ![create_database](/xiaper.io/create_database.png)
 * 初始化数据库, 导入sql文件：[xiaper_mysql.sql](https://github.com/xiaper/server/blob/master/sql/xiaper_mysql.sql)
 
-<!--
+命令行创建
+
 ``` bash
+# 创建数据库
+mysql>CREATE DATABASE bytedesk CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+# 使用数据库
+mysql>use bytedesk;
+# 导入.sql文件
+mysql>source /var/local/bytedesk_20190329.sql;
 ```
--->
 
 ## Spring Boot 配置
 

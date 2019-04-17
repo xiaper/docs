@@ -7,7 +7,7 @@
 
 ## 下载
 
-* [Github](https://github.com/Bytedesk/bytedesk-ios)
+* [Github](https://github.com/xiaper/ios)
 
 ## IM实战
 

@@ -64,7 +64,7 @@
 
 * Jar：支持直接运行jar
 * War：支持war包放到Tomcat/WebLogic等容器中
-* Maven：支持将虾婆通过maven或gradle方式集成到现有项目中
+* Maven：支持将虾婆通过maven或gradle方式集成到现有项目中, [maven](https://mvnrepository.com/artifact/io.xiaper)
 * Docker：支持docker部署 TODO
 :::
 
@@ -205,13 +205,13 @@ chmod 777 start.sh
 
 * 参考demo中：自定义服务器
 * REST服务器为nginx地址
-* 其中消息服务器地址为RabbitMQ服务器地址
+* 其中消息服务器地址为RabbitMQ服务器地址, 如搭建有haproxy则填写haproxy地址
 
 ### iOS端
 
 * 参考demo中：自定义服务器
 * REST服务器为nginx地址
-* 其中消息服务器地址为RabbitMQ服务器地址
+* 其中消息服务器地址为RabbitMQ服务器地址, 如搭建有haproxy则填写haproxy地址
 
 ### web端
 

@@ -24,9 +24,9 @@
 ::: tip 提示
 
 * Linux无特殊系统版本要求，Ubuntu或者CentOS均可。建议配置 16核，64G。
-* MySQL/Oracle二选其一，无特殊版本要求，建议最新稳定版。
+* MySQL/Oracle二选其一，无特殊版本要求，建议最新稳定版，默认支持MySQL
 * Redis无特殊版本要求，建议最新稳定版。
-* RabbitMQ/ActiveMQ二选其一，无特殊版本要求，建议最新稳定版
+* RabbitMQ/ActiveMQ二选其一，无特殊版本要求，建议最新稳定版，默认支持RabbitMQ
 * Zookeeper，无特殊版本要求，建议最新稳定版
 :::
 
@@ -73,7 +73,7 @@
 <!-- TODO: ### Docker -->
 <!-- TODO:开发vuepress插件：支持客服和聊天 -->
 
-### 单体部署
+<!-- ### 单体部署 -->
 
 #### 安装[jdk8](https://github.com/Bytedesk/bytedesk-server/wiki/java)
 

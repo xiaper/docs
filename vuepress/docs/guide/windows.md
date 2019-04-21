@@ -1,5 +1,10 @@
 # Windows
 
+::: tip
+
+* [Github](https://github.com/xiaper/pc)
+:::
+
 ## 准备
 
 ## IM实战

@@ -1,5 +1,7 @@
 # ZooKeeper
 
+废弃，系统不再使用zk
+
 ## Spring Boot 配置文件
 
 首先到[ZooKeeper](https://zookeeper.apache.org/)下载最新稳定版

@@ -4,6 +4,11 @@
 示例基于两个用户 [Alice And Bob](https://en.wikipedia.org/wiki/Alice_and_Bob)
 :::
 
+::: tip
+
+* [Github](https://github.com/xiaper/web)
+:::
+
 ## 准备
 
 ## IM实战

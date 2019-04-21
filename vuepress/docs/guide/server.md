@@ -5,6 +5,7 @@
 * 编程语言：Java
 * 版本：JDK 8
 * 框架：Spring Boot 2.1.3.RELEASE, Spring Cloud Greenwich.RELEASE
+* [Github](https://github.com/xiaper/server)
 :::
 
 ## 准备

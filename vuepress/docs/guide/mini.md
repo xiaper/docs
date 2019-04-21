@@ -1,5 +1,10 @@
 # 小程序
 
+::: tip
+
+* [Github](https://github.com/xiaper/miniprogram)
+:::
+
 ## IM实战
 
 ### 效果图

@@ -4,23 +4,26 @@
 
 * 编程语言：Java
 * 版本：JDK 8
-* 框架：Spring Boot 2.1.3.RELEASE, Spring Cloud Greenwich.RELEASE
-* [Github](https://github.com/xiaper/server)
+* 框架：Spring Boot 2.1.4.RELEASE, Spring Cloud Greenwich.RELEASE
 :::
+
+## 下载
+
+* [Github](https://github.com/xiaper/server)
 
 ## 准备
 
 * Linux
 * [Nginx](/component/nginx.md)
 * [MySQL](/component/mysql.md)
-* [Oracle](/component/oracle.md)
+<!-- * [Oracle](/component/oracle.md) -->
 * [Redis](/component/redis.md)
-* [Mongo](/component/mongo.md)
+<!-- * [Mongo](/component/mongo.md) -->
 * [RabbitMQ](/component/rabbitmq.md)
-* [ActiveMQ](/component/activemq.md)
+<!-- * [ActiveMQ](/component/activemq.md) -->
 <!-- * [Zookeeper](/component/zookeeper.md) -->
-* [AliyunOSS](/component/aliyunoss.md)
-* [ELK](/other/elk.md)
+<!-- * [AliyunOSS](/component/aliyunoss.md) -->
+<!-- * [ELK](/other/elk.md) -->
 
 ::: tip 提示
 
@@ -28,7 +31,7 @@
 * MySQL/Oracle二选其一，无特殊版本要求，建议最新稳定版，默认支持MySQL
 * Redis无特殊版本要求，建议最新稳定版。
 * RabbitMQ/ActiveMQ二选其一，无特殊版本要求，建议最新稳定版，默认支持RabbitMQ
-* Zookeeper，无特殊版本要求，建议最新稳定版
+<!-- * Zookeeper，无特殊版本要求，建议最新稳定版 -->
 :::
 
 ## 架构
@@ -150,12 +153,6 @@ spring.rabbitmq.password=密码
 spring.rabbitmq.stomp.port=61613
 spring.rabbitmq.stomp.login=stomp_web
 spring.rabbitmq.stomp.passcode=stomp_web
-```
-
-* ZooKeeper
-
-``` bash
-zk.url=127.0.0.1:2181
 ```
 
 * 上传到服务器

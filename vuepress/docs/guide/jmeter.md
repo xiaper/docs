@@ -1,11 +1,14 @@
 # JMeter
 
+<!-- ![软件测试分类](/xiaper.io/image/testing.png) -->
+
 ::: tip
 
-* 负载测试(Load Testing): 通过改变系统负载方式、增加负载等来发现系统中所存在的性能问题。负载测试是一种测试方法，可以为性能测试、压力测试所采用。负载测试的加载方式也有很多种，可以根据测试需要来选择。
-* 性能测试(Performance Testing): 为获取或验证系统性能指标而进行测试。多数情况下，性能测试会在不同负载情况下进行。
-* 压力测试(Stress Testing, 又称强度测试): 通常是在高负载情况下来对系统的稳定性进行测试，更有效地发现系统稳定性的隐患和系统在负载峰值的条件下功能隐患等。
-* 功能测试: 测试系统各项功能是否正常工作
+* 负载测试(Load Testing): 在一定软硬件环境下，通过不断加大负载（不同虚拟用户数）来确定在满足性能指标情况下能够承受的最大用户数。简单说，可以帮我们对系统进行定容定量，找出系统性能的拐点。指标包括：TPS（Transaction Per Second, 每秒事务数）、RT（Response Time/average Response Time, 平均响应时间）、CPU Using（CPU 利用率）、Mem Using（内存使用情况）等。
+* 性能测试(Performance Testing): 模拟用户负载来测试系统在负载情况下, 系统的响应时间、吞吐量等指标是否满足性能要求。
+* 压力测试(Stress Testing, 又称强度测试): 模拟极限状态，就是在高负载的情况下，把系统搞坏，收集系统中的隐藏问题。
+<!-- * 容量测试(Volume Test): 确定系统可处理同时在线的最大用户数。 -->
+<!-- * 功能测试: 测试系统各项功能是否正常工作 -->
 :::
 
 系统是否具有高性能的运行特征，不仅取决于系统本身的设计和程序算法，而且取决于系统的运行环境。系统的运行环境会依赖于一些关键因素，例如：
@@ -22,7 +25,7 @@
 
 ## 压力测试
 
-## 功能测试
+<!-- ## 功能测试 -->
 
 ## 准备
 
@@ -48,10 +51,16 @@
 * 重启 ApacheJMeter.jar
 
 ``` bash
-./jmeter -g /Users/ningjinpeng/Desktop/JMeterTestPlans/HTTP请求-hello.csv -o /Users/ningjinpeng/Desktop/JMeterTestPlans/HTMLReports
+./jmeter -g /Users/ningjinpeng/Desktop/JMeterTestPlans/HTTP请求-hello.csv -o /Users/ningjinpeng/Desktop/JMeterTestPlans/HTMLReports-hello
+./jmeter -g /Users/ningjinpeng/Desktop/JMeterTestPlans/HTTP请求-oauth.csv -o /Users/ningjinpeng/Desktop/JMeterTestPlans/HTMLReports-oauth
 ```
+
+## 监控系统
+
+nmon
 
 ## 参考
 
 * [Apache JMeter](https://jmeter.apache.org/)
+* 全栈性能测试修理宝典 JMeter实战
 * [负载测试、压力测试和性能测试的异同](https://blog.csdn.net/KerryZhu/article/details/3515714)

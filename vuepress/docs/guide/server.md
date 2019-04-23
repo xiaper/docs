@@ -79,11 +79,13 @@
 
 <!-- ### 单体部署 -->
 
-#### 安装[jdk8](https://github.com/Bytedesk/bytedesk-server/wiki/java)
+## 配置
 
-#### [下载](https://github.com/Bytedesk/bytedesk-server/releases)
+### [JDK8](https://github.com/Bytedesk/bytedesk-server/wiki/java)
 
-#### 解压
+### [下载](https://github.com/Bytedesk/bytedesk-server/releases)
+
+### 解压
 
 目录结构
 
@@ -96,11 +98,14 @@
 └─ xiaper-spring-boot-sample-webmvc-2.1.5-SNAPSHOT.jar
 ```
 
-#### 修改配置config/application.properties，将以下值均修改为自定义服务器配置
+### [Nginx](/component/nginx.md)
 
-* MySQL
+需要配置负载均衡以便支持集群配置 和 websocket
+
+### [MySQL](/component/mysql.md)
 
 ``` bash
+# 支持单体，同时支持多数据源、读写分离配置
 # mysql 5.7
 #spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 spring.datasource.url=jdbc:mysql://localhost:3306/数据库名?autoReconnect=true&characterEncoding=utf8&useSSL=true&serverTimezone=GMT%2B8
@@ -108,9 +113,10 @@ spring.datasource.username=root
 spring.datasource.password=
 ```
 
-* Redis
+### [Redis](/component/redis.md)
 
 ``` bash
+# 支持单体，同时支持集群配置
 # redis缓存
 spring.cache.type=Redis
 spring.redis.database=0
@@ -122,9 +128,25 @@ spring.redis.port=6379
 spring.redis.password=
 ```
 
-* 上传文件
+### [RabbitMQ](/component/rabbitmq.md)
 
-支持服务器本地存储、阿里云OSS、腾讯云对象存储三种存储方式，其中本地存储不支持集群，下面说明以腾讯云为例
+``` bash
+# 支持单体，同时支持集群配置
+# 如果通过HAProxy连接，则此处请配置Haproxy地址
+spring.rabbitmq.host=127.0.0.1
+spring.rabbitmq.port=5672
+spring.rabbitmq.username=用户名
+spring.rabbitmq.password=密码
+spring.rabbitmq.stomp.port=61613
+spring.rabbitmq.stomp.login=stomp_web
+spring.rabbitmq.stomp.passcode=stomp_web
+```
+
+### 上传文件
+
+支持服务器本地存储、阿里云OSS、腾讯云对象存储三种存储方式，其中本地存储不支持集群
+
+上传腾讯云
 
 ``` bash
 # 腾讯云cos
@@ -143,16 +165,24 @@ tencent.secretid=
 tencent.secretkey=
 ```
 
-* RabbitMQ
+上传阿里云OSS
 
 ``` bash
-spring.rabbitmq.host=127.0.0.1
-spring.rabbitmq.port=5672
-spring.rabbitmq.username=用户名
-spring.rabbitmq.password=密码
-spring.rabbitmq.stomp.port=61613
-spring.rabbitmq.stomp.login=stomp_web
-spring.rabbitmq.stomp.passcode=stomp_web
+# 阿里云OSS
+upload.type=aliyun
+
+aliyun.access.key.id=
+aliyun.access.key.secret=
+
+# 阿里云OSS服务相关配置
+# OSS的endpoint,这里是华南地区(也就是深圳)
+aliyun.oss.endpoint=
+#
+aliyun.oss.base.url=
+# 这是创建的bucket
+aliyun.oss.bucket.name=
+# 这里已经把自己的域名映射到bucket地址了。需要设置域名绑定，设置域名CNAME（暂不使用）
+aliyun.oss.img.domain=
 ```
 
 * 上传到服务器
@@ -162,7 +192,7 @@ spring.rabbitmq.stomp.passcode=stomp_web
 chmod 777 start.sh
 ```
 
-* 启动：
+### 启动
 
 ``` bash
 ./start.sh
@@ -199,17 +229,19 @@ chmod 777 start.sh
 启动：./start.sh
 ```
 
+## 前端
+
 ### 安卓端
 
 * 参考demo中：自定义服务器
 * REST服务器为nginx地址
-* 其中消息服务器地址为RabbitMQ服务器地址, 如搭建有haproxy则填写haproxy地址
+* 其中消息服务器地址为RabbitMQ服务器地址, 如通过haproxy连接则填写haproxy地址
 
 ### iOS端
 
 * 参考demo中：自定义服务器
 * REST服务器为nginx地址
-* 其中消息服务器地址为RabbitMQ服务器地址, 如搭建有haproxy则填写haproxy地址
+* 其中消息服务器地址为RabbitMQ服务器地址, 如通过haproxy连接则填写haproxy地址
 
 ### web端
 

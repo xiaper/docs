@@ -9,7 +9,7 @@
 
 ## 下载
 
-* [Github](https://github.com/xiaper/server)
+* [Demo](https://github.com/xiaper/server)
 
 ## 准备
 
@@ -83,7 +83,7 @@
 
 ### [JDK8](https://github.com/Bytedesk/bytedesk-server/wiki/java)
 
-### [下载](https://github.com/Bytedesk/bytedesk-server/releases)
+### [下载Jar](https://github.com/Bytedesk/bytedesk-server/releases)
 
 ### 解压
 

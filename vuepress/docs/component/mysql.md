@@ -8,8 +8,11 @@ MySQL 和 Oracle 二选其一
 
 ## 配置(可选)
 
+- [下载mysql-apt-config_0.8.12-1_all.deb](https://dev.mysql.com/downloads/repo/apt/)
+
 ``` bash
 - sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
+- 弹出配置界面，选择mysql-5.7, 选择ok
 - sudo apt-get update
 - sudo apt-get install mysql-server
 

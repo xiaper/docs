@@ -1,6 +1,26 @@
 # Nginx
 
-## nginx.conf
+## 安装
+
+``` bash
+sudo apt update
+sudo apt install nginx
+# 查看是否安装成功
+netstat -ntlp
+# 如果80端口正常启动，则证明安装成功
+```
+
+## SSL证书生成
+
+``` bash
+wget https://dl.eff.org/certbot-auto
+chmod a+x certbot-auto
+./certbot-auto certonly  -d "*.chainsnow.com" --manual --preferred-challenges dns-01  --server https://acme-v02.api.letsencrypt.org/directory
+```
+
+## 配置
+
+修改/etc/nginx/nginx.conf
 
 ``` bash
 http {
@@ -35,7 +55,7 @@ http {
 }
 ```
 
-## sites-available/default
+修改/etc/nginx/sites-available/default
 
 ``` bash
 server {
@@ -128,7 +148,13 @@ server {
 }
 ```
 
-## 免费https证书
+``` bash
+# 重新加载配置文件
+nginx -s reload
+# 或者 重启nginx
+```
+
+## 参考
 
 - [letsencrypt](https://letsencrypt.org/)
 - [LetsEncrypt通配符证书](https://www.jianshu.com/p/c5c9d071e395)

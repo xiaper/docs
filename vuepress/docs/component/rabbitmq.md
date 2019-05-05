@@ -7,6 +7,19 @@ ActiveMQ 和 RabbitMQ 二选其一
 
 ## 配置
 
+源码编译安装Erlang
+
+``` bash
+# 下载 http://www.erlang.org/downloads
+tar -xzvf otp_src_21.2.tar.gz
+cd otp_src_21.2
+sudo apt-get install libncurses5-dev
+./configure && make  
+sudo make install  
+```
+
+安装RabbitMQ
+
 ``` bash
 - 查看最新版本：https://github.com/rabbitmq/rabbitmq-server/releases
 - 注意：下载 rabbitmq-server-generic-unix-***.tar.xz 版本
@@ -78,8 +91,60 @@ spring.rabbitmq.addresses=127.0.0.1:5672,127.0.0.2:5672,127.0.0.3:5672
 
 <!-- TODO:如何搭建rabitmq集群 -->
 
-<!-- ## KeepAlived -->
+## rabbitmq集群
 
-## HAProxy
+RabbitMQ Cluster是根据Erlang的实现的。必须满足一下几个要求：
+
+- 所有机器上，必须Erlang运行时和RabbitMQ的版本相同。（否则会不能连接到一起）
+- 所有机器上，的Erlang的Cookie都相同。
+
+``` bash
+# 集群中所有机器的/etc/hosts文件中必须同时包含集群中所有机器 ip hostname
+# 同步hosts, hostname可以自行修改
+vi /etc/hosts
+192.168.0.1 mq-master
+192.168.0.2 mq-slave-01
+192.168.0.3 mq-slave-02
+```
+
+``` bash
+# 将任意一台服务器的~/.erlang.cookie文件同步到其他所有服务器（所有服务器必须一致，文件内容相同）
+# 同步.erlang.cookie
+```
+
+``` bash
+# 192.168.0.1
+# 让当前rabbitmq-server的进程后台运行
+./sbin/rabbitmq-server -detached
+# # 启动集群
+# ./sbin/rabbitmqctl start_app
+ # 获得集群配置信息
+./sbin/rabbitmqctl cluster_status
+```
+
+``` bash
+# 192.168.0.2 && 192.168.0.3
+./sbin/rabbitmq-server –detached
+# ./sbin/rabbitmqctl start_app
+./sbin/rabbitmqctl stop_app  #停止rabbitmq运行
+./sbin/rabbitmqctl join_cluster --ram rabbit@mq-master  #加入到rabbit节点中，使用内存模式。
+./sbin/rabbitmqctl start_app  #启动rabbitmq
+./sbin/rabbitmqctl cluster_status  #查看状态
+```
+
+``` bash
+# 在所有三台机器运行
+# ["^"匹配所有]
+./sbin/rabbitmqctl set_policy ha-all "^" '{"ha-mode":"all"}'
+```
 
 ## 参考
+
+- [Distributed RabbitMQ brokers](https://www.rabbitmq.com/distributed.html)
+- [Clustering Guide](https://www.rabbitmq.com/clustering.html)
+- [Highly Available (Mirrored) Queues](https://www.rabbitmq.com/ha.html)
+- [HAProxy](http://www.haproxy.org/)
+- [KeepAlived](https://www.keepalived.org/)
+- [用 HAproxy 搭建 RabbitMQ 集群](https://www.cnblogs.com/tiantiandas/p/rabbitmq_haproxy.html)
+- [基于 Keepalived + HAproxy 的 RabbitMQ 高可用配置实践](https://hoxis.github.io/keepalived-haproxy-rabbitmq.html)
+- [RabbitMQ分布式集群架构](https://blog.csdn.net/WoogeYu/article/details/51119101)

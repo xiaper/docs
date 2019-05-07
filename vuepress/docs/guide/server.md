@@ -41,23 +41,23 @@
 
 ### 单体架构
 
-![单体架构](/xiaper.io/architechture-sole.png)
+![单体架构](/xiaper.io/image/architechture/architechture-sole.png)
 
 ### 分布式架构
 
 * 中小企业
-![分布式架构](/xiaper.io/architechture-cluster.png)
+![分布式架构](/xiaper.io/image/architechture/architechture-cluster.png)
 
 * 大型企业
-![分布式架构2](/xiaper.io/architechture-cluster2.png)
+![分布式架构2](/xiaper.io/image/architechture/architechture-cluster2.png)
 
 ### 微服务架构
 
 * 中小企业
-![微服务架构](/xiaper.io/architechture-service.png)
+![微服务架构](/xiaper.io/image/architechture/architechture-service.png)
 
 * 大型企业
-![微服务架构2](/xiaper.io/architechture-service2.png)
+![微服务架构2](/xiaper.io/image/architechture/architechture-service2.png)
 
 <!-- ## 部署 -->
 

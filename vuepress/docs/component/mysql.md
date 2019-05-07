@@ -30,7 +30,7 @@ MySQL 和 Oracle 二选其一
 ```
 
 * 创建数据库，可自定义数据库名，编码选择：utf8mb4_unicode_cli，例如：
-![create_database](/xiaper.io/create_database.png)
+![create_database](/xiaper.io/image/create_database.png)
 * 初始化数据库, 导入sql文件：[xiaper_mysql.sql](https://github.com/xiaper/server/blob/master/sql/xiaper_mysql.sql)
 
 命令行创建

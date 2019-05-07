@@ -15,38 +15,9 @@
 为了更好的将IM运用到自己已有的业务系统中，我们可以将IM仅视为**消息通道**，也即：IM的用途仅仅是将消息从A用户发送给B用户，跟用户个人资料，如：头像、昵称和个人签名等没有必然的联系，甚至IM可以不存储任何聊天记录。*当然，虾婆默认为开发者提供完整的用户体系和聊天记录存储机制。*
 :::
 
-<!-- ### 效果图 -->
+### 效果图
 
-### 新建项目集成虾婆
-
-* Xcode创建 `Tabbed App` 项目：`xiaper-tutorial`
-* Terminal中切换到项目根目录：`cd xiaper-tutorial`，执行 `pod init`
-* 修改Podfile，并添加 `pod 'bytedesk-ui'` 和 `pod 'bytedesk-core'`，如下：
-
-``` bash
-# Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
-workspace 'xiaper'
-
-target 'xiaper-tutorial' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for xiaper-tutorial
-  pod 'bytedesk-ui'
-  pod 'bytedesk-core'
-
-  target 'xiaper-tutorialTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-end
-```
-
-* 关闭`xiaper-tutorial` Xcode工程，然后Terminal执行 `pod install`
-
-### 已有项目集成虾婆
+### 集成pod
 
 * 修改Podfile，并添加 `pod 'bytedesk-ui'` 和 `pod 'bytedesk-core'`
 

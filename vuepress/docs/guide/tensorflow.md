@@ -18,3 +18,4 @@ TODO: 基于深度学习的问答机器人，优化中
 - [RNN算法探索之旅](https://mp.weixin.qq.com/s?__biz=MzI1NjczMjEwNw==&mid=2247484207&idx=1&sn=3540352314a36d7664097563617a80f5&chksm=ea237d8bdd54f49d84edbea8a1a059e4b7ccc1cbe7e49790cabaf3323da685f06e47e33f411e&scene=21#wechat_redirect)
 - [大规模中文自然语言处理语料](https://github.com/brightmart/nlp_chinese_corpus)
 - [中文自然语言处理工具和语料库介绍](https://mlln.cn/2018/06/02/[%E8%BD%AC]%E5%90%8A%E7%82%B8%E5%A4%A9%E7%9A%84%E4%B8%AD%E6%96%87%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7%E5%92%8C%E8%AF%AD%E6%96%99%E5%BA%93%E4%BB%8B%E7%BB%8D/)
+- [ChatRobot](https://github.com/shen1994/ChatRobot)

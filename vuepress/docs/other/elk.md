@@ -15,6 +15,10 @@
 
 ## Kafka
 
+## 微信公众号
+
+<img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
+
 ## 参考
 
 - [SpringBoot+kafka+ELK分布式日志收集](https://yq.aliyun.com/articles/645316)

@@ -52,6 +52,10 @@ core characteristic of good encryption: even the people who design and deploy it
 
 TODO
 
+## 微信公众号
+
+<img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
+
 ## 参考
 
 - [Signal Protocol](https://signal.org/docs/)

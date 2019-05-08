@@ -12,6 +12,10 @@
 
 - 2019年，发布开源版[虾婆](http://www.xiaper.io)
 - 2018年，基于SpringCloud微服务改造上线, 发布智能客服[萝卜丝](https://www.bytedesk.com)
-- 2017年，探索优化通讯协议：XMPP->Socket.io->Stomp/WebSocket/MQTT/私有协议
-- 2014年，[微客服](http://www.weikefu.net)集群版发布，基于Ejabberd(XMPP协议)
-- 2013年，[微客服](http://www.weikefu.net)单机版发布，基于Ejabberd(XMPP协议)
+- 2017年，通讯协议Stomp/WebSocket/MQTT/私有协议
+- 2014年，[微客服](http://www.weikefu.net)集群版发布
+- 2013年，[微客服](http://www.weikefu.net)单机版发布
+
+### 微信公众号
+
+<img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>

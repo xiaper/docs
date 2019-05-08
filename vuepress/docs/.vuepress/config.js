@@ -74,7 +74,8 @@ module.exports = {
               '/guide/webrtc',
               '/guide/flutter',
               '/guide/tensorflow',
-              '/guide/jmeter'
+              '/guide/jmeter',
+              '/guide/admin'
             ]
           },{
             title: '组件',

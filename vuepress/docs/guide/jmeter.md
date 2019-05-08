@@ -19,12 +19,6 @@
 * 支撑软件的选定，如选定不同的数据库管理系统（Oracle、MySQL等）和web应用服务器（Tomcat、GlassFish、Jboss、WebLogic等），对应用系统的性能都有影响。
 * 外部负载，同时有多少个用户连接、用户上载文件大小、数据库中的记录数等都会对系统的性能有影响。一般来说，系统负载越大，系统的性能会降低。
 
-## 负载测试
-
-## 性能测试
-
-## 压力测试
-
 <!-- ## 功能测试 -->
 
 ## 准备
@@ -54,6 +48,12 @@
 ./jmeter -g /Users/ningjinpeng/Desktop/JMeterTestPlans/HTTP请求-hello.csv -o /Users/ningjinpeng/Desktop/JMeterTestPlans/HTMLReports-hello
 ./jmeter -g /Users/ningjinpeng/Desktop/JMeterTestPlans/HTTP请求-oauth.csv -o /Users/ningjinpeng/Desktop/JMeterTestPlans/HTMLReports-oauth
 ```
+
+## 负载测试
+
+## 性能测试
+
+## 压力测试
 
 ## 监控系统
 

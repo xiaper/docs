@@ -276,6 +276,10 @@
 ``` bash
 ```
 
+### 关注我们
+
+<img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
+
 ## 参考
 
-- [虾婆 Web/H5 Demo](https://github.com/xiaper/web)
+* [虾婆 Web/H5 Demo](https://github.com/xiaper/web)

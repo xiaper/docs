@@ -72,7 +72,7 @@ module.exports = {
               '/guide/mp',
               '/guide/mini',
               '/guide/webrtc',
-              // '/guide/flutter',
+              '/guide/flutter',
               '/guide/tensorflow',
               '/guide/jmeter'
             ]

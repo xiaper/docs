@@ -5,6 +5,7 @@
 * 编程语言：Java
 * 版本：JDK 8
 * 框架：Spring Boot 2.1.4.RELEASE, Spring Cloud Greenwich.RELEASE
+* 支持分布式集群部署，完全消除单点故障
 :::
 
 ## 下载
@@ -262,3 +263,9 @@ chmod 777 start.sh
 
 ### 关于业务系统账号体系与IM账号体系整合 
 -->
+
+### 关注我们
+
+<img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
+
+## 参考

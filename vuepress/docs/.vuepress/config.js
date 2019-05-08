@@ -74,6 +74,7 @@ module.exports = {
               '/guide/webrtc',
               '/guide/flutter',
               '/guide/tensorflow',
+              '/guide/callcenter',
               '/guide/jmeter',
               '/guide/admin'
             ]
@@ -88,7 +89,8 @@ module.exports = {
               '/component/redis',
               '/component/haproxy',
               '/component/keepalived',
-              '/component/quartz'
+              '/component/quartz',
+              '/component/freeswitch'
             ]
           },{
             title: '通信协议',

@@ -3,7 +3,7 @@
 TODO: 基于深度学习的问答机器人，优化中
 <!-- 智能客服 -->
 
-## 关注我们
+## 微信公众号
 
 <img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
 

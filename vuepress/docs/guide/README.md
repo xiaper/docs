@@ -117,6 +117,6 @@ TODO: 虾婆将会支持插件机制，支持开发者自行开发插件
 
 如果您需要技术支持或者定制服务，我们很乐意为您提供商业技术支持
 
-### 关注我们
+### 微信公众号
 
 <img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>

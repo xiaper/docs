@@ -1,4 +1,4 @@
-# Mac
+# Windows/Mac/Linux
 
 ::: tip
 
@@ -6,6 +6,8 @@
 :::
 
 ## 准备
+
+VueJS + Electron
 
 ## IM实战
 
@@ -278,4 +280,4 @@
 
 ## 参考
 
-* [虾婆 Mac Demo](https://github.com/xiaper/pc)
+- [虾婆 Windows Demo](https://github.com/xiaper/pc)

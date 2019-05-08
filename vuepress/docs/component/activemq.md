@@ -37,4 +37,8 @@ spring.activemq.broker-url=failover:(tcp://172.18.1.1:61616,tcp://172.18.1.2:616
 
 <!-- TODO:如何搭建activemq集群 -->
 
+### 微信公众号
+
+<img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
+
 ## 参考

@@ -200,6 +200,10 @@ redis-trib.rb reshard ip:port
 cluster replicate master-id # 转换前6380端必须没有slots
 ```
 
+### 微信公众号
+
+<img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
+
 ## 参考
 
 - [phpRedisAdmin](https://github.com/erikdubbelboer/phpRedisAdmin)

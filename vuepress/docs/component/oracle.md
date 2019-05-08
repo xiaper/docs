@@ -39,6 +39,10 @@ spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
 spring.datasource.jndi-name=java:jdbc/oracle
 ```
 
+### 微信公众号
+
+<img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
+
 ## 参考
 
 - [Connection to a JNDI DataSource](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html#boot-features-connecting-to-a-jndi-datasource)

@@ -21,3 +21,7 @@ spring.mail.properties.mail.smtp.socketFactory.port=465
 #显示在收件人邮箱里面的发件人名称
 spring.mail.self.username=邮箱地址
 ```
+
+## 微信公众号
+
+<img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>

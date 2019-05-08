@@ -21,4 +21,8 @@ zk.url=127.0.0.1:2181
 
 ## 集群
 
+### 微信公众号
+
+<img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
+
 ## 参考

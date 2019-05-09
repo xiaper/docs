@@ -19,3 +19,4 @@ TODO: 基于深度学习的问答机器人，优化中
 - [大规模中文自然语言处理语料](https://github.com/brightmart/nlp_chinese_corpus)
 - [中文自然语言处理工具和语料库介绍](https://mlln.cn/2018/06/02/[%E8%BD%AC]%E5%90%8A%E7%82%B8%E5%A4%A9%E7%9A%84%E4%B8%AD%E6%96%87%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7%E5%92%8C%E8%AF%AD%E6%96%99%E5%BA%93%E4%BB%8B%E7%BB%8D/)
 - [ChatRobot](https://github.com/shen1994/ChatRobot)
+- [Awesome-Chinese-NLP](https://github.com/crownpku/awesome-chinese-nlp)

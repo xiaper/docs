@@ -49,10 +49,9 @@ module.exports = {
             items: [
               { text: 'iOS', link: '/api/ios' },
               { text: 'Android', link: '/api/android' },
-              { text: 'Web', link: '/api/web' },
-              { text: 'Mac', link: '/api/mac' },
-              { text: 'Windows', link: '/api/windows' },
-              { text: 'MiniProgram', link: '/api/mini' }
+              { text: 'Web/H5', link: '/api/web' },
+              { text: 'Mac/Windows/Linux', link: '/api/pc' },
+              { text: '小程序', link: '/api/mini' }
             ]
           },
           { text: '虾婆云', link: 'http://www.xiaper.com' },

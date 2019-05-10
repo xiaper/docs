@@ -54,7 +54,17 @@ module.exports = {
               { text: 'Windows', link: '/api/windows' },
               { text: 'MiniProgram', link: '/api/mini' }
             ]
-          }
+          },
+          { text: '虾婆云', link: 'http://www.xiaper.com' },
+          {
+            text: '其他',
+            items: [
+              { text: '微客服', link: 'http://www.weikefu.net' },
+              { text: '萝卜丝', link: 'http://www.bytedesk.com' },
+              { text: '虾信', link: 'http://www.xiaper.im' },
+              { text: '虾群', link: 'http://www.xiaqun.im' }
+            ]
+          },
         ],
         sidebarDepth: 3,
         sidebar: {
@@ -139,6 +149,7 @@ module.exports = {
           { text: 'Home', link: '/' },
           { text: 'Guide', link: '/guide/' },
           { text: 'External', link: 'https://google.com' },
+          { text: 'XiaperCloud', link: 'http://www.xiaper.com' }
         ],
         sidebarDepth: 3,
         sidebar: [

@@ -10,6 +10,7 @@ TODO: 基于深度学习的问答机器人，优化中
 ## 参考
 
 - [TensorFlow](https://www.tensorflow.org/)
+- [Keras](https://keras.io/)
 - [DeepQA](https://github.com/Conchylicultor/DeepQA)
 - [DeepPavlov](https://github.com/deepmipt/DeepPavlov)
 - [Rasa](https://github.com/RasaHQ)

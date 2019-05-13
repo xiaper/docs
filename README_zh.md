@@ -38,6 +38,16 @@ based on it.
 
 To check out docs, visit [xiaper.io](http://xiaper.io).
 
+or
+
+```cmd
+cd vuepress
+yarn
+yarn run docs:dev
+```
+
+then open http://localhost:8080 in browser
+
 ## Questions
 
 forum and chat to be released

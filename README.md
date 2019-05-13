@@ -41,6 +41,7 @@ To check out docs, visit [xiaper.io](http://xiaper.io).
 or
 
 ```cmd
+cd vuepress
 yarn
 yarn run docs:dev
 ```

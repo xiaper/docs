@@ -47,11 +47,12 @@ module.exports = {
           {
             text: 'APIs',
             items: [
-              { text: 'iOS', link: '/api/ios' },
-              { text: 'Android', link: '/api/android' },
-              { text: 'Web/H5', link: '/api/web' },
-              { text: 'Mac/Windows/Linux', link: '/api/pc' },
-              { text: '小程序', link: '/api/mini' }
+              { text: 'iOS core-sdk-api', link: 'http://www.xiaper.io/docs/ios/core-api/html/index.html' },
+              { text: 'iOS ui-sdk-api', link: 'http://www.xiaper.io/docs/ios/ui-api/html/index.html' },
+              { text: 'Android core-sdk-api', link: 'http://www.xiaper.io/docs/android/core-api' },
+              { text: 'Android ui-sdk-api', link: 'http://www.xiaper.io/docs/android/ui-api' },
+              { text: 'Web im-sdk-api', link: 'http://www.xiaper.io/docs/web/im-api' },
+              { text: 'Web kefu-sdk-api', link: 'http://www.xiaper.io/docs/web/kf-api' },
             ]
           },
           { text: '虾婆云', link: 'http://www.xiaper.com' },

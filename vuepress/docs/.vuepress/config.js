@@ -99,7 +99,10 @@ module.exports = {
               '/component/haproxy',
               '/component/keepalived',
               '/component/quartz',
-              '/component/freeswitch'
+              '/component/freeswitch',
+              '/component/elasticsearch',
+              '/component/kibana',
+              '/component/logstash'
             ]
           },{
             title: '通信协议',

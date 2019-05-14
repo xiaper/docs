@@ -7,13 +7,13 @@
 结构图
 ![elk+kafka](/xiaper.io/image/elk-kafka.jpeg)
 
-## Elasticsearch
+[Elasticsearch](/component/elasticsearch.md)
 
-## Logstash
+[Kibana](/component/kibana.md)
 
-## Kibana
+[Logstash](/component/logstash.md)
 
-## Kafka
+<!-- ## Kafka -->
 
 ## 微信公众号
 

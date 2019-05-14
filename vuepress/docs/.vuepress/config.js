@@ -117,6 +117,7 @@ module.exports = {
             title: '其他',
             children: [ 
               '/other/microservice',
+              '/other/manual',
               '/other/elk',
               '/other/docker',
               '/other/protobuf',

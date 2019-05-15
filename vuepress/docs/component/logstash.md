@@ -2,11 +2,12 @@
 
 ::: tip
 可选组件
+用途：
+
+* 日志管理
 :::
 
-TODO: 部署、配置
-
-- [下载](https://www.elastic.co/downloads/logstash)
+* [下载](https://www.elastic.co/downloads/logstash)
 
 ```bash
 unzip logstash-7.0.1.zip
@@ -23,6 +24,32 @@ http.host: "0.0.0.0"
 
 ```bash
 cp config/logstash-sample.conf config/logstash.conf
+```
+
+```bash
+input {
+#  beats {
+#    port => 5044
+#  }
+  tcp {
+    mode => "server"
+    host => "0.0.0.0"
+    port => 5044
+    codec => json_lines
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => ["http://localhost:9200"]
+    index => "%{[@metadata][beat]}-%{[@metadata][version]}-%{+YYYY.MM.dd}"
+    #user => "elastic"
+    #password => "changeme"
+  }
+}
+```
+
+```bash
 # 前台运行（测试）
 ./bin/logstash -f config/logstash.conf
 # 后台运行（生产）

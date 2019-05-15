@@ -17,7 +17,7 @@
 tar -xzvf elasticsearch-7.0.1-linux-x86_64.tar.gz
 ```
 
-默认elasticsearch禁止root运行
+默认elasticsearch禁止root运行, 所有需要添加用户
 
 ```bash
 groupadd elsearch

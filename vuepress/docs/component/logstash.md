@@ -58,6 +58,9 @@ nohup ./bin/logstash -f config/logstash.conf &
 nohup ./bin/logstash -f config/logstash.conf > mylogstash.log 2>&1 &
 ```
 
-默认端口5044
+## 配置
+
+```bash
+```
 
 ## 参考

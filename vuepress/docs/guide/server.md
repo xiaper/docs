@@ -28,7 +28,7 @@
 
 ::: tip 提示
 
-* Linux无特殊系统版本要求，Ubuntu或者CentOS均可。建议配置 16核，64G。
+* Linux无特殊系统版本要求，Ubuntu或者CentOS均可。建议配置 16核64G内存。
 * MySQL/Oracle二选其一，无特殊版本要求，建议最新稳定版，默认支持MySQL
 * Redis无特殊版本要求，建议最新稳定版。
 * RabbitMQ/ActiveMQ二选其一，无特殊版本要求，建议最新稳定版，默认支持RabbitMQ

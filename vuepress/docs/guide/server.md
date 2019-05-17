@@ -82,9 +82,9 @@
 
 ## 配置
 
-### [JDK8](https://github.com/Bytedesk/bytedesk-server/wiki/java)
+### [JDK8安装](/other/jdk8.md)
 
-### [下载Jar](https://github.com/Bytedesk/bytedesk-server/releases)
+### [下载虾婆服务器](https://github.com/Bytedesk/bytedesk-server/releases)
 
 ### 解压
 

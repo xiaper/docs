@@ -49,6 +49,11 @@ output {
 }
 ```
 
+用户授权
+
+```bash
+```
+
 ```bash
 # 前台运行（测试）
 ./bin/logstash -f config/logstash.conf

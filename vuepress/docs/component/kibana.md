@@ -24,6 +24,11 @@ vi config/kibana.yml
 server.host: "0.0.0.0"
 ```
 
+用户授权
+
+```bash
+```
+
 启动
 
 ```bash

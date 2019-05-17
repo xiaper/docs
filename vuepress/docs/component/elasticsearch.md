@@ -74,6 +74,11 @@ http.cors.enabled: true
 http.cors.allow-origin: /.*/
 ```
 
+用户授权
+
+```bash
+```
+
 切换到elsearch用户，并启动
 
 ```bash
@@ -91,6 +96,7 @@ exit
 ```bash
 # 其中：127.0.0.1替换为真实服务器ip
 http://127.0.0.1:9200/
+# 端口9200用于rest api接口，9300用于集群结点之间通信
 ```
 
 ## 配置

@@ -84,6 +84,7 @@ module.exports = {
               '/guide/flutter',
               '/guide/tensorflow',
               '/guide/callcenter',
+              '/guide/ticket',
               '/guide/jmeter',
               '/guide/admin'
             ]
@@ -100,6 +101,7 @@ module.exports = {
               '/component/keepalived',
               '/component/quartz',
               '/component/freeswitch',
+              '/component/activiti',
               '/component/elasticsearch',
               '/component/kibana',
               '/component/logstash'

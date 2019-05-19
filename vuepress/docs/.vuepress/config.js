@@ -85,11 +85,13 @@ module.exports = {
               '/guide/tensorflow',
               '/guide/callcenter',
               '/guide/ticket',
+              '/guide/knowledgebase',
+              '/guide/community',
               '/guide/jmeter',
               '/guide/admin'
             ]
           },{
-            title: '组件',
+            title: '第三方组件',
             children: [ 
               '/component/activemq',
               '/component/mysql',
@@ -109,6 +111,7 @@ module.exports = {
           },{
             title: '通信协议',
             children: [ 
+              '/protocol/http',
               '/protocol/mqtt',
               // '/protocol/socket.io',
               '/protocol/stomp',

@@ -123,6 +123,7 @@ module.exports = {
             children: [ 
               '/other/microservice',
               '/other/manual',
+              '/other/friend',
               '/other/elk',
               '/other/docker',
               '/other/protobuf',

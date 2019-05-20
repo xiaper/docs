@@ -85,6 +85,7 @@ module.exports = {
               '/guide/tensorflow',
               '/guide/callcenter',
               '/guide/ticket',
+              '/guide/feedback',
               '/guide/knowledgebase',
               '/guide/community',
               '/guide/jmeter',

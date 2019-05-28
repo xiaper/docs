@@ -8,6 +8,12 @@
 - 微博[码总](https://www.weibo.com/ningjipeng)
 - Email: 270580156@qq.com
 
+## 联系我
+
+- 请备注：虾婆
+
+<img :src="$withBase('/image/wechat.jpeg')" style="width:250px;"/>
+
 ## 虾婆
 
 - 2019年，发布开源版[虾婆](http://www.xiaper.io)

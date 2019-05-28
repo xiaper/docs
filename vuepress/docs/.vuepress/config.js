@@ -122,6 +122,7 @@ module.exports = {
           },{
             title: '其他',
             children: [ 
+              '/other/java',
               '/other/microservice',
               '/other/manual',
               '/other/friend',

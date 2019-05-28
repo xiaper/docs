@@ -82,7 +82,7 @@
 
 ## 配置
 
-### [JDK8安装](/other/jdk8.md)
+### [JDK8安装](/other/java.md)
 
 ### [下载虾婆服务器](https://github.com/Bytedesk/bytedesk-server/releases)
 

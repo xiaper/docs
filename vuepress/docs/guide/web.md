@@ -1,8 +1,7 @@
 # Web/H5
 
-::: tip 提示
-
-:::
+<!-- ::: tip 提示
+::: -->
 
 * [Github](https://github.com/xiaper/web)
 

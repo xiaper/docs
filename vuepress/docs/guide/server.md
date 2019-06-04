@@ -10,7 +10,7 @@
 
 ## 下载
 
-* [Demo](https://github.com/xiaper/server)
+* [Github](https://github.com/xiaper/server)
 
 ## 准备
 

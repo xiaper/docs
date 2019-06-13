@@ -64,6 +64,10 @@ sudo make install
 - 添加访问控制： ./sbin/rabbitmqctl set_permissions -p "/" mqtt_android ".*" ".*" ".*"
 - 添加web端授权用户：./sbin/rabbitmqctl add_user stomp_web stomp_web
 - 添加访问控制： ./sbin/rabbitmqctl set_permissions -p "/" stomp_web ".*" ".*" ".*"
+- 添加windows端授权用户：./sbin/rabbitmqctl add_user mqtt_windows mqtt_windows
+- 添加访问控制： ./sbin/rabbitmqctl set_permissions -p "/" mqtt_windows ".*" ".*" ".*"
+- 添加mac端授权用户：./sbin/rabbitmqctl add_user mqtt_mac mqtt_mac
+- 添加访问控制： ./sbin/rabbitmqctl set_permissions -p "/" mqtt_mac ".*" ".*" ".*"
 
 - 查看：./sbin/rabbitmqctl list_permissions -p /
 

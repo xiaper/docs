@@ -133,6 +133,7 @@ module.exports = {
               '/other/security',
               '/other/push',
               '/other/taboo',
+              '/other/p2p',
               '/other/compare',
               '/other/support',
               '/other/about',

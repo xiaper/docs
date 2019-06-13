@@ -134,6 +134,7 @@ module.exports = {
               '/other/push',
               '/other/taboo',
               '/other/p2p',
+              '/other/iot',
               '/other/compare',
               '/other/support',
               '/other/about',

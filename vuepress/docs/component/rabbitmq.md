@@ -73,6 +73,8 @@ sudo make install
 
 ```
 
+开放外网访问端口号：1883
+
 ## Spring Boot 配置文件
 
 ``` bash

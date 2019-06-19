@@ -8,7 +8,7 @@
 :::
 
 <!-- * [下载](https://www.elastic.co/downloads/kibana) -->
-* [下载v6.2](https://www.elastic.co/cn/downloads/past-releases/kibana-6-4-2)
+* [下载v6.2](https://www.elastic.co/cn/downloads/past-releases/kibana-6-2-4)
 
 ```bash
 tar -xzvf kibana-6.2.4-linux-x86_64.tar.gz
@@ -28,6 +28,7 @@ server.host: "0.0.0.0"
 用户授权
 
 ```bash
+# 配置远程访问用户名/密码
 ```
 
 启动

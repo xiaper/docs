@@ -7,11 +7,12 @@
 * 日志管理
 :::
 
-* [下载](https://www.elastic.co/downloads/logstash)
+<!-- * [下载](https://www.elastic.co/downloads/logstash) -->
+* [下载v6.2](https://www.elastic.co/cn/downloads/past-releases/logstash-6-2-4)
 
 ```bash
-unzip logstash-7.0.1.zip
-cd logstash-7.0.1/
+unzip logstash-6.2.4.zip
+cd logstash-6.2.4/
 ```
 
 ```bash
@@ -49,10 +50,7 @@ output {
 }
 ```
 
-用户授权
-
-```bash
-```
+运行
 
 ```bash
 # 前台运行（测试）

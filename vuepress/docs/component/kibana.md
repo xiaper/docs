@@ -7,11 +7,12 @@
 * 日志管理
 :::
 
-* [下载](https://www.elastic.co/downloads/kibana)
+<!-- * [下载](https://www.elastic.co/downloads/kibana) -->
+* [下载v6.2](https://www.elastic.co/cn/downloads/past-releases/kibana-6-4-2)
 
 ```bash
-tar -xzvf kibana-7.0.1-linux-x86_64.tar.gz
-cd kibana-7.0.1-linux-x86_64
+tar -xzvf kibana-6.2.4-linux-x86_64.tar.gz
+cd kibana-6.2.4-linux-x86_64
 ```
 
 修改配置文件，使其能够外网访问

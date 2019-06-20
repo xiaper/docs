@@ -107,7 +107,8 @@ module.exports = {
               '/component/activiti',
               '/component/elasticsearch',
               '/component/kibana',
-              '/component/logstash'
+              '/component/logstash',
+              '/component/coturn'
             ]
           },{
             title: '通信协议',

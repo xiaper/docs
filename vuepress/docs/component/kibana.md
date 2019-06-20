@@ -49,4 +49,31 @@ exit
 http://127.0.0.1:5601/
 ```
 
+在管理后台 Management -> Index Pattern -> 创建index pattern:
+
+```bash
+logstash-*
+```
+
+其他
+
+如果遇到下列问题:
+
+* 删除index失败
+* 创建index失败：saved_objects/index-pattern 403 (Forbidden)
+
+```bash
+# 解决方案
+# 在Dev Tools里面执行
+PUT _settings
+{
+    "index": {
+        "blocks": {
+            "read_only_allow_delete": "false"
+        }
+    }
+}
+# 也有可能是磁盘空间不足引起，建议清理或增加磁盘空间
+```
+
 ## 参考

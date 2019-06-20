@@ -6,7 +6,7 @@ for WebRTC
 
 - [下载](https://github.com/coturn/coturn/wiki/Downloads)
 
-## 安装依赖
+## 依赖
 
 ```bash
 sudo apt-get install -y libssl-dev libevent-dev libpq-dev mysql-client libmysqlclient-dev libhiredis-dev openssl

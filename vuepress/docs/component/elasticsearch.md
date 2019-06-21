@@ -1,6 +1,6 @@
 # ElasticSearch
 
-::: tip
+::: tip 提示
 可选组件
 用途：
 

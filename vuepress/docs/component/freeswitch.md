@@ -1,5 +1,9 @@
 # FreeSwitch
 
+::: tip 提示
+可选组件
+:::
+
 TODO: 待开源
 
 ## 配置

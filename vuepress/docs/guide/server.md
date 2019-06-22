@@ -4,7 +4,7 @@
 
 * 编程语言：Java
 * 版本：JDK 8
-* 框架：Spring Boot 2.1.4.RELEASE, Spring Cloud Greenwich.RELEASE
+* 框架：Spring Boot 2.1.5.RELEASE, Spring Cloud Greenwich.RELEASE
 * 支持分布式集群部署，完全消除单点故障
 :::
 

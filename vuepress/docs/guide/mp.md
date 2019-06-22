@@ -1,10 +1,21 @@
 # 公众号
 
-::: tip
+::: tip 提示
+功能列表
 
-* [Github](https://github.com/xiaper/wechat)
+* 机器人
+* 人工客服
+* TODO:菜单管理
+* TODO:素材管理
+* TODO:用户管理
+* TODO:统计数据
 :::
 
+## 对接
+
+## 机器人
+
+## 人工客服
 
 ## 其他
 

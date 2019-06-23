@@ -114,10 +114,11 @@ module.exports = {
             title: '通信协议',
             children: [ 
               '/protocol/http',
+              '/protocol/websocket',
               '/protocol/mqtt',
               '/protocol/socketio',
               '/protocol/stomp',
-              '/protocol/websocket'
+              '/protocol/sockjs'
               // '/protocol/xmpp'
             ]
           },{

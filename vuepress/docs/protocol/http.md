@@ -1,6 +1,12 @@
 # Http
 
-rest api 接口
+::: tip 提示
+
+RESTFULL API接口, 协议格式 json + protobuf
+:::
+
+
+
 
 ## 微信公众号
 

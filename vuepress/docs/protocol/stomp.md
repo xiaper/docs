@@ -2,7 +2,7 @@
 
 ::: tip 提示
 
-虾婆web/h5/小程序端基于Stomp Over WebSocket协议开发
+虾婆h5/小程序端基于Stomp Over WebSocket协议开发
 :::
 
 ## STOMP Protocol Specification, Version 1.2

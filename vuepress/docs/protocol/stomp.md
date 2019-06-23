@@ -899,7 +899,6 @@ Backus-Naur Form (BNF) grammar used in HTTP/1.1
     header-name         = 1*<any OCTET except CR or LF or ":">
     header-value        = *<any OCTET except CR or LF or ":">
 
-
 ## 微信公众号
 
 <img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
@@ -908,3 +907,4 @@ Backus-Naur Form (BNF) grammar used in HTTP/1.1
 
 - [Github STOMP Protocol Specification, Version 1.2](https://github.com/stomp/stomp-spec/blob/master/src/stomp-specification-1.2.md)
 - [STOMP Protocol Specification](http://stomp.github.io/stomp-specification-1.2.html)
+- [STOMP Over WebSocket](http://jmesnil.net/stomp-websocket/doc/)

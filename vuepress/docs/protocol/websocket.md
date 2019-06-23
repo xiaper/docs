@@ -118,3 +118,5 @@ straightforward decision than it is for public facing applications.
 
 - [The WebSocket Protocol](https://tools.ietf.org/html/rfc6455)
 - [WebSocket中文协议](/protocol/rfc6455.md)
+- [Spring WebSockets](https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#websocket-intro)
+- [Spring WebSocket Support](https://docs.spring.io/spring-framework/docs/5.0.0.BUILD-SNAPSHOT/spring-framework-reference/html/websocket.html)

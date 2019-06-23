@@ -115,7 +115,7 @@ module.exports = {
             children: [ 
               '/protocol/http',
               '/protocol/mqtt',
-              // '/protocol/socket.io',
+              '/protocol/socketio',
               '/protocol/stomp',
               '/protocol/websocket'
               // '/protocol/xmpp'

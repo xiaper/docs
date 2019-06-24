@@ -899,12 +899,28 @@ Backus-Naur Form (BNF) grammar used in HTTP/1.1
     header-name         = 1*<any OCTET except CR or LF or ":">
     header-value        = *<any OCTET except CR or LF or ":">
 
+
+
+## STOMP vs WebSocket
+
+The benefits of using STOMP as a WebSocket sub-protocol:
+
+* No need to invent a custom message format
+* Use existing stomp.js client in the browser
+* Ability to route messages to based on destination
+* Option to use full-fledged message broker such as RabbitMQ, ActiveMQ, etc. for broadcasting
+* Most importantly the use of STOMP (vs plain WebSocket) enables the Spring Framework to provide a programming model for application-level use in the same way that Spring MVC provides a programming model based on HTTP.
+
+## Other
+
+Although STOMP is a text-oriented protocol, the payload of messages can be either text or binary.
+
 ## 微信公众号
 
 <img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
 
 ## 参考
 
-- [Github STOMP Protocol Specification, Version 1.2](https://github.com/stomp/stomp-spec/blob/master/src/stomp-specification-1.2.md)
-- [STOMP Protocol Specification](http://stomp.github.io/stomp-specification-1.2.html)
-- [STOMP Over WebSocket](http://jmesnil.net/stomp-websocket/doc/)
+* [Github STOMP Protocol Specification, Version 1.2](https://github.com/stomp/stomp-spec/blob/master/src/stomp-specification-1.2.md)
+* [STOMP Protocol Specification](http://stomp.github.io/stomp-specification-1.2.html)
+* [STOMP Over WebSocket](http://jmesnil.net/stomp-websocket/doc/)

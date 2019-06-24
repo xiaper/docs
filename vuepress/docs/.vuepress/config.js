@@ -118,8 +118,8 @@ module.exports = {
               '/protocol/websocket',
               '/protocol/stomp',
               '/protocol/sockjs',
-              '/protocol/socketio'
-              // '/protocol/xmpp'
+              '/protocol/socketio',
+              '/protocol/xmpp'
             ]
           },{
             title: '其他',

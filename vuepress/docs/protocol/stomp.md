@@ -2,7 +2,8 @@
 
 ::: tip 提示
 
-虾婆h5/小程序端基于Stomp Over WebSocket协议开发
+- STOMP is the Simple (or Streaming) Text Orientated Messaging Protocol.
+- 虾婆h5/小程序端基于STOMP v1.2协议开发
 :::
 
 ## STOMP Protocol Specification, Version 1.2

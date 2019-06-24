@@ -2,7 +2,8 @@
 
 ::: tip 提示
 
-虾婆移动端(安卓/iOS)使用的是基于mqtt协议的自定义版本
+- MQTT(Message Queuing Telemetry Transport, 消息队列遥测传输协议)
+- 虾婆移动端(安卓/iOS)使用的是基于mqtt协议的自定义版本
 :::
 
 - [前言](/protocol/mqtt/00-Preface.md)

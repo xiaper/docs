@@ -138,6 +138,7 @@ module.exports = {
               '/other/taboo',
               '/other/p2p',
               '/other/telegram',
+              '/other/signal',
               '/other/compare',
               '/other/support',
               '/other/about',

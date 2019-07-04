@@ -33,6 +33,13 @@ MySQL 和 Oracle 二选其一
 ![create_database](/xiaper.io/image/create_database.png)
 * 初始化数据库, 导入sql文件：[xiaper_mysql.sql](https://github.com/xiaper/server/blob/master/sql/xiaper_mysql.sql)
 
+```bash
+# 默认账号
+企业号：vip
+用户名：2939499399@qq.com
+密码：123456
+```
+
 命令行创建
 
 ``` bash

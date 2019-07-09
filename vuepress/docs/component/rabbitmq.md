@@ -7,7 +7,7 @@ ActiveMQ 和 RabbitMQ 二选其一
 
 ## 配置
 
-源码编译安装Erlang
+源码编译安装[Erlang](http://www.erlang.org/downloads)
 
 ``` bash
 # 下载 http://www.erlang.org/downloads
@@ -18,7 +18,7 @@ sudo apt-get install libncurses5-dev
 sudo make install  
 ```
 
-安装RabbitMQ
+安装[RabbitMQ](https://github.com/rabbitmq/rabbitmq-server/releases)
 
 ``` bash
 - 查看最新版本：https://github.com/rabbitmq/rabbitmq-server/releases

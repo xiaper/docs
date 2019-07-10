@@ -104,6 +104,8 @@ module.exports = {
               '/component/keepalived',
               '/component/quartz',
               '/component/micrometer',
+              '/component/prometheus',
+              '/component/grafana',
               // '/component/freeswitch',
               // '/component/activiti',
               '/component/elasticsearch',

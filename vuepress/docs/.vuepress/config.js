@@ -139,6 +139,7 @@ module.exports = {
               '/other/security',
               '/other/push',
               '/other/taboo',
+              '/other/dbtable',
               '/other/p2p',
               '/other/telegram',
               '/other/signal',

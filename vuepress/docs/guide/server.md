@@ -269,3 +269,5 @@ chmod 777 start.sh
 <img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
 
 ## 参考
+
+- [从100到1000万高并发的架构演进之路](http://www.52im.net/thread-2665-1-1.html)

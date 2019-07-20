@@ -4,7 +4,7 @@
 
 * 编程语言：Java
 * 版本：JDK 8
-* 框架：Spring Boot 2.1.5.RELEASE, Spring Cloud Greenwich.RELEASE
+* 框架：Spring Boot 2.1.6.RELEASE
 * 支持分布式集群部署，完全消除单点故障
 :::
 
@@ -14,13 +14,13 @@
 
 ## 准备
 
-* Linux
-* [Nginx](/component/nginx.md)
+<!-- * Linux -->
+<!-- * [Nginx](/component/nginx.md) -->
 * [MySQL](/component/mysql.md)
 <!-- * [Oracle](/component/oracle.md) -->
 * [Redis](/component/redis.md)
 <!-- * [Mongo](/component/mongo.md) -->
-* [RabbitMQ](/component/rabbitmq.md)
+<!-- * [RabbitMQ](/component/rabbitmq.md) -->
 <!-- * [ActiveMQ](/component/activemq.md) -->
 <!-- * [Zookeeper](/component/zookeeper.md) -->
 <!-- * [AliyunOSS](/component/aliyunoss.md) -->
@@ -31,47 +31,17 @@
 * Linux无特殊系统版本要求，Ubuntu或者CentOS均可。建议配置 16核64G内存。
 * MySQL/Oracle二选其一，无特殊版本要求，建议最新稳定版，默认支持MySQL
 * Redis无特殊版本要求，建议最新稳定版。
-* RabbitMQ/ActiveMQ二选其一，无特殊版本要求，建议最新稳定版，默认支持RabbitMQ
-<!-- * Zookeeper，无特殊版本要求，建议最新稳定版 -->
+<!-- * RabbitMQ/ActiveMQ二选其一，无特殊版本要求，建议最新稳定版，默认支持RabbitMQ -->
 :::
 
-## 架构
-
-支持多种架构，可任选其一
-<!-- TODO: 高并发、高可用、易伸缩、可扩展、安全 -->
-
-### 单体架构
-
-![单体架构](/xiaper.io/image/architechture/architechture-sole.png)
-
-### 分布式架构
-
-* 中小企业
-![分布式架构](/xiaper.io/image/architechture/architechture-cluster.png)
-
-* 大型企业
-![分布式架构2](/xiaper.io/image/architechture/architechture-cluster2.png)
-
-### 微服务架构
-
-* 中小企业
-![微服务架构](/xiaper.io/image/architechture/architechture-service.png)
-
-* 大型企业
-![微服务架构2](/xiaper.io/image/architechture/architechture-service2.png)
-
-<!-- ## 部署 -->
-
-单体架构不推荐，分布式架构和微服务架构整体类似，我们下文主要以讲解分布式架构为主。
-
-::: tip 提示
+<!-- ::: tip 提示
 支持多种部署方式，可任选其一
 
 * Jar：支持直接运行jar
 * War：支持war包放到Tomcat/WebLogic等容器中
 * Maven：支持将虾婆通过maven或gradle方式集成到现有项目中, [maven](https://mvnrepository.com/artifact/io.xiaper)
 * Docker：支持docker部署 TODO
-:::
+::: -->
 
 <!-- TODO: ### 源码 -->
 <!-- TODO: War -->
@@ -99,7 +69,7 @@
 └─ xiaper-spring-boot-sample-webmvc-2.1.5-SNAPSHOT.jar
 ```
 
-### [Nginx](/component/nginx.md)
+<!-- ### [Nginx](/component/nginx.md)
 
 需要配置负载均衡以便支持集群配置 和 websocket
 
@@ -246,7 +216,7 @@ chmod 777 start.sh
 
 ### web端
 
-* 修改js/data.js中默认HOST地址为nginx地址
+* 修改js/data.js中默认HOST地址为nginx地址 -->
 
 <!-- ### 快速集群部署 -->
 
@@ -269,5 +239,3 @@ chmod 777 start.sh
 <img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
 
 ## 参考
-
-- [从100到1000万高并发的架构演进之路](http://www.52im.net/thread-2665-1-1.html)

@@ -129,6 +129,7 @@ module.exports = {
             children: [ 
               '/other/java',
               '/other/netty',
+              '/other/architechture',
               '/other/microservice',
               '/other/manual',
               '/other/friend',

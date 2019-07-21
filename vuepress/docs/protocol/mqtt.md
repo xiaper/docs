@@ -3,7 +3,7 @@
 ::: tip 提示
 
 - MQTT(Message Queuing Telemetry Transport, 消息队列遥测传输协议)
-- 虾婆移动端(安卓/iOS)使用的是基于mqtt协议的自定义版本
+- 虾婆移动端(安卓/iOS)以及服务器端底层通信协议借鉴于mqtt
 :::
 
 ## 简介

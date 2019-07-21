@@ -2,7 +2,7 @@
 
 ::: tip 提示
 
-虾婆web端基于STOMP over WebSocket and SockJS开发
+虾婆web端底层通信协议借鉴于sockjs，首先判断浏览器是否支持websocket，如果支持则建立连接，否则进行服务降级通过xhr-streaming或者xhr-polling进行通信。尽最大程度兼容各种浏览器
 :::
 
 WebSocket is not supported in all browsers yet and may be precluded by restrictive network proxies. This is why Spring provides fallback options that emulate the WebSocket API as close as possible based on the [SockJS Protocol](http://sockjs.github.io/sockjs-protocol/sockjs-protocol-0.3.3.html) (version 0.3.3).

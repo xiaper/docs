@@ -23,4 +23,5 @@
 - [MQTT Version 5.0](https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html)
 - [MQTT Essentials](https://www.hivemq.com/mqtt-essentials/)
 - [MQTT v3.1.1 协议中文版](https://github.com/mcxiaoke/mqtt)
+- [MQTT v5 协议中文版](https://github.com/hui6075/mqtt_v5)
 - [Summary of new features in MQTT v5.0](https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901293)

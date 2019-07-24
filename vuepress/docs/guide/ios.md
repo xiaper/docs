@@ -25,13 +25,13 @@ pod 'bytedesk-ui'
 
 ### 第二步：在AppDelegate.m文件中添加头文件
 
-```c++
+```c
 #import <bytedesk-core/bdcore.h>
 ```
 
 ### 第三步：在AppDelegate.m建立萝卜丝长连接
 
-```c++
+```c
 // 1. 在 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions中添加
 // 2. 在 - (void)applicationWillEnterForeground:(UIApplication *)application中添加
 // anonymouseLogin函数代码请查看AppDelegate.m文件
@@ -40,13 +40,13 @@ pod 'bytedesk-ui'
 
 ### 第四步：在ViewController.m中添加头文件
 
-```c++
+```c
 #import <bytedesk-ui/bdui.h>
 ```
 
 ### 第五步：在ViewController.m打开在线客服会话窗口
 
-```c++
+```c
 [BDUIApis pushWorkGroupChat:self.navigationController withWorkGroupWid:DEFAULT_TEST_WID withTitle:kDefaultTitle];
 ```
 

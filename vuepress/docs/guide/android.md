@@ -16,7 +16,7 @@
 
 ## 开始集成
 
-> 第一步：在项目build.gradle的 allprojects -> repositories 添加
+### 第一步：在项目build.gradle的 allprojects -> repositories 添加
 
 ```java
 maven {
@@ -38,7 +38,7 @@ allprojects {
 }
 ```
 
-> 第二步：在module的build.gradle android{}添加
+### 第二步：在module的build.gradle android{}添加
 
 ```java
 android {
@@ -51,7 +51,7 @@ android {
 }
 ```
 
-> 第三步：在module的build.gradle dependencies{}添加
+### 第三步：在module的build.gradle dependencies{}添加
 
 ```java
 // 萝卜丝第三步
@@ -66,7 +66,7 @@ implementation 'com.bytedesk:ui:2.0.2'
 implementation 'com.qmuiteam:qmui:1.4.0'
 ```
 
-> 第四步：AndroidManifest.xml添加权限
+### 第四步：AndroidManifest.xml添加权限
 
 ```xml
 <!--添加萝卜丝权限-->
@@ -77,7 +77,7 @@ implementation 'com.qmuiteam:qmui:1.4.0'
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-> 第五步：AndroidManifest.xml添加Activity和Service
+### 第五步：AndroidManifest.xml添加Activity和Service
 
 ```xml
 <!--萝卜丝bytedesk.com代码 开始-->
@@ -95,7 +95,7 @@ implementation 'com.qmuiteam:qmui:1.4.0'
 <!--./萝卜丝bytedesk.com代码 结束-->
 ```
 
-> 第六步：在样式文件styles.xml中添加
+### 第六步：在样式文件styles.xml中添加
 
 ```xml
 <!--添加萝卜丝样式 开始-->
@@ -117,7 +117,7 @@ implementation 'com.qmuiteam:qmui:1.4.0'
 <!--添加萝卜丝样式 结束-->
 ```
 
-> 第七部：初始化UI和建立长连接
+### 第七部：初始化UI和建立长连接
 
 参考demo中MainActivity.java
 
@@ -128,7 +128,7 @@ BDUiApi.init(this);
 anonymousLogin();
 ```
 
-> 第八步：开始客服会话
+### 第八步：开始客服会话
 
 ```java
 // 打开客服对话界面

@@ -1,12 +1,10 @@
 # 工单系统
 
-* [Github](https://github.com/xiaper/web)
+## 开发文档
 
-## 效果图
-
-## 功能点
-
-## 集成
+* [安卓-5分钟集成工单](https://github.com/xiaper/android/tree/master/ticket)
+* [iOS-5分钟集成工单](https://github.com/xiaper/ios/tree/master/ticket)
+* [Web-5分钟集成工单](https://github.com/xiaper/web/tree/master/ticket)
 
 ## 微信公众号
 

@@ -14,7 +14,7 @@
 
 ## 开始集成
 
-> 第一步：添加pod库
+### 第一步：添加pod库
 
 ```md
 # 集成萝卜丝核心协议库core
@@ -23,13 +23,13 @@ pod 'bytedesk-core'
 pod 'bytedesk-ui'
 ```
 
-> 第二步：在AppDelegate.m文件中添加头文件
+### 第二步：在AppDelegate.m文件中添加头文件
 
 ```c++
 #import <bytedesk-core/bdcore.h>
 ```
 
-> 第三步：在AppDelegate.m建立萝卜丝长连接
+### 第三步：在AppDelegate.m建立萝卜丝长连接
 
 ```c++
 // 1. 在 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions中添加
@@ -38,19 +38,19 @@ pod 'bytedesk-ui'
 [self anonymouseLogin];
 ```
 
-> 第四步：在ViewController.m中添加头文件
+### 第四步：在ViewController.m中添加头文件
 
 ```c++
 #import <bytedesk-ui/bdui.h>
 ```
 
-> 第五步：在ViewController.m打开在线客服会话窗口
+### 第五步：在ViewController.m打开在线客服会话窗口
 
 ```c++
 [BDUIApis pushWorkGroupChat:self.navigationController withWorkGroupWid:DEFAULT_TEST_WID withTitle:kDefaultTitle];
 ```
 
-> 第六步：在Info.plist添加 相册 + 拍照 权限，可参考demo
+### 第六步：在Info.plist添加 相册 + 拍照 权限，可参考demo
 
 ## 集成完毕
 

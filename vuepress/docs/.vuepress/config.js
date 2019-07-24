@@ -83,11 +83,11 @@ module.exports = {
               '/guide/webrtc',
               '/guide/flutter',
               '/guide/tensorflow',
-              '/guide/callcenter',
+              // '/guide/callcenter',
               '/guide/ticket',
               '/guide/feedback',
-              '/guide/knowledgebase',
-              '/guide/community',
+              '/guide/support',
+              // '/guide/community',
               '/guide/jmeter',
               '/guide/admin'
             ]

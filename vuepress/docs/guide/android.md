@@ -152,3 +152,4 @@ BDUiApi.startWorkGroupChatActivity(context, wId, "工作组客服");
 * [5分钟集成工单](https://github.com/xiaper/android/tree/master/ticket)
 * [5分钟集成帮助中心](https://github.com/xiaper/android/tree/master/helpcenter)
 * [5分钟集成意见反馈](https://github.com/xiaper/android/tree/master/feedback)
+* [5分钟集成自定义UI](https://github.com/xiaper/android/tree/master/myui)

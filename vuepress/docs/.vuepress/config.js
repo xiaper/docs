@@ -73,6 +73,11 @@ module.exports = {
             collapsable: false,
             children: [
               '/guide/',
+              
+            ]
+          },{
+            title: '部署集成',
+            children: [ 
               '/guide/server',
               '/guide/ios',
               '/guide/android',
@@ -80,15 +85,18 @@ module.exports = {
               '/guide/pc',
               '/guide/mp',
               '/guide/mini',
+              '/guide/flutter'
+            ]
+          },{
+            title: '功能模块',
+            children: [ 
               '/guide/webrtc',
-              '/guide/flutter',
               '/guide/tensorflow',
               // '/guide/callcenter',
               '/guide/ticket',
               '/guide/feedback',
               '/guide/support',
               // '/guide/community',
-              '/guide/jmeter',
               '/guide/admin'
             ]
           },{
@@ -130,6 +138,7 @@ module.exports = {
               '/other/java',
               '/other/netty',
               '/other/architechture',
+              '/guide/jmeter',
               '/other/microservice',
               '/other/manual',
               '/other/friend',

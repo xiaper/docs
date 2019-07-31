@@ -234,7 +234,7 @@ chmod 777 start.sh
 ### 关于业务系统账号体系与IM账号体系整合 
 -->
 
-### 微信公众号
+## 微信公众号
 
 <img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
 

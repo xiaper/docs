@@ -1,8 +1,7 @@
 # 小程序
 
-::: tip
+::: tip 提示
 
-- [Github](https://github.com/xiaper/miniprogram)
 :::
 
 ## 准备工作

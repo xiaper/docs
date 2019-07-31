@@ -2,7 +2,6 @@
 
 ::: tip 提示
 
-* [Github](https://github.com/xiaper/android)
 :::
 
 <!-- ## 效果图 -->

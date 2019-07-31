@@ -82,7 +82,9 @@ module.exports = {
               '/guide/ios',
               '/guide/android',
               '/guide/web',
-              '/guide/pc',
+              '/guide/windows',
+              '/guide/mac',
+              '/guide/linux',
               '/guide/mp',
               '/guide/mini',
               '/guide/flutter'

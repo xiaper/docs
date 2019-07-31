@@ -1,13 +1,13 @@
-# Windows/Mac/Linux
+# Mac
 
 ::: tip
 
-* [Github](https://github.com/xiaper/pc)
+- 支持C++(QT)
+- 支持Objective-C
+- 支持JavaScript(Electron)
 :::
 
 ## 准备
-
-VueJS + Electron
 
 ## IM实战
 

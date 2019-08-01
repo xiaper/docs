@@ -99,9 +99,8 @@ dependencies {
 ```java
 dependencies {
     ...
-    // 步骤6：添加下面两行，建议修改为最新版本
+    // 步骤6：添加下面一行，建议修改为最新版本
     implementation 'com.google.protobuf:protobuf-java:3.9.0'
-    implementation 'com.google.protobuf:protoc:3.9.0'
     ...
 }
 ```

@@ -1,5 +1,8 @@
 # Signal
 
+::: tip 提示
+:::
+
 ## 参考
 
 - [Signal Protocol](https://signal.org/docs/)

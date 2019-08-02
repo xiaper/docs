@@ -1,5 +1,9 @@
 # War
 
+::: tip 提示
+虾婆支持打成war包，放到tomcat、weblogic等web容器
+:::
+
 ## 打包
 
 需要修改三处，首先给ClusterWebMvcApplication添加继承SpringBootServletInitializer，并重写configure函数，如下：

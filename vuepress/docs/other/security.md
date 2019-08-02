@@ -80,3 +80,4 @@ TODO
 - [Signal: A Quick and Dirty demo](https://medium.com/@lvijay/signal-a-quick-and-dirty-demo-eca47d76d4f3)
 - [signal-protocol Javascript npm](https://www.npmjs.com/package/signal-protocol)
 - [Advanced cryptographic ratcheting](https://signal.org/blog/advanced-ratcheting/)
+- [双棘轮算法](https://signal.org/docs/specifications/doubleratchet/)

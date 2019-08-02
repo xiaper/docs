@@ -157,6 +157,7 @@ module.exports = {
               '/other/telegram',
               '/other/signal',
               '/other/wire',
+              '/other/tox',
               // '/other/compare',
               '/other/support',
               '/other/about',

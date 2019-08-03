@@ -7,17 +7,18 @@
 
 ## 作者
 
-- 宁金鹏, 中科院研究生院硕士
+<!-- - 宁金鹏, 中科院研究生院硕士
 - 曾就职于爱立信、创新工场等, 目前创业中...
-- 全栈程序员, 目前主要致力于架构设计和优化
+- 全栈程序员, 目前主要致力于架构设计和优化 -->
+
 - 微博[码总](https://www.weibo.com/ningjipeng)
 - Email: 270580156@qq.com
 
-## 联系我
+<!-- ## 联系我 -->
 
-- 请备注：虾婆
+<!-- - 请备注：虾婆 -->
 
-<img :src="$withBase('/image/wechat.jpeg')" style="width:250px;"/>
+<!-- <img :src="$withBase('/image/wechat.jpeg')" style="width:250px;"/> -->
 
 ## 虾婆
 

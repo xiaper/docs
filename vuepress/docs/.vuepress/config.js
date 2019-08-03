@@ -159,6 +159,7 @@ module.exports = {
               '/other/wire',
               '/other/tox',
               // '/other/compare',
+              '/other/reference',
               '/other/support',
               '/other/about',
               '/faq/'

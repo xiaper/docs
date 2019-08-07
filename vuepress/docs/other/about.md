@@ -12,7 +12,7 @@
 - 全栈程序员, 目前主要致力于架构设计和优化 -->
 
 - 微博[码总](https://www.weibo.com/ningjipeng)
-- Email: 270580156@qq.com
+- Email: <270580156@qq.com>
 
 <!-- ## 联系我 -->
 

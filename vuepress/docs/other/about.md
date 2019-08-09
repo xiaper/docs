@@ -28,6 +28,10 @@
 - 2014年，[微客服](http://www.weikefu.net)集群版发布
 - 2013年，[微客服](http://www.weikefu.net)单机版发布
 
+## 所有权
+
+- [北京微语天下科技有限公司](https://wwww.bytedesk.com)
+
 ## 微信公众号
 
 <img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>

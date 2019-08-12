@@ -99,7 +99,7 @@ module.exports = {
               '/guide/feedback',
               '/guide/support',
               // '/guide/community',
-              '/guide/admin'
+              // '/guide/admin'
             ]
           },{
             title: '第三方组件',

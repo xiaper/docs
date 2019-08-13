@@ -110,6 +110,7 @@ module.exports = {
               '/component/oracle',
               '/component/rabbitmq',
               '/component/redis',
+              '/component/rocketmq',
               '/component/haproxy',
               '/component/keepalived',
               '/component/quartz',

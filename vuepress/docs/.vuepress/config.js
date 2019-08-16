@@ -92,6 +92,8 @@ module.exports = {
           },{
             title: '功能模块',
             children: [ 
+              '/guide/im',
+              '/guide/kefu',
               '/guide/webrtc',
               '/guide/tensorflow',
               // '/guide/callcenter',

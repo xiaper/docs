@@ -2,15 +2,16 @@
 
 ::: tip 提示
 
+基于WebRTC的音视频解决方案
+
+- 音视频客服
+- IM音视频
 :::
-
-## WebRTC
-
-TODO: 内测中：音、视频通话、白板互动
 
 ## 配置
 
 - [coturn](/component/coturn.md)
+
 
 ## 微信公众号
 

@@ -95,7 +95,7 @@ module.exports = {
               '/guide/im',
               '/guide/kefu',
               '/guide/webrtc',
-              '/guide/tensorflow',
+              '/guide/robot',
               // '/guide/callcenter',
               '/guide/ticket',
               '/guide/feedback',

@@ -1,5 +1,10 @@
 # 帮助中心
 
+::: tip 提示
+
+也即 知识库
+:::
+
 ## 开发文档
 
 * [安卓-5分钟集成帮助中心](https://github.com/xiaper/android/tree/master/helpcenter)

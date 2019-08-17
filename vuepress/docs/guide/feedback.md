@@ -1,5 +1,9 @@
 # 意见反馈
 
+::: tip 提示
+
+:::
+
 ## 开发文档
 
 * [安卓-5分钟集成意见反馈](https://github.com/xiaper/android/tree/master/feedback)

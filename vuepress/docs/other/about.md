@@ -30,7 +30,7 @@
 
 ## 所有权
 
-- [北京微语天下科技有限公司](https://wwww.bytedesk.com)
+- [萝卜丝](https://wwww.bytedesk.com)
 
 ## 微信公众号
 

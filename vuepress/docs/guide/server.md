@@ -4,7 +4,7 @@
 
 * 编程语言：Java
 * 版本：JDK 8
-* 框架：Spring Boot 2.1.6.RELEASE
+* 框架：Spring Boot 2.x
 * 支持分布式集群、跨机房部署
 :::
 

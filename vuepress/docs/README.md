@@ -18,5 +18,5 @@ features:
   details: 提供客服工作组会话、指定坐席会话、智能客服、统计KPI等相关接口
 - title: 全开源免费
   details: 代码之前，了无密码。面对开源代码，您可以任意修改和发布
-footer: Copyright ©2013~2019 北京微语天下科技有限公司
+footer: Copyright ©2013~2019 wwww.bytedesk.com
 ---

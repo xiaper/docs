@@ -8,12 +8,12 @@
 
 ## 简介
 
-- [mqttv5](/protocol/mqttv5)
-- [mqttv3.1.1](/protocol/mqttv311)
+<!-- - [mqttv5](/protocol/mqttv5)
+- [mqttv3.1.1](/protocol/mqttv311) -->
 
-```bash
+<!-- ```bash
 # 消息体最大长度65535字节
-```
+``` -->
 
 ## 微信公众号
 
@@ -26,6 +26,6 @@
 - [MQTT Version 3.1.1](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html)
 - [MQTT Version 5.0](https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html)
 - [MQTT Essentials](https://www.hivemq.com/mqtt-essentials/)
-- [MQTT v3.1.1 协议中文版](https://github.com/mcxiaoke/mqtt)
-- [MQTT v5 协议中文版](https://github.com/hui6075/mqtt_v5)
+- [MQTT v3.1.1 协议中文版](https://github.com/pengjinning/mqttv3.1.1)
+- [MQTT v5 协议中文版](https://github.com/pengjinning/mqttv5)
 - [Summary of new features in MQTT v5.0](https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901293)

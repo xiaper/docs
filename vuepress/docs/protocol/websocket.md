@@ -35,7 +35,8 @@ WebSockets revolves around the two way exchange of text or binary messages. It l
 
 ## 参考
 
+- [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/WebSockets_API)
 - [The WebSocket Protocol](https://tools.ietf.org/html/rfc6455)
-- [WebSocket中文协议](/protocol/rfc6455.md)
+<!-- - [WebSocket中文协议](/protocol/rfc6455.md) -->
 - [Spring WebSockets](https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#websocket-intro)
 - [Spring WebSocket Support](https://docs.spring.io/spring-framework/docs/5.0.0.BUILD-SNAPSHOT/spring-framework-reference/html/websocket.html)

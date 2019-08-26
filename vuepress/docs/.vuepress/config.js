@@ -130,8 +130,8 @@ module.exports = {
             title: '通信协议',
             children: [ 
               '/protocol/http',
-              '/protocol/mqtt',
               '/protocol/websocket',
+              '/protocol/mqtt',
               '/protocol/stomp',
               '/protocol/sockjs',
               '/protocol/socketio',

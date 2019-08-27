@@ -1,6 +1,10 @@
 # Protobuf
 
-## 安卓配置protobuf
+::: tip 提示
+虾婆提供Json和Protobuf两种消息传输格式，下面主要讲述Protobuf在各个端的配置步骤
+:::
+
+## 安卓
 
 ### Step 1
 
@@ -107,9 +111,11 @@ dependencies {
 
 同步Sync之后，会在build/generated/source/proto文件夹找到生成的java文件，直接在代码中import相关类即可
 
-## iOS配置protobuf
+## iOS
 
-## SpringBoot配置protobuf
+## JavaScript
+
+## SpringBoot
 
 ## 微信公众号
 

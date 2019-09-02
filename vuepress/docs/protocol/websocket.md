@@ -5,7 +5,7 @@
 虾婆web/h5/小程序端基于Stomp Over WebSocket协议开发
 :::
 
-## Traditional Polling
+<!-- ## Traditional Polling
 
 The browser keeps sending requests to check for new information and the server responds immediately each time. This fits scenarios where polling can be done at reasonably sparse intervals. For example a mail client can check for new messages every 10 minutes. It's simple and it works. However, the approach becomes inefficient when new information must be shown as soon as possible in which case polling must be very frequent.
 
@@ -27,7 +27,7 @@ The browser sends an HTTP request to the server to switch to the WebSocket proto
 
 The WebSocket protocol was designed to replace the need for polling and is specifically suited for scenarios where messages need to be exchanged between browser and server at a high frequency. The initial handshake over HTTP ensures WebSocket requests can go through firewalls. However, there are also significant challenges since a majority of deployed browsers do not support WebSockets and there are further issues with getting through network intermediaries.
 
-WebSockets revolves around the two way exchange of text or binary messages. It leads to a significantly different approach from a RESTful, HTTP-based architecture. In fact there is a need for some another protocol on top of WebSockets, e.g. XMPP, AMQP, STOMP, or other and which one(s) will become predominant remains to be seen.
+WebSockets revolves around the two way exchange of text or binary messages. It leads to a significantly different approach from a RESTful, HTTP-based architecture. In fact there is a need for some another protocol on top of WebSockets, e.g. XMPP, AMQP, STOMP, or other and which one(s) will become predominant remains to be seen. -->
 
 ## 微信公众号
 

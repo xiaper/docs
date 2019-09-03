@@ -26,3 +26,5 @@
 ## 参考
 
 - [xmpp](http://xmpp.org/)
+- [xmpp core: rfc3920](https://www.ietf.org/rfc/rfc3920.txt)
+- [xmpp message and presence: rfc3921](https://www.ietf.org/rfc/rfc3921.txt)

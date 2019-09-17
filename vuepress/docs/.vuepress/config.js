@@ -127,7 +127,7 @@ module.exports = {
               '/component/coturn'
             ]
           },{
-            title: '通信协议',
+            title: '传输协议',
             children: [ 
               '/protocol/http',
               '/protocol/websocket',

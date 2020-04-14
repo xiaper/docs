@@ -55,14 +55,14 @@ module.exports = {
               { text: 'Web kefu-sdk-api', link: 'http://www.xiaper.io/docs/web/kf-api' },
             ]
           },
-          { text: '虾婆云', link: 'http://www.xiaper.com' },
+          // { text: '虾婆云', link: 'http://www.xiaper.com' },
           {
             text: '其他',
             items: [
               { text: '微客服', link: 'http://www.weikefu.net' },
               { text: '萝卜丝', link: 'http://www.bytedesk.com' },
-              { text: '虾信', link: 'http://www.xiaper.im' },
-              { text: '虾群', link: 'http://www.xiaqun.im' }
+              // { text: '虾信', link: 'http://www.xiaper.im' },
+              // { text: '虾群', link: 'http://www.xiaqun.im' }
             ]
           },
         ],

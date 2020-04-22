@@ -31,7 +31,7 @@
 
 ## 所有权
 
-- [萝卜丝](https://wwww.bytedesk.com)
+- [萝卜丝](https://www.bytedesk.com)
 
 ## 微信公众号
 

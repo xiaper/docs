@@ -16,7 +16,7 @@ features:
   details: 提供IM相关接口，如发送文本消息、图片消息、语音消息等，支持单聊和群聊
 - title: 在线客服
   details: 提供客服工作组会话、指定坐席会话、智能客服、统计KPI等相关接口
-- title: 全开源免费
-  details: 代码之前，了无密码。面对开源代码，您可以任意修改和发布
+- title: 开源+商业
+  details: 开源的同时，提供商业解决方案支持，推动良性发展
 footer: Copyright ©2013~2019 wwww.bytedesk.com
 ---

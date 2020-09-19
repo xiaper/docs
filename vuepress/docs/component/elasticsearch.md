@@ -1,7 +1,7 @@
 # ElasticSearch
 
 ::: tip 提示
-可选组件
+可选组件, 基于spring boot 2.3.x
 用途：
 
 * 日志管理
@@ -10,12 +10,13 @@
 ## 安装
 
 <!-- * [下载](https://www.elastic.co/downloads/elasticsearch) -->
-* [下载v6.2](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/zip-targz.html)
+<!-- * [下载v6.2](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/zip-targz.html) -->
+* [下载v7.6.2](https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.6.2-linux-x86_64.tar.gz)
 
 解压
 
 ```bash
-unzip elasticsearch-6.2.4.zip
+unzip elasticsearch-7.6.2.zip
 ```
 
 默认elasticsearch禁止root运行, 所有需要添加用户
@@ -28,15 +29,15 @@ useradd elsearch -g elsearch -p elasticsearch
 更改文件夹及内部文件的所属用户及组为elsearch:elsearch
 
 ```bash
-chown -R elsearch:elsearch elasticsearch-6.2.4
+chown -R elsearch:elsearch elasticsearch-7.6.2
 ```
 
-如果默认目录为/root/elasticsearch-6.2.4/, 需要迁移到/home/elasticsearch-6.2.4/
+如果默认目录为/root/elasticsearch-7.6.2/, 需要迁移到/home/elasticsearch-7.6.2/
 
 ```bash
 cd /home
-mv /root/elasticsearch-6.2.4/ .
-cd elasticsearch-6.2.4/
+mv /root/elasticsearch-7.6.2/ .
+cd elasticsearch-7.6.2/
 ```
 
 修改 max file descriptors
@@ -66,19 +67,19 @@ vi config/elasticsearch.yml
 # 修改为
 cluster.name: elasticsearch
 network.host: 0.0.0.0
-# node.name: node-1
-# discovery.seed_hosts: ["127.0.0.1", "[::1]"]
-# cluster.initial_master_nodes: ["node-1"]
+# 防止默认使用阿里云内网ip
+network.publish_host: 外网ip
+# 添加配置
+node.name: "node-1"
+discovery.seed_hosts: ["127.0.0.1", "[::1]"]
+cluster.initial_master_nodes: ["node-1"]
 # 开启跨域访问支持，默认为false（可选）
-# http.cors.enabled: true
+http.cors.enabled: true
 # 跨域访问允许的域名地址，(允许所有域名)以上使用正则（可选）
-# http.cors.allow-origin: /.*/
-```
-
-用户授权
-
-```bash
-# 配置远程访问用户名/密码
+http.cors.allow-origin: /.*/
+http.cors.allow-headers: Authorization
+xpack.security.enabled: true
+xpack.security.transport.ssl.enabled: true
 ```
 
 切换到elsearch用户，并启动
@@ -91,6 +92,14 @@ su elsearch
 ./bin/elasticsearch -d
 # 退出
 exit
+```
+
+用户授权
+
+```bash
+# 设置用户名/密码
+./bin/elasticsearch-setup-passwords interactive
+# 按提示
 ```
 
 浏览器中打开
@@ -118,6 +127,11 @@ http://127.0.0.1:9200/
 spring.data.elasticsearch.cluster-name=elasticsearch
 spring.data.elasticsearch.repositories.enabled=true
 spring.data.elasticsearch.cluster-nodes=127.0.0.1:9300
+#
+spring.elasticsearch.rest.uris=127.0.0.1:9200
+spring.elasticsearch.rest.read-timeout=10000
+spring.elasticsearch.rest.username=
+spring.elasticsearch.rest.password=
 ```
 
 ## 参考

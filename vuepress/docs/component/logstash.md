@@ -8,11 +8,12 @@
 :::
 
 <!-- * [下载](https://www.elastic.co/downloads/logstash) -->
-* [下载v6.2](https://www.elastic.co/cn/downloads/past-releases/logstash-6-2-4)
+* [下载v7.6.2](https://www.elastic.co/cn/downloads/past-releases/logstash-7-6-2)
+* [推荐-国内镜像](https://www.newbe.pro/Mirrors/Mirrors-Logstash/)
 
 ```bash
-unzip logstash-6.2.4.zip
-cd logstash-6.2.4/
+unzip logstash-7.6.2.zip
+cd logstash-7.6.2/
 ```
 
 ```bash
@@ -30,7 +31,7 @@ http.host: "0.0.0.0"
 vi config/logstash.conf
 ```
 
-编辑logstash.conf内容
+编辑logstash.conf内容，设置访问elasticsearch用户名密码
 
 ```bash
 input {

@@ -12,6 +12,7 @@
 <!-- * [下载](https://www.elastic.co/downloads/elasticsearch) -->
 <!-- * [下载v6.2](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/zip-targz.html) -->
 * [下载v7.6.2](https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.6.2-linux-x86_64.tar.gz)
+* [推荐-国内镜像](https://www.newbe.pro/Mirrors/Mirrors-Elasticsearch/)
 
 解压
 
@@ -99,7 +100,7 @@ exit
 ```bash
 # 设置用户名/密码
 ./bin/elasticsearch-setup-passwords interactive
-# 按提示
+# 按提示设置密码
 ```
 
 浏览器中打开

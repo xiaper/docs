@@ -8,11 +8,12 @@
 :::
 
 <!-- * [下载](https://www.elastic.co/downloads/kibana) -->
-* [下载v6.2](https://www.elastic.co/cn/downloads/past-releases/kibana-6-2-4)
+* [下载v7.6.2](https://www.elastic.co/cn/downloads/past-releases/kibana-7-6-2)
+- [推荐-国内镜像](https://www.newbe.pro/Mirrors/Mirrors-Kibana/)
 
 ```bash
-tar -xzvf kibana-6.2.4-linux-x86_64.tar.gz
-cd kibana-6.2.4-linux-x86_64
+tar -xzvf kibana-7.6.2-linux-x86_64.tar.gz
+cd kibana-7.6.2-linux-x86_64
 ```
 
 修改配置文件，使其能够外网访问
@@ -20,24 +21,22 @@ cd kibana-6.2.4-linux-x86_64
 ```bash
 vi config/kibana.yml
 # 修改
-#server.host: "localhost"
+# server.host: "localhost"
+# elasticsearch.username: "elastic"
+# elasticsearch.password: "pass"
 # 为
 server.host: "0.0.0.0"
-```
-
-用户授权
-
-```bash
-# 配置远程访问用户名/密码
+elasticsearch.username: "elastic"
+elasticsearch.password: "密码"
 ```
 
 启动
 
 ```bash
 # 前台启动（测试）
-./bin/kibana
+./bin/kibana --allow-root
 # 后台运行（生产）
-./bin/kibana &
+./bin/kibana --allow-root &
 # 退出
 exit
 ```

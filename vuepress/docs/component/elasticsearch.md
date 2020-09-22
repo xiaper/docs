@@ -83,6 +83,20 @@ xpack.security.enabled: true
 xpack.security.transport.ssl.enabled: true
 ```
 
+中文分词(可选)
+
+* [ik帮助文档](https://github.com/medcl/elasticsearch-analysis-ik)
+* [下载中文分词v7.6.2](https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.6.2/elasticsearch-analysis-ik-7.6.2.zip)
+
+```bash
+cd /home/elasticsearch-7.6.2/plugins
+mkdir ik
+cd ik
+# 上传elasticsearch-analysis-ik-7.6.2.zip到ik目录，并解压
+unzip elasticsearch-analysis-ik-7.6.2.zip
+# 重启elasticsearch
+```
+
 切换到elsearch用户，并启动
 
 ```bash

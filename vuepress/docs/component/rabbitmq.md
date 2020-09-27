@@ -6,15 +6,29 @@
 
 ## 配置
 
-源码编译安装[Erlang](http://www.erlang.org/downloads)
+Linux编译安装[Erlang](http://www.erlang.org/downloads)
 
 ``` bash
 # 下载 http://www.erlang.org/downloads
 tar -xzvf otp_src_23.1.tar.gz
 cd otp_src_23.1
+# 安装 openssl
+# ubuntu
 sudo apt-get install libncurses5-dev libssl-dev openssl
 ./configure && make
 sudo make install
+```
+
+Mac 安装
+
+```bash
+brew install openssl
+brew upgrade erlang
+brew upgrade rabbitmq
+# 后台启动
+brew services start rabbitmq
+# 或 前台启动
+rabbitmq-server
 ```
 
 ``` bash

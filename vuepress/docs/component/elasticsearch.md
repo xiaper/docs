@@ -89,11 +89,15 @@ xpack.security.transport.ssl.enabled: true
 * [下载中文分词v7.6.2](https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.6.2/elasticsearch-analysis-ik-7.6.2.zip)
 
 ```bash
+# 安装方法一
 cd /home/elasticsearch-7.6.2/plugins
 mkdir ik
 cd ik
 # 上传elasticsearch-analysis-ik-7.6.2.zip到ik目录，并解压
 unzip elasticsearch-analysis-ik-7.6.2.zip
+# 或 安装方法二
+cd /home/elasticsearch-7.6.2
+./bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.6.2/elasticsearch-analysis-ik-7.6.2.zip
 # 重启elasticsearch
 ```
 

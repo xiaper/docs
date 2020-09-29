@@ -124,7 +124,9 @@ module.exports = {
               '/component/elasticsearch',
               '/component/kibana',
               '/component/logstash',
-              '/component/coturn'
+              '/component/coturn',
+              '/component/docker',
+              '/component/kubernetes'
             ]
           },{
             title: '传输协议',

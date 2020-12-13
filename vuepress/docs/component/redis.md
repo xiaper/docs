@@ -6,6 +6,8 @@
 apt-get update
 # 命令安装redis：
 sudo apt-get install redis-server
+# 查看运行状态
+sudo systemctl status redis-server
 # 修改密码：
 vi /etc/redis/redis.conf
 # 取消注释：requirepass foobared，修改密码： requirepass 你的密码
@@ -20,6 +22,15 @@ wget http://download.redis.io/releases/redis-4.0.14.tar.gz
 tar xzf redis-4.0.14.tar.gz
 cd redis-4.0.14
 make && make install
+# 修改密码：
+vi /etc/redis/redis.conf
+# 取消注释：requirepass foobared，修改密码： requirepass 你的密码
+# 远程访问：添加注释 bind 127.0.0.1 ::1
+# 修改 daemonize no 为 daemonize yes
+# 启动
+redis-server /etc/redis/redis.conf
+# 检查状态
+redis-cli ping
 ```
 
 安装完成后，在redis-4.0.14安装目录下会出现一个bin目录，bin目录下有几个可执行文件

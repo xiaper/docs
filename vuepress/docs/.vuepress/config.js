@@ -163,6 +163,8 @@ module.exports = {
               '/other/signal',
               '/other/wire',
               '/other/tox',
+              '/other/deamon',
+              '/other/letsencrypt',
               // '/other/compare',
               '/other/reference',
               '/other/support',

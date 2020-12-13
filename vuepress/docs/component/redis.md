@@ -3,6 +3,7 @@
 ## 安装
 
 ``` bash
+apt-get update
 # 命令安装redis：
 sudo apt-get install redis-server
 # 修改密码：

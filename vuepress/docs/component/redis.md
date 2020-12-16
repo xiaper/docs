@@ -29,8 +29,13 @@ vi /etc/redis/redis.conf
 # 修改 daemonize no 为 daemonize yes
 # 启动
 redis-server /etc/redis/redis.conf
+# 停止
+# redis-server stop
 # 检查状态
-redis-cli ping
+# redis-cli ping
+# 其他命令
+# /etc/init.d/redis-server stop
+# /etc/init.d/redis-server start
 ```
 
 安装完成后，在redis-4.0.14安装目录下会出现一个bin目录，bin目录下有几个可执行文件
@@ -212,6 +217,21 @@ redis-trib.rb reshard ip:port
 cluster replicate master-id # 转换前6380端必须没有slots
 ```
 
+## redis之间数据迁移步骤: redis-shake
+
+```shell
+# 1. 下载安装包,这个可以github的release页面找到:
+wget https://github.com/alibaba/RedisShake/releases/download/release-v2.0.3-20200724/redis-shake-v2.0.3.tar.gz
+# 2. 解压文件:
+tar -xvf redis-shake.tar.gz
+# 3. 编辑 redis-shake.conf 配置文件, 主要是更改 source, target 选项:
+vim redis-shake.conf    # 注意按照普通的redis连接来更改即可;
+# 4. 运行 redis-shake 同步脚本:
+./redis-shake.linux64 -type=rump -conf=redis-shake.conf
+# 或
+./start.sh redis-shake.conf rump
+```
+
 ## 微信公众号
 
 <img :src="$withBase('/image/qrcode_xiaperio_430.jpg')" style="width:250px;"/>
@@ -225,3 +245,5 @@ cluster replicate master-id # 转换前6380端必须没有slots
 - [redis 4.0 集群部署](https://www.jianshu.com/p/c8a957413284)
 - [CentOS7安装Redis4.0.10与集群搭建](https://www.cnblogs.com/frankdeng/p/9332618.html)
 - [CentOS6.5搭建Redis-v4.0.8集群](https://www.liutf.com/posts/1419646468.html)
+- [RedisShake-0](https://github.com/alibaba/RedisShake)
+- [RedisShake-1](https://www.cnblogs.com/yougewe/articles/11003725.html)

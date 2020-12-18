@@ -10,6 +10,23 @@ netstat -ntlp
 # 如果80端口正常启动，则证明安装成功
 ```
 
+```bash
+# 查看是否安装stream模块
+nginx -V | grep stream # 注意是大写V
+nginx version: nginx/1.18.0 (Ubuntu)
+built with OpenSSL 1.1.1f  31 Mar 2020
+TLS SNI support enabled
+configure arguments: --with-cc-opt='-g -O2 -fdebug-prefix-map=/build/nginx-5J5hor/nginx-1.18.0=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -Wdate-time -D_FORTIFY_SOURCE=2' --with-ld-opt='-Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fPIC' --prefix=/usr/share/nginx --conf-path=/etc/nginx/nginx.conf --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --lock-path=/var/lock/nginx.lock --pid-path=/run/nginx.pid --modules-path=/usr/lib/nginx/modules --http-client-body-temp-path=/var/lib/nginx/body --http-fastcgi-temp-path=/var/lib/nginx/fastcgi --http-proxy-temp-path=/var/lib/nginx/proxy --http-scgi-temp-path=/var/lib/nginx/scgi --http-uwsgi-temp-path=/var/lib/nginx/uwsgi --with-debug --with-compat --with-pcre-jit --with-http_ssl_module --with-http_stub_status_module --with-http_realip_module --with-http_auth_request_module --with-http_v2_module --with-http_dav_module --with-http_slice_module --with-threads --with-http_addition_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_image_filter_module=dynamic --with-http_sub_module --with-http_xslt_module=dynamic --with-stream=dynamic --with-stream_ssl_module --with-mail=dynamic --with-mail_ssl_module
+# 可以看到参数：--with-stream=dynamic，说明已经安装stream模块
+# 对应报错：unknown directive "stream" in /etc/nginx/nginx.conf，需要在nginx.conf的第一行插入
+load_module /usr/lib/nginx/modules/ngx_stream_module.so;
+```
+
+```bash
+# 缓存路径，创建文件夹，在nginx.conf文件中用到
+mkdir -p /var/www/html/nginx/cache/webserver
+```
+
 ## SSL证书生成
 
 ``` bash
@@ -22,9 +39,14 @@ chmod a+x certbot-auto
 
 ## 配置
 
-修改/etc/nginx/nginx.conf
+```bash
+vi /etc/nginx/nginx.conf
+```
 
 ``` bash
+# 注意对于新版本需要手动加载此行，否则会报错：unknown directive "stream" in /etc/nginx/nginx.conf
+load_module /usr/lib/nginx/modules/ngx_stream_module.so;
+# 
 user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
@@ -43,7 +65,6 @@ http {
   ##
   # Basic Settings
   ##
-
   sendfile on;
   tcp_nopush on;
   tcp_nodelay on;
@@ -60,21 +81,18 @@ http {
   ##
   # SSL Settings
   ##
-
   ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # Dropping SSLv3, ref: POODLE
   ssl_prefer_server_ciphers on;
 
   ##
   # Logging Settings
   ##
-
   access_log /var/log/nginx/access.log;
   error_log /var/log/nginx/error.log;
 
   ##
   # Gzip Settings
   ##
-
   gzip on;
   gzip_disable "msie6";
 
@@ -93,18 +111,18 @@ http {
   ## 设置缓存
   ## 注意：要放在/var/www/html目录下，否则会permission denied
   proxy_cache_path /var/www/html/nginx/cache/webserver levels=1:2 keys_zone=webserver:20m max_size=1g;
-
   # nginx 出现413 Request Entity Too Large问题的解决方法
   client_max_body_size 1024m;
 
   ## 负载均衡
-  upstream bytedesk{
+  upstream bytedesk {
 
     # 这样来自同一个IP的访客固定访问一个后端服务器
     # ip_hash;
     #fair;
     # least_conn;
 
+    # 替换ip填写多条
     # server 127.0.0.2:8000     weight=2 max_fails=10 fail_timeout=60s;
     server 127.0.0.1:8000     weight=2 max_fails=10 fail_timeout=60s;
 
@@ -113,13 +131,14 @@ http {
     # server 127.0.0.1:80 backup;
   }
 
-  upstream bytedeskwss{
+  upstream bytedeskwss {
 
     # 这样来自同一个IP的访客固定访问一个后端服务器
     # ip_hash;
     #fair;
     # least_conn;
 
+    # 替换ip填写多条
     # server 127.0.0.2:3885     weight=2 max_fails=10 fail_timeout=60s;
     server 127.0.0.1:3885     weight=2 max_fails=10 fail_timeout=60s;
   }
@@ -132,12 +151,15 @@ http {
 stream {
 
   #tcp
-  upstream bytedesktcp{
+  upstream bytedesktcp {
       #ip_hash;
+
+      # 替换ip填写多条
       server 127.0.0.1:3883     weight=2 max_fails=10 fail_timeout=60s;
+      # server 127.0.0.1:3883     weight=2 max_fails=10 fail_timeout=60s;
   }
 
-  server{                           
+  server {                     
       listen 13883 ssl;
 
       ssl_certificate /etc/nginx/ssl/fullchain.cer;
@@ -155,7 +177,9 @@ stream {
 }
 ```
 
-修改/etc/nginx/sites-available/default
+```bash
+vi /etc/nginx/sites-available/default
+```
 
 ``` bash
 server {
@@ -239,7 +263,7 @@ server {
   listen 443 ssl default_server;
   listen [::]:443 ssl default_server;
 
-  ssl on;
+  ssl on; # 最新版nginx可注释掉此行
   #ssl_certificate /etc/letsencrypt/live/bytedesk.com/fullchain.pem;
   #ssl_certificate_key /etc/letsencrypt/live/bytedesk.com/privkey.pem;
   #ssl_trusted_certificate  /etc/letsencrypt/live/bytedesk.com/chain.pem;

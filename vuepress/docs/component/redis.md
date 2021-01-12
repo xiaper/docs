@@ -44,23 +44,6 @@ redis-server /etc/redis/redis.conf
 # /etc/init.d/redis-server start
 ```
 
-安装完成后，在redis-4.0.14安装目录下会出现一个bin目录，bin目录下有几个可执行文件
-
-``` bash
-# 性能测试工具
-redis-benchmark
-# AOF文件修复工具
-redis-check-aof
-# RDB文件检测工具（快照持久化文件）
-redis-check-rdb
-# 命令行客户端
-redis-cli
-# redis哨兵
-redis-sentinel -> redis-server
-# redis服务器启动命令
-redis-server
-```
-
 ## 配置文件
 
 ``` bash
@@ -227,7 +210,7 @@ redis-trib.rb reshard ip:port
 cluster replicate master-id # 转换前6380端必须没有slots
 ```
 
-## redis之间数据迁移步骤: redis-shake
+## redis-shake数据迁移
 
 ```shell
 # 1. 下载安装包,这个可以github的release页面找到:
@@ -249,6 +232,7 @@ vim redis-shake.conf    # 注意按照普通的redis连接来更改即可;
 ## 参考
 
 - [Redis cluster tutorial-官方](https://redis.io/topics/cluster-tutorial)
+- [Redis Cluster Specification-详情](https://redis.io/topics/cluster-spec)
 - [Spring Boot Redis Cluster](https://docs.spring.io/spring-data/data-redis/docs/current/reference/html/#cluster)
 - [redis 系列之——高可用（主从、哨兵、集群）](https://xie.infoq.cn/article/6c3500c66c3cdee3d72b88780)
 - [phpRedisAdmin](https://github.com/erikdubbelboer/phpRedisAdmin)
@@ -256,6 +240,7 @@ vim redis-shake.conf    # 注意按照普通的redis连接来更改即可;
 - [RedisDesktopManager Mac](https://github.com/onewe/RedisDesktopManager-Mac/releases/tag/0.9.9)
 - [Redis cluster tutorial](https://redis.io/topics/cluster-tutorial)
 - [redis 4.0 集群部署](https://www.jianshu.com/p/c8a957413284)
+- [Redis 5集群](https://www.cnblogs.com/zhoujinyi/p/11606935.html)
 - [CentOS7安装Redis4.0.10与集群搭建](https://www.cnblogs.com/frankdeng/p/9332618.html)
 - [CentOS6.5搭建Redis-v4.0.8集群](https://www.liutf.com/posts/1419646468.html)
 - [RedisShake-0](https://github.com/alibaba/RedisShake)

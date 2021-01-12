@@ -115,12 +115,12 @@ mkdir 7000 7001 7002
 ``` bash
 # redis后台运行
 daemonize yes
-# pidfile文件对应7000,7002,7003
+# pidfile文件对应7000,7001,7002
 pidfile /var/run/redis_7000.pid
 # 数据文件存放位置对应7000,7001,7002,7003,7004,7005
 dir /var/run/redis_cluster/7000/
 # 默认ip为127.0.0.1 需要改为其他节点机器可访问的ip 否则创建集群时无法访问对应的端口，无法创建集群  
-bind 192.168.0.1
+# bind 192.168.0.1
 # 端口7000,7002,7003
 port 7000
 # 开启集群
@@ -138,9 +138,9 @@ appendonly yes
 ``` bash
 # 启动
 cd redis-4.0.14
-./bin/redis-server redis_cluster/7000/redis.conf
-./bin/redis-server redis_cluster/7001/redis.conf
-./bin/redis-server redis_cluster/7002/redis.conf
+redis-server redis_cluster/7000/redis.conf
+redis-server redis_cluster/7001/redis.conf
+redis-server redis_cluster/7002/redis.conf
 ```
 
 测试服务是否正常启动
@@ -149,11 +149,11 @@ cd redis-4.0.14
 # 查看服务是否正常运行
 ps -ef | grep redis
 # 测试客户端是否可正常连接
-./bin/redis-cli -h 192.168.0.1 -p 7000
+redis-cli -h 192.168.0.1 -p 7000
 192.168.0.1:7000> ping
 PONG
 # 停止redis运行
-./bin/redis-cli -h 192.168.0.1 -p 7000 shutdown
+redis-cli -h 192.168.0.1 -p 7000 shutdown
 ```
 
 ## 创建集群

@@ -155,10 +155,15 @@ spring.elasticsearch.rest.password=
 
 ## 常见问题
 
-```bash
-# 本地磁盘空间不够
-2020-12-17T12:19:21,726][WARN ][o.e.c.r.a.DiskThresholdMonitor] [ningjinpengdeMacBook-Pro.local] high disk watermark [90%] exceeded on [v_FndxbHTsilbe_S9-68vA][ningjinpengdeMacBook-Pro.local][/Users/ningjinpeng/Desktop/Java/elasticsearch-7.6.2/data/nodes/0] free: 21.3gb[9.1%], shards will be relocated away from this node; currently relocating away shards totalling [0] bytes; the node is expected to continue to exceed the high disk watermark when these relocations are complete
-# 解决方案：打开另外一个terminal, 执行下面两个命令
+本地测试报错
+
+```shell
+flood stage disk watermark [95%] exceeded on [nCxquc7PTxKvs6hLkfonvg][nCxquc7][/usr/local/var/lib/elasticsearch/nodes/0] free: 15.3gb[4.1%], all indices on this node will be marked read-only
+```
+
+解决方法
+
+```shell
 curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_cluster/settings -d '{ "transient": { "cluster.routing.allocation.disk.threshold_enabled": false } }'
 curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
 ```

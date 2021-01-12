@@ -8,6 +8,12 @@ apt-get update
 sudo apt-get install redis-server
 # 查看运行状态
 sudo systemctl status redis-server
+# 查看版本
+redis-server --version
+redis-server -v
+# 
+redis-cli --version
+redis-cli -v
 # 修改密码：
 vi /etc/redis/redis.conf
 # 取消注释：requirepass foobared，修改密码： requirepass 你的密码
@@ -149,7 +155,7 @@ redis-server redis_cluster/7002/redis.conf
 # 查看服务是否正常运行
 ps -ef | grep redis
 # 测试客户端是否可正常连接
-redis-cli -h 192.168.0.1 -p 7000
+redis-cli -h 192.168.0.1 -p 7000 -a 密码
 192.168.0.1:7000> ping
 PONG
 # 停止redis运行
@@ -161,7 +167,8 @@ redis-cli -h 192.168.0.1 -p 7000 shutdown
 ``` bash
 # redis安装目录src中redis-trib.rb完成集群创建，redis-trib.rb命令需要安装gem redis模块才能运行，gem redis需要Ruby环境
 # 安装ruby
-yum -y install ruby ruby-devel rubygems rpm-build
+# yum -y install ruby ruby-devel rubygems rpm-build
+apt-get install ruby ruby-devel rubygems rpm-build
 # gem 这个命令来安装 redis接口
 gem install redis
 ```
@@ -178,7 +185,10 @@ cd redis-4.0.14
 
 ``` bash
 # 集群客户端连接方式 redis-cli  -c
-./bin/redis-cli -c -h 192.168.0.1 -p 7000
+# -c，使用集群方式登录
+./bin/redis-cli -c -h 192.168.0.1 -p 7000 -a 密码
+# 查看集群信息：192.168.1.11:6379> CLUSTER INFO
+# 列出节点信息：192.168.1.11:6379> CLUSTER NODES
 192.168.0.1:7000> set foo bar
 -> Redirected to slot [12182] located at 192.168.0.1:7002
 OK
@@ -238,6 +248,9 @@ vim redis-shake.conf    # 注意按照普通的redis连接来更改即可;
 
 ## 参考
 
+- [Redis cluster tutorial-官方](https://redis.io/topics/cluster-tutorial)
+- [Spring Boot Redis Cluster](https://docs.spring.io/spring-data/data-redis/docs/current/reference/html/#cluster)
+- [redis 系列之——高可用（主从、哨兵、集群）](https://xie.infoq.cn/article/6c3500c66c3cdee3d72b88780)
 - [phpRedisAdmin](https://github.com/erikdubbelboer/phpRedisAdmin)
 - [RedisDesktopManager Windows](https://www.daxiblog.com/redis%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7redisdesktopmanager-0-9-9-%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD/)
 - [RedisDesktopManager Mac](https://github.com/onewe/RedisDesktopManager-Mac/releases/tag/0.9.9)

@@ -24,19 +24,26 @@ vi /etc/redis/redis.conf
 
 ``` bash
 # 源码安装
-wget http://download.redis.io/releases/redis-4.0.14.tar.gz
-tar xzf redis-4.0.14.tar.gz
-cd redis-4.0.14
-make && make install
+# wget http://download.redis.io/releases/redis-4.0.14.tar.gz
+# tar xzf redis-4.0.14.tar.gz
+# cd redis-4.0.14
+# make && make install
+wget https://download.redis.io/releases/redis-6.0.9.tar.gz
+tar xzf redis-6.0.9.tar.gz
+cd redis-6.0.9
+make
 # 修改密码：
-vi /etc/redis/redis.conf
+# vi /etc/redis/redis.conf
 # 取消注释：requirepass foobared，修改密码： requirepass 你的密码
 # 远程访问：添加注释 bind 127.0.0.1 ::1
 # 修改 daemonize no 为 daemonize yes
 # 启动
-redis-server /etc/redis/redis.conf
+src/redis-server
+# redis-server /etc/redis/redis.conf
 # 停止
 # redis-server stop
+# 命令行
+src/redis-cli
 # 检查状态
 # redis-cli ping
 # 其他命令
@@ -44,17 +51,204 @@ redis-server /etc/redis/redis.conf
 # /etc/init.d/redis-server start
 ```
 
-## 配置文件
+## 集群
+
+### 架构
+
+<img :src="$withBase('/image/redis-structure.png')" style="width:400px;"/>
+
+### 说明
+
+- redis支持集群最小的单位为6个实例，3个主节点，3个从节点
+- redis使用源码安装方式，安装目录redis-6.0.9
+
+### 机器
+
+| 机器名称 | IP | 端口 |
+| :----------: | :----------: | :----------: |
+| master 1 | 127.0.0.1 | 7000 |
+| master 2 | 127.0.0.1 | 7001 |
+| master 3 | 127.0.0.1 | 7002 |
+| slave 1  | 127.0.0.1 | 7100 |
+| slave 2  | 127.0.0.1 | 7101 |
+| slave 3  | 127.0.0.1 | 7102 |
+
+### 配置
+
+```bash
+# 跟redis-6.0.9同级目录创建文件夹redis-cluster
+mkdir redis-cluster
+cd redis-cluster
+# 
+mkdir 7000
+mkdir 7001
+mkdir 7002
+mkdir 7003
+mkdir 7004
+mkdir 7005
+# 
+cd 7000
+vi redis.conf
+# 粘贴以下内容，其余端口请修改文件中相应端口号
+```
+
+```bash
+# 端口
+port 7000
+# 开启集群
+cluster-enabled  yes
+# 配置集群模式下的配置文件名称和位置,nodes.conf这个文件是集群启动后自动生成的，不需要手动配置
+cluster-config-file /绝对路径/7000/nodes.conf
+# 请求超时, 设置5秒够了
+cluster-node-timeout 5000
+# aof日志开启, 有需要就开启, 它会每次写操作都记录一条日志
+appendonly yes
+# redis后台运行
+daemonize yes
+# 密码
+masterauth 密码
+requirepass 密码
+# 下面几项可选
+# pidfile文件
+pidfile /绝对路径/7000/pidfile.pid
+# 本地数据库存放目录
+dir /绝对路径/7000/
+# 默认ip为127.0.0.1 需要改为其他节点机器可访问的ip 否则创建集群时无法访问对应的端口，无法创建集群  
+# bind 192.168.0.1
+#日志输出的路径及文件名称
+logfile /绝对路径/7000/redis.log
+```
+
+### 启动
+
+#### 手动启动
+
+``` bash
+cd redis-6.0.9
+# 启动
+./src/redis-server ../redis-cluster/7000/redis.conf
+./src/redis-server ../redis-cluster/7001/redis.conf
+./src/redis-server ../redis-cluster/7002/redis.conf
+./src/redis-server ../redis-cluster/7003/redis.conf
+./src/redis-server ../redis-cluster/7004/redis.conf
+./src/redis-server ../redis-cluster/7005/redis.conf
+# 停止集群中某结点
+./src/redis-cli -h 127.0.0.1 -p 7000 -a 密码 shutdown
+./src/redis-cli -h 127.0.0.1 -p 7001 -a 密码 shutdown
+./src/redis-cli -h 127.0.0.1 -p 7002 -a 密码 shutdown
+./src/redis-cli -h 127.0.0.1 -p 7003 -a 密码 shutdown
+./src/redis-cli -h 127.0.0.1 -p 7004 -a 密码 shutdown
+./src/redis-cli -h 127.0.0.1 -p 7005 -a 密码 shutdown
+```
+
+#### 脚本启动
+
+创建启动脚本文件startAll.sh，内容如下：
+
+```bash
+#!/bin/bash
+
+cd /绝对路径/redis-6.0.9
+# 启动
+./src/redis-server ../redis-cluster/7000/redis.conf
+./src/redis-server ../redis-cluster/7001/redis.conf
+./src/redis-server ../redis-cluster/7002/redis.conf
+./src/redis-server ../redis-cluster/7003/redis.conf
+./src/redis-server ../redis-cluster/7004/redis.conf
+./src/redis-server ../redis-cluster/7005/redis.conf
+```
+
+```bash
+# 增加可执行权限
+chmod 777 startAll.sh
+# 启动
+./startAll.sh
+```
+
+创建结束脚本stopAll.sh，内容如下：
+
+```bash
+#!/bin/bash
+
+cd /绝对路径/redis-6.0.9
+# mac上停止集群中某结点
+./src/redis-cli -h 127.0.0.1 -p 7000 -a 密码 shutdown
+./src/redis-cli -h 127.0.0.1 -p 7001 -a 密码 shutdown
+./src/redis-cli -h 127.0.0.1 -p 7002 -a 密码 shutdown
+./src/redis-cli -h 127.0.0.1 -p 7003 -a 密码 shutdown
+./src/redis-cli -h 127.0.0.1 -p 7004 -a 密码 shutdown
+./src/redis-cli -h 127.0.0.1 -p 7005 -a 密码 shutdown
+```
+
+```bash
+# 增加可执行权限
+chmod 777 stopAll.sh
+# 停止
+./stopAll.sh
+```
+
+### 创建
+
+#### 手动分配主从
+
+```bash
+# redis 5 及以上版本，redis3/4要使用redis-trib.rb
+# 首先创建不含slaver 的集群
+./src/redis-cli --cluster create 127.0.0.1:7000 127.0.0.1:7001 127.0.0.1:7002 --cluster-replicas 0 -a 密码
+# 手动添加slaver
+# 使用创建时的cluster-master-id 或执行 `./src/redis-cli -a 密码 --cluster check 127.0.0.1:7000` 查看运行状态
+# 挂载slaver
+./src/redis-cli --cluster add-node 127.0.0.1:7003 127.0.0.1:7000 --cluster-slave --cluster-master-id `<cluster-master-id>` -a 密码
+./src/redis-cli --cluster add-node 127.0.0.1:7004 127.0.0.1:7000 --cluster-slave --cluster-master-id `<cluster-master-id>` -a 密码
+./src/redis-cli --cluster add-node 127.0.0.1:7005 127.0.0.1:7000 --cluster-slave --cluster-master-id `<cluster-master-id>` -a 密码
+```
+
+#### 自动分配主从
+
+```bash
+# redis 5 及以上版本，redis3/4要使用redis-trib.rb
+./src/redis-cli --cluster create 127.0.0.1:7000 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003 127.0.0.1:7004 127.0.0.1:7005 --cluster-replicas 1 -a 密码
+# 添加结点
+./src/redis-cli --cluster add-node 127.0.0.1:7006 127.0.0.1:7000
+# 删除结点
+./src/redis-cli --cluster del-node 127.0.0.1:7000 `<node-id>`
+```
+
+### 测试
+
+```bash
+# 查看当前redis进程
+ps -ef | grep redis-server
+# 健康检查
+./src/redis-cli -a 密码 --cluster check 127.0.0.1:7000
+# 
+./src/redis-cli -c -p 7000 -a 密码
+# 查看相关命令
+127.0.0.1:7000> cluster help
+# 集群信息
+127.0.0.1:7000> cluster info
+# 查看结点信息
+127.0.0.1:7000> cluster nodes
+# 停止集群运行
+127.0.0.1:7000> SHUTDOWN
+# 测试存储数据
+127.0.0.1:7000> set foo bar
+# 测试读取数据
+127.0.0.1:7000> get foo
+```
+
+## SpringBoot
 
 ``` bash
 # redis缓存
 spring.cache.type=Redis
-spring.redis.database=2
 ```
 
-单点
+### 单点
 
 ``` bash
+# 可自选，1~16
+spring.redis.database=2
 # Redis服务器地址
 spring.redis.host=127.0.0.1
 # Redis服务器连接端口
@@ -73,141 +267,11 @@ spring.redis.password=
 #spring.redis.timeout=0
 ```
 
-集群
+### Cluster
 
 ``` bash
 #逗号分隔
-spring.redis.cluster.nodes=192.168.0.159:7001,192.168.0.159:7002
-```
-
-## Redis集群
-
-## 说明
-
-- redis支持集群最小的单位为6个实例，3个主节点，3个从节点
-- 假设两台机器：192.168.0.1， 192.168.0.2, 每台机器安装3个结点
-- redis使用源码安装方式，安装目录redis-4.0.14
-
-## 配置
-
-``` bash
-# 192.168.0.1
-cd redis-4.0.14
-mkdir redis_cluster
-cd redis_cluster
-mkdir 7000 7001 7002
-# 在文件夹 7000/7001/7002中分别创建文件redis.conf
-```
-
-其中，7000/redis.conf文件如下，7001和7002中redis.conf文件请修改相应端口
-
-``` bash
-# redis后台运行
-daemonize yes
-# pidfile文件对应7000,7001,7002
-pidfile /var/run/redis_7000.pid
-# 数据文件存放位置对应7000,7001,7002,7003,7004,7005
-dir /var/run/redis_cluster/7000/
-# 默认ip为127.0.0.1 需要改为其他节点机器可访问的ip 否则创建集群时无法访问对应的端口，无法创建集群  
-# bind 192.168.0.1
-# 端口7000,7002,7003
-port 7000
-# 开启集群
-cluster-enabled  yes
-# 集群的配置, 配置文件首次启动自动生成
-cluster-config-file nodes.conf
-# 请求超时, 设置5秒够了
-cluster-node-timeout 5000
-# aof日志开启, 有需要就开启, 它会每次写操作都记录一条日志
-appendonly yes
-```
-
-在 192.168.0.2 机器上重复上述步骤，然后分别在2台服务器上启动redis
-
-``` bash
-# 启动
-cd redis-4.0.14
-redis-server redis_cluster/7000/redis.conf
-redis-server redis_cluster/7001/redis.conf
-redis-server redis_cluster/7002/redis.conf
-```
-
-测试服务是否正常启动
-
-``` bash
-# 查看服务是否正常运行
-ps -ef | grep redis
-# 测试客户端是否可正常连接
-redis-cli -h 192.168.0.1 -p 7000 -a 密码
-192.168.0.1:7000> ping
-PONG
-# 停止redis运行
-redis-cli -h 192.168.0.1 -p 7000 shutdown
-```
-
-## 创建集群
-
-``` bash
-# redis安装目录src中redis-trib.rb完成集群创建，redis-trib.rb命令需要安装gem redis模块才能运行，gem redis需要Ruby环境
-# 安装ruby
-# yum -y install ruby ruby-devel rubygems rpm-build
-apt-get install ruby ruby-devel rubygems rpm-build
-# gem 这个命令来安装 redis接口
-gem install redis
-```
-
-``` bash
-cd redis-4.0.14
-# 创建新集群命令：命令create
-# --replicas 1 表示 自动为每一个master节点分配一个slave节点. 上面有6个节点，程序会按照一定规则生成 3个master（主）3个slave(从)
-# 其他参数用于创建新集群的实例的地址列表
-./src/redis-trib.rb create --replicas 1 192.168.0.1:7000 192.168.0.1:7001 192.168.0.1:7002 192.168.0.2:7000 192.168.0.2:7001 192.168.0.2:7002
-```
-
-## 测试
-
-``` bash
-# 集群客户端连接方式 redis-cli  -c
-# -c，使用集群方式登录
-./bin/redis-cli -c -h 192.168.0.1 -p 7000 -a 密码
-# 查看集群信息：192.168.1.11:6379> CLUSTER INFO
-# 列出节点信息：192.168.1.11:6379> CLUSTER NODES
-192.168.0.1:7000> set foo bar
--> Redirected to slot [12182] located at 192.168.0.1:7002
-OK
-192.168.0.1:7002> get foo
-"bar"
-192.168.0.1:7002> keys *
-1) "foo"
-192.168.0.1:7002> exit
-[root@node21 redis-cluster]# redis-cli -c -h 192.168.0.1 -p 7000
-192.168.0.1:7000> keys *
-(empty list or set)
-192.168.0.1:7000> get foo
--> Redirected to slot [12182] located at 192.168.0.1:7002
-"bar"
-192.168.0.1:7002>
-```
-
-## 其他常用命令
-
-``` bash
-# 查看集群情况
-其中，ip代表服务器地址，port为服务器端口号
-# 检查集群状态
-redis-trib.rb check ip:port
-# 使用-c进入集群命令模式
-redis-cli -c -h ip -p port
-# 重新分配权重
-redis-trib.rb rebalance ip:port --auto-weights
-# 使用add-node命令将新节点的地址指定为第一个参数，并将集群中随机存在节点的地址指定为第二个参数，redis-trib在运行之前也会检查集群的状态。
-redis-trib.rb add-node ip:port（新增节点） ip:port（现有效节点）
- # 删除master节点之前首先要使用reshard移除master的全部slot
-redis-trib.rb del-node ip:port id（目标节点的id)
-# 重新划分slot
-redis-trib.rb reshard ip:port
-# 将master转换为salve
-cluster replicate master-id # 转换前6380端必须没有slots
+spring.redis.cluster.nodes=127.0.0.1:7000,127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003,127.0.0.1:7004,127.0.0.1:7005
 ```
 
 ## redis-shake数据迁移

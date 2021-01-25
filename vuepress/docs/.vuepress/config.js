@@ -169,6 +169,7 @@ module.exports = {
               // '/other/compare',
               '/other/reference',
               '/other/support',
+              '/other/apns',
               '/other/about',
               '/faq/'
             ]

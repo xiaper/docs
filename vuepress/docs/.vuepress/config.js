@@ -155,6 +155,7 @@ module.exports = {
               '/other/protobuf',
               '/other/war',
               '/other/security',
+              '/other/apns',
               '/other/push',
               '/other/taboo',
               '/other/dbtable',
@@ -169,7 +170,6 @@ module.exports = {
               // '/other/compare',
               '/other/reference',
               '/other/support',
-              '/other/apns',
               '/other/about',
               '/faq/'
             ]

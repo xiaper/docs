@@ -24,28 +24,24 @@ vi /etc/redis/redis.conf
 
 ``` bash
 # 源码安装
-# wget http://download.redis.io/releases/redis-4.0.14.tar.gz
-# tar xzf redis-4.0.14.tar.gz
-# cd redis-4.0.14
-# make && make install
 wget https://download.redis.io/releases/redis-6.0.9.tar.gz
 tar xzf redis-6.0.9.tar.gz
 cd redis-6.0.9
 make
+# 如果找不到make命令，则执行：sudo apt install make 或 sudo apt install build-essential
 # 修改密码：
-# vi /etc/redis/redis.conf
-# 取消注释：requirepass foobared，修改密码： requirepass 你的密码
-# 远程访问：添加注释 bind 127.0.0.1 ::1
-# 修改 daemonize no 为 daemonize yes
+vi ./redis.conf
+取消注释：requirepass foobared，修改密码： requirepass 你的密码
+远程访问：添加注释 bind 127.0.0.1 ::1
+修改 daemonize no 为 daemonize yes
 # 启动
-src/redis-server
-# redis-server /etc/redis/redis.conf
+./src/redis-server ./redis.conf
 # 停止
-# redis-server stop
+./src/redis-server stop
 # 命令行
-src/redis-cli
+./src/redis-cli
 # 检查状态
-# redis-cli ping
+# ./src/redis-cli ping
 # 其他命令
 # /etc/init.d/redis-server stop
 # /etc/init.d/redis-server start

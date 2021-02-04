@@ -8,29 +8,34 @@ MySQL 和 Oracle 二选其一
 
 ## 配置(可选)
 
-- [下载mysql-apt-config_0.8.12-1_all.deb](https://dev.mysql.com/downloads/repo/apt/)
+- [下载mysql-apt-config_0.8.16-1_all.deb](https://dev.mysql.com/downloads/repo/apt/)
 
 ``` bash
-- sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
-- 弹出配置界面，选择mysql-5.7, 选择ok
+- sudo dpkg -i mysql-apt-config_0.8.16-1_all.deb
+- 弹出配置界面，选择mysql-8.0, 选择ok
 - sudo apt-get update
 - sudo apt-get install mysql-server
 
-# 默认密码为空, 需要设置密码, 暂定为: password
-- mysql -u root
-- use mysql;
-- update user set password=PASSWORD("password") where User='root';
-- flush privileges;
+# mysql5.7 默认密码为空, 需要设置密码, 暂定为: password
+# - mysql -u root
+# - use mysql;
+# - update user set password=PASSWORD("password") where User='root';
+# - flush privileges;
 
-# 开启远程登录//mysql 远程连接
-- GRANT ALL PRIVILEGES ON  *.*  TO  'root'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
-- flush privileges;
+# mysql5.7:开启远程登录//mysql 远程连接
+# - GRANT ALL PRIVILEGES ON  *.*  TO  'root'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
+- mysql> CREATE USER 'root'@'%' IDENTIFIED BY 'root';
+- mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+- mysql> flush privileges;
+- mysql> exit;
 # 如果要用sqlyog远程登录, 需要修改/etc/mysql/mysql.conf.d/mysqld.cnf , 注释掉bind-address = 127.0.0.1 (可选)
 - service mysql restart
+# 如果远程连接报错：Authentication plugin 'caching_sha2_password' cannot be loaded，则修改如下
+# mysql> ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 
 * 创建数据库，可自定义数据库名，编码选择：utf8mb4_unicode_cli，例如：
-![create_database](/xiaper.io/image/create_database.png)
+<!-- ![create_database](/xiaper.io/image/create_database.png) -->
 * 初始化数据库, 导入sql文件：[xiaper_mysql.sql](https://github.com/xiaper/server/blob/master/sql/xiaper_mysql.sql)
 
 ```bash

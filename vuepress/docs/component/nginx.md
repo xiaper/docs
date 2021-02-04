@@ -40,6 +40,18 @@ load_module /usr/lib/nginx/modules/ngx_stream_module.so;
 mkdir -p /var/www/html/nginx/cache/webserver
 ```
 
+```bash
+# 对外开放端口号
+http：80
+https：443
+wss：3885 # nginx对内代理，无需对外开放
+tcp：3883
+tls：13883
+# 另外
+mysql：3306
+redis：6379
+```
+
 ## SSL证书生成
 
 ``` bash

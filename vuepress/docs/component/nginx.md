@@ -44,9 +44,9 @@ mkdir -p /var/www/html/nginx/cache/webserver
 # 对外开放端口号
 http：80
 https：443
-wss：3885 # nginx对内代理，无需对外开放
-tcp：3883
-tls：13883
+# wss：3885 # nginx对内代理，无需对外开放
+# tcp：3883
+# tls：13883
 # 另外
 mysql：3306
 redis：6379

@@ -44,6 +44,8 @@ or
 cd vuepress
 yarn
 yarn run docs:dev
+# 发布
+yarn run docs:build
 ```
 
 then open http://localhost:8080 in browser

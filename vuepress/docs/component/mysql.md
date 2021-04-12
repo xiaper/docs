@@ -34,15 +34,15 @@ MySQL 和 Oracle 二选其一
 # mysql> ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 
-创建数据库，可自定义数据库名，编码选择：utf8mb4_unicode_cli，例如：
+<!-- 创建数据库，可自定义数据库名，编码选择：utf8mb4_unicode_cli，例如： -->
 <!-- ![create_database](/xiaper.io/image/create_database.png) -->
-初始化数据库, 导入sql文件：[xiaper_mysql.sql](https://github.com/xiaper/server/blob/master/sql/xiaper_mysql.sql)
+<!-- 初始化数据库, 导入sql文件：[xiaper_mysql.sql](https://github.com/xiaper/server/blob/master/sql/xiaper_mysql.sql) -->
 
 ```bash
 # 默认账号
-企业号：vip
-用户名：2939499399@qq.com
-密码：123456
+# 企业号：vip
+# 用户名：2939499399@qq.com
+# 密码：123456
 ```
 
 命令行创建
@@ -53,12 +53,14 @@ mysql>CREATE DATABASE bytedesk CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 # 使用数据库
 mysql>use bytedesk;
 # 导入.sql文件
-mysql>source /var/local/bytedesk_20190329.sql;
+# mysql>source /var/local/bytedesk_20190329.sql;
 ```
 
 ## 主从复制
 
-第一步
+首先在主、从服务器上分别安装MySQL
+
+首先，在主服务器执行
 
 ``` bash
 # master: 外网ip: 47.98.54.86 内网ip: 172.16.81.2
@@ -82,7 +84,7 @@ mysql> flush privileges;
 service mysqld restart
 ```
 
-第二步
+其次，在从服务器执行
 
 ``` bash
 # slave: 外网ip: 47.99.38.99, 内网ip: 172.16.81.1
@@ -94,7 +96,7 @@ server_id=2
 service mysqld restart
 ```
 
-第三步
+第三步，在主服务器执行
 
 ``` bash
 # 登录 master console
@@ -103,7 +105,7 @@ mysql -u root -p
 mysql> show master status;
 ```
 
-第四步
+第四步，在从服务器执行
 
 ``` bash
 # 登录 slave console

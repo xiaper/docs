@@ -6,7 +6,7 @@ MySQL 和 Oracle 二选其一
 
 支持最新8.0以及5.7
 
-## 配置(可选)
+## 安装配置
 
 - [下载mysql-apt-config_0.8.16-1_all.deb](https://dev.mysql.com/downloads/repo/apt/)
 

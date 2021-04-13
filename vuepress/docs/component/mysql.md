@@ -4,7 +4,8 @@
 MySQL 和 Oracle 二选其一
 :::
 
-支持最新8.0以及5.7
+主服务器：内网ip：127.0.0.1
+从服务器：内网ip：127.0.0.2
 
 ## 安装配置
 
@@ -15,40 +16,31 @@ MySQL 和 Oracle 二选其一
 - 弹出配置界面，选择mysql-8.0, 选择ok
 - sudo apt-get update
 - sudo apt-get install mysql-server
+# 注：安装过程中需要设置密码，选择最新密码加密方式
 
-# mysql5.7 默认密码为空, 需要设置密码, 暂定为: password
-# - mysql -u root
-# - use mysql;
-# - update user set password=PASSWORD("password") where User='root';
-# - flush privileges;
-
-# mysql5.7:开启远程登录//mysql 远程连接
-# - GRANT ALL PRIVILEGES ON  *.*  TO  'root'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
-- mysql> CREATE USER 'root'@'%' IDENTIFIED BY 'password';
-- mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
-- mysql> flush privileges;
-- mysql> exit;
-# 如果要用sqlyog远程登录, 需要修改/etc/mysql/mysql.conf.d/mysqld.cnf , 注释掉bind-address = 127.0.0.1 (可选)
-- service mysql restart
+# 下载Sequel Ace客户端远程连接MySQL
+# 开启root远程访问，登录服务器
+- mysql -u root -p # 按提示输入密码
+- mysql> use mysql; # 进入mysql库
+- mysql> update user set host='%' where user ='root'; # 更新域属性，'%'表示允许外部访问
+- mysql> FLUSH PRIVILEGES;
+- mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION; # 执行授权语句。执行完此句，外部已经可以通过账户密码访问了
+# - mysql> exit;
+# 其他：
+# FLUSH PRIVILEGES; 命令本质上的作用是：
+# 将当前user和privilige表中的用户信息/权限设置从mysql库(MySQL数据库的内置库)中提取到内存里。
+# MySQL用户数据和权限有修改后，希望在"不重启MySQL服务"的情况下直接生效，那么就需要执行这个命令。
+# 
+# - service mysql restart
 # 如果远程连接报错：Authentication plugin 'caching_sha2_password' cannot be loaded，则修改如下
 # mysql> ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 
-<!-- 创建数据库，可自定义数据库名，编码选择：utf8mb4_unicode_cli，例如： -->
-<!-- ![create_database](/xiaper.io/image/create_database.png) -->
-<!-- 初始化数据库, 导入sql文件：[xiaper_mysql.sql](https://github.com/xiaper/server/blob/master/sql/xiaper_mysql.sql) -->
-
-```bash
-# 默认账号
-# 企业号：vip
-# 用户名：2939499399@qq.com
-# 密码：123456
-```
-
-命令行创建
+创建数据库
 
 ``` bash
-# 创建数据库
+# 或者 使用SequalAce客户端创建数据库
+# 命令创建数据库
 mysql>CREATE DATABASE bytedesk CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 # 使用数据库
 mysql>use bytedesk;
@@ -63,7 +55,7 @@ mysql>use bytedesk;
 首先，在主服务器执行
 
 ``` bash
-# master: 外网ip: 47.98.54.86 内网ip: 172.16.81.2
+# master
 vi /etc/mysql/mysql.conf.d/mysqld.cnf
 # 注释掉bind-address = 127.0.0.1
 #需要备份的数据库
@@ -80,20 +72,21 @@ mysql -u root -p
 mysql> CREATE USER 'bytedesk'@'%' IDENTIFIED BY 'password';
 mysql> GRANT REPLICATION SLAVE ON *.* TO 'bytedesk'@'%';
 mysql> flush privileges;
+mysql> exit;
 # 重启Mysqld服务
-service mysqld restart
+service mysql restart
 ```
 
 其次，在从服务器执行
 
 ``` bash
-# slave: 外网ip: 47.99.38.99, 内网ip: 172.16.81.1
+# slave
 vi /etc/mysql/mysql.conf.d/mysqld.cnf
 # log-bin=mysql-bin   #[可选]启用二进制日志
 # 设置server_id，一般设置为IP,注意要唯一
 server_id=2
 # 重启
-service mysqld restart
+service mysql restart
 ```
 
 第三步，在主服务器执行
@@ -108,14 +101,27 @@ mysql> show master status;
 第四步，在从服务器执行
 
 ``` bash
+# 主服务器将RSA公钥发送给从服务器，后者使用它来加密密码并将结果返回给服务器
+mysql --ssl-mode=DISABLED -h 127.0.0.1 -ubytedesk -ppassword --get-server-public-key
+mysql> exit;
+# 注意：必须首先执行上面语句，否则会报错：
+# Last_IO_Error: error connecting to master 'bytedesk@127.0.0.1:3306' - retry-time: 30 retries: 1 message: Authentication plugin 'caching_sha2_password' reported error: Authentication requires secure connection.
+# https://blog.csdn.net/wawa8899/article/details/86689618
+# https://www.modb.pro/db/29919
+# https://www.cnblogs.com/summertime-wu/p/11637520.html
 # 登录 slave console
 mysql -u root -p
 # 根据第三步中的信息，修改下面命令
-mysql> change master to master_host='172.16.81.2', master_user='bytedesk', master_password='password', master_port=3306, master_log_file='mysql-bin.000001', master_log_pos=0, master_connect_retry=30;
+mysql> change master to master_host='127.0.0.1', master_user='bytedesk', master_password='password', master_port=3306, master_log_file='mysql-bin.000001', master_log_pos=0, master_connect_retry=30;
 # 启动 slave 从库
 mysql> start slave;
 # 查看 slave 从库
-mysql> show slave status\G;
+mysql> show slave status\G; # 注意：末尾的\G用来格式化显示，增加易读性
+#停止主从复制
+#清空之前的主从复制配置信息
+# mysql> stop slave;
+# mysql> reset slave;
+mysql> exit;
 # 若Slave_IO_Running和Slave_SQL_Running均为Yes，则表示连接正常。
 ```
 
